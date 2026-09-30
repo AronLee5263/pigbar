@@ -81,3 +81,24 @@ Official guide: https://developers.kakao.com/docs/ko/tool/common
 - Chinese and Japanese translate the same selected five-star English Google review excerpts, with a translated-text label beside the source.
 - Verified mobile widths of 320px and 390px, a 900px desktop breakpoint, language switching, menu filtering, source links, image availability and Pages-relative routes.
 - Translation locations and route details are documented in LANGUAGES.md.
+
+## Mobile spacing, language control and photo selection (2026-09-30)
+
+- The mobile hero keeps its existing outer dimensions. Its photograph occupies 85% of the height; the upper area holds the headline, with a short gradient at the boundary. At the checked 390px viewport the hero remains 560px and the photograph is 476px, reducing the rendered subject scale by 15%.
+- Ten numbered photo alternatives follow the representative image. Previous/next controls and a counter replace the crowded dots for the 14-slide comparison. Details: PHOTO_OPTIONS.md.
+- The language control always reads Language and opens native-language links, with the current language checked.
+- Section labels follow the current language. Korean address, opening hours and booking labels no longer have English duplicates; the main brand eyebrow is retained.
+- The mobile opening-hours card measured 191px, previously 214px, with times and text sizes retained.
+- Main menu and expanded-board prices have 6px of right inset; their vertical alignment is retained. Mobile drink prices also move inward.
+- Bottom menu, directions and reservation tiles contain only their localized labels, with no duplicate English text or arrow symbols.
+- The local preview recognizes JPEG, WebP, SVG and MP4 media and disables stale response caching.
+- Checked all four locales at 320px, ten candidate images, carousel boundaries and language navigation. Existing prices and review selections are retained.
+
+### Kakao sharing preview
+
+The public page already points to the approved neon image. If Kakao still displays an older meat photo, clear the URL metadata cache and send the link again. The tool requires a Kakao login.
+
+Tool: https://developers.kakao.com/tool/debugger/sharing
+Official cache explanation: https://devtalk.kakao.com/t/topic/33298
+
+Keep using https://aronlee5263.github.io/pigbar/ when resetting the Korean page. Reset the exact language URL separately if an older preview is shown for it.

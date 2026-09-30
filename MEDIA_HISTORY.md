@@ -54,3 +54,11 @@ Korean cards contain verbatim excerpts of confirmed five-star Naver reviews by y
 - Original image: https://blogfiles.pstatic.net/MjAyNjA0MThfMjg0/MDAxNzc2NDgzMjc1MzAy.CD_gbhdC08H4wTEXpYWfSld2bh2B-2xHvvYdV3GXqKUg.Xyht2oDvIAK4AtrKR2jcJRkVtIptBISLgrYSAB5yk14g.JPEG/900_20260416_190924.jpg/900x900
 - Used in the pork-neck banner and first signature card in all four languages. The previous pork-neck.jpg is retained.
 - The main charcoal-grill photo and approved neon sharing thumbnail remain the same.
+
+## Numbered pork-neck alternatives (2026-09-30)
+
+- Added ten Naver Place alternatives after the representative banner, labeled 01–10.
+- The user will choose a final image after comparing the photos inside the mobile layout.
+- The current first signature-card image remains pork-neck-grilled.jpg.
+- Exact original URLs and candidate ordering are recorded in PHOTO_OPTIONS.json; see PHOTO_OPTIONS.md.
+- The approved coral-pink neon share image is unchanged. The public page already references pigbar-share-neon-v3.png, and that image returned HTTP 200 with image/png when checked.

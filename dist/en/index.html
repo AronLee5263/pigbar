@@ -77,16 +77,10 @@
         </nav>
         <div class="header-actions">
           <div class="lang-switch" role="group" aria-label="Choose language">
-            <a class="lang-button" href="../" data-lang="ko" lang="ko">KR</a>
-            <a class="lang-button is-active" href="./" data-lang="en" lang="en" aria-current="page">EN</a>
-            <a class="lang-button" href="../zh/" data-lang="zh" lang="zh-Hans">中文</a>
-            <a class="lang-button" href="../ja/" data-lang="ja" lang="ja">日本語</a>
-            <select class="lang-select" id="language-select" aria-label="Choose language">
-              <option value="../" data-lang="ko" lang="ko">한국어</option>
-              <option value="./" data-lang="en" lang="en" selected>English</option>
-              <option value="../zh/" data-lang="zh" lang="zh-Hans">简体中文</option>
-              <option value="../ja/" data-lang="ja" lang="ja">日本語</option>
-            </select>
+            <details class="language-menu">
+              <summary lang="en" aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18M12 3c-5 5-5 13 0 18"/></svg><span>Language</span><svg class="language-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></summary>
+              <div class="language-options"><a class="lang-button" href="../" data-lang="ko" lang="ko"><span>한국어</span><span class="language-check" aria-hidden="true"></span></a><a class="lang-button is-active" href="./" data-lang="en" lang="en" aria-current="page"><span>English</span><span class="language-check" aria-hidden="true">✓</span></a><a class="lang-button" href="../zh/" data-lang="zh" lang="zh-Hans"><span>简体中文</span><span class="language-check" aria-hidden="true"></span></a><a class="lang-button" href="../ja/" data-lang="ja" lang="ja"><span>日本語</span><span class="language-check" aria-hidden="true"></span></a></div>
+            </details>
           </div>
           <a class="button button-primary header-book" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer" data-i18n="reserve">Book a table</a>
           <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
@@ -97,22 +91,31 @@
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-track" id="hero-track" tabindex="0" aria-label="PIGBAR food photos">
-          <figure class="hero-slide"><img src="../assets/charcoal-grill.jpg" alt="Charcoal-grilled pork at PIGBAR" fetchpriority="high" /></figure>
-          <figure class="hero-slide"><img src="../assets/pork-neck-grilled.jpg" alt="A juicy slice of charcoal-grilled pork neck at PIGBAR" loading="lazy" /></figure>
-          <figure class="hero-slide"><img src="../assets/doenjang.jpg" alt="Beef doenjang stew at PIGBAR" loading="lazy" /></figure>
-          <figure class="hero-slide"><img src="../assets/fried-rice.jpg" alt="Cheese blanket kimchi fried rice" loading="lazy" /></figure>
-          <figure class="hero-slide"><img src="../assets/draft-beer.jpg" alt="Hanmac creamy draft beer" loading="lazy" /></figure>
+          <figure class="hero-slide"><img src="../assets/charcoal-grill.jpg" data-photo="0" alt="Charcoal-grilled pork at PIGBAR" fetchpriority="high" /></figure>
+          <figure class="hero-slide" data-candidate="01"><img src="../assets/pork-neck-option-01.webp" data-candidate="01" alt="Grilled pork neck photo option 01" loading="lazy" decoding="async" /><figcaption class="hero-photo-label">Pork neck option 01</figcaption></figure>
+          <figure class="hero-slide" data-candidate="02"><img src="../assets/pork-neck-option-02.webp" data-candidate="02" alt="Grilled pork neck photo option 02" loading="lazy" decoding="async" /><figcaption class="hero-photo-label">Pork neck option 02</figcaption></figure>
+          <figure class="hero-slide" data-candidate="03"><img src="../assets/pork-neck-option-03.webp" data-candidate="03" alt="Grilled pork neck photo option 03" loading="lazy" decoding="async" /><figcaption class="hero-photo-label">Pork neck option 03</figcaption></figure>
+          <figure class="hero-slide" data-candidate="04"><img src="../assets/pork-neck-option-04.webp" data-candidate="04" alt="Grilled pork neck photo option 04" loading="lazy" decoding="async" /><figcaption class="hero-photo-label">Pork neck option 04</figcaption></figure>
+          <figure class="hero-slide" data-candidate="05"><img src="../assets/pork-neck-option-05.webp" data-candidate="05" alt="Grilled pork neck photo option 05" loading="lazy" decoding="async" /><figcaption class="hero-photo-label">Pork neck option 05</figcaption></figure>
+          <figure class="hero-slide" data-candidate="06"><img src="../assets/pork-neck-option-06.webp" data-candidate="06" alt="Grilled pork neck photo option 06" loading="lazy" decoding="async" /><figcaption class="hero-photo-label">Pork neck option 06</figcaption></figure>
+          <figure class="hero-slide" data-candidate="07"><img src="../assets/pork-neck-option-07.webp" data-candidate="07" alt="Grilled pork neck photo option 07" loading="lazy" decoding="async" /><figcaption class="hero-photo-label">Pork neck option 07</figcaption></figure>
+          <figure class="hero-slide" data-candidate="08"><img src="../assets/pork-neck-option-08.webp" data-candidate="08" alt="Grilled pork neck photo option 08" loading="lazy" decoding="async" /><figcaption class="hero-photo-label">Pork neck option 08</figcaption></figure>
+          <figure class="hero-slide" data-candidate="09"><img src="../assets/pork-neck-option-09.webp" data-candidate="09" alt="Grilled pork neck photo option 09" loading="lazy" decoding="async" /><figcaption class="hero-photo-label">Pork neck option 09</figcaption></figure>
+          <figure class="hero-slide" data-candidate="10"><img src="../assets/pork-neck-option-10.webp" data-candidate="10" alt="Grilled pork neck photo option 10" loading="lazy" decoding="async" /><figcaption class="hero-photo-label">Pork neck option 10</figcaption></figure>
+          <figure class="hero-slide"><img src="../assets/doenjang.jpg" data-photo="2" alt="Beef doenjang stew at PIGBAR" loading="lazy" /></figure>
+          <figure class="hero-slide"><img src="../assets/fried-rice.jpg" data-photo="3" alt="Cheese blanket kimchi fried rice" loading="lazy" /></figure>
+          <figure class="hero-slide"><img src="../assets/draft-beer.jpg" data-photo="4" alt="Hanmac creamy draft beer" loading="lazy" /></figure>
         </div>
         <div class="hero-copy"><p class="eyebrow" data-i18n="heroEyebrow">HAPJEONG · KOREAN PORK BBQ</p><h1 id="hero-title" data-i18n="heroTitle">Charcoal BBQ, done right.</h1></div>
-        <div class="hero-pagination"><div class="hero-dots" aria-label="Photo selection"><button type="button" class="is-active" data-slide="0" aria-label="Charcoal-grilled pork at PIGBAR" aria-pressed="true"></button><button type="button" data-slide="1" aria-label="A juicy slice of charcoal-grilled pork neck at PIGBAR" aria-pressed="false"></button><button type="button" data-slide="2" aria-label="Beef doenjang stew at PIGBAR" aria-pressed="false"></button><button type="button" data-slide="3" aria-label="Cheese blanket kimchi fried rice" aria-pressed="false"></button><button type="button" data-slide="4" aria-label="Hanmac creamy draft beer" aria-pressed="false"></button></div><span id="hero-count" class="hero-count">1 / 5</span></div>
+        <div class="hero-pagination" aria-label="Photo selection"><button type="button" id="hero-prev" aria-label="Previous photo" disabled><span aria-hidden="true">‹</span></button><span id="hero-count" class="hero-count" aria-live="polite" aria-atomic="true">1 / 14</span><button type="button" id="hero-next" aria-label="Next photo"><span aria-hidden="true">›</span></button></div>
       </section>
       <nav class="quick-nav" aria-label="Quick links"><a href="#menu"><strong data-i18n="quickMenu">Menu</strong></a><a href="#visit"><strong data-i18n="quickVisit">Directions</strong></a><a href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer"><strong data-i18n="reserve">Book a table</strong></a></nav>
-      <section class="experience section-pad" aria-labelledby="experience-title"><div class="shell"><p class="section-kicker">THE PIGBAR EXPERIENCE</p><h2 id="experience-title" data-i18n="experienceTitle">Your evening at PIGBAR.</h2><div class="experience-grid"><a href="#signature"><span class="experience-icon" aria-hidden="true">01</span><h3 data-i18n="experiencePork">Tender pork</h3><p data-i18n="experiencePorkBody">Thick cuts. Tender bites.</p></a><a href="#story"><span class="experience-icon" aria-hidden="true">02</span><h3 data-i18n="experienceGrill">We grill</h3><p data-i18n="experienceGrillBody">You sit back and enjoy.</p></a><a href="#signature"><span class="experience-icon" aria-hidden="true">03</span><h3 data-i18n="experienceFinish">The finale</h3><p data-i18n="experienceFinishBody">Warm stew. Cheesy rice.</p></a></div></div></section>
+      <section class="experience section-pad" aria-labelledby="experience-title"><div class="shell"><p class="section-kicker" data-i18n="experienceKicker">THE PIGBAR EXPERIENCE</p><h2 id="experience-title" data-i18n="experienceTitle">Your evening at PIGBAR.</h2><div class="experience-grid"><a href="#signature"><span class="experience-icon" aria-hidden="true">01</span><h3 data-i18n="experiencePork">Tender pork</h3><p data-i18n="experiencePorkBody">Thick cuts. Tender bites.</p></a><a href="#story"><span class="experience-icon" aria-hidden="true">02</span><h3 data-i18n="experienceGrill">We grill</h3><p data-i18n="experienceGrillBody">You sit back and enjoy.</p></a><a href="#signature"><span class="experience-icon" aria-hidden="true">03</span><h3 data-i18n="experienceFinish">The finale</h3><p data-i18n="experienceFinishBody">Warm stew. Cheesy rice.</p></a></div></div></section>
 
       <section class="signature section-pad" id="signature" aria-labelledby="signature-title">
         <div class="shell">
           <div class="section-heading">
-            <div><p class="section-kicker">PIGBAR SIGNATURE</p><h2 id="signature-title" data-i18n="signatureTitle">PIGBAR signatures</h2></div>
+            <div><p class="section-kicker" data-i18n="signatureKicker">PIGBAR SIGNATURE</p><h2 id="signature-title" data-i18n="signatureTitle">PIGBAR signatures</h2></div>
             <p data-i18n="signatureIntro">Tender pork neck, beef soybean stew and cheesy kimchi fried rice.</p>
           </div>
           <div class="signature-browse"><span data-i18n="signatureSwipe">Swipe to explore our signatures</span><div><button id="signature-prev" type="button" aria-label="Previous signature dish">←</button><span id="signature-count">1 / 4</span><button id="signature-next" type="button" aria-label="Next signature dish">→</button></div></div><div class="signature-grid" id="signature-track" tabindex="0">
@@ -134,7 +137,7 @@
       <section class="story section-pad" id="story" aria-labelledby="story-title">
         <div class="shell story-grid">
           <div class="story-copy">
-            <p class="section-kicker">TABLESIDE GRILLING</p>
+            <p class="section-kicker" data-i18n="storyKicker">TABLESIDE GRILLING</p>
             <h2 id="story-title" data-i18n="storyTitle">We grill. You enjoy.</h2>
             <p class="story-lead" data-i18n="storyLead">Our team grills your pork over charcoal, right at your table.</p>
             <div class="story-points">
@@ -155,7 +158,7 @@
 
       <section class="menu-section section-pad" id="menu" aria-labelledby="menu-title">
         <div class="shell">
-          <div class="section-heading menu-heading"><div><p class="section-kicker">FULL MENU</p><h2 id="menu-title" data-i18n="menuTitle">The full menu.</h2></div></div>
+          <div class="section-heading menu-heading"><div><p class="section-kicker" data-i18n="menuKicker">FULL MENU</p><h2 id="menu-title" data-i18n="menuTitle">The full menu.</h2></div></div>
           <div class="menu-tabs" role="tablist" aria-label="Menu categories">
             <button class="menu-tab is-active" type="button" role="tab" aria-selected="true" data-category="all" data-i18n="menuAll">All</button>
             <button class="menu-tab" type="button" role="tab" aria-selected="false" data-category="grill" data-i18n="menuGrill">Grill</button>
@@ -170,7 +173,7 @@
 
       <section class="reviews section-pad" id="reviews" aria-labelledby="reviews-title">
         <div class="shell">
-          <div class="section-heading"><div><p class="section-kicker">PEOPLE SAY</p><h2 id="reviews-title" data-i18n="reviewsTitle">From our guests.</h2></div></div>
+          <div class="section-heading"><div><p class="section-kicker" data-i18n="reviewsKicker">PEOPLE SAY</p><h2 id="reviews-title" data-i18n="reviewsTitle">From our guests.</h2></div></div>
           <div class="review-source"><span class="stars" aria-label="Selected five-star Google reviews">5.0 / 5</span><strong id="review-source-title">Google reviews</strong><a id="review-source-link" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer">Read on Google ↗</a></div>
           <p class="review-swipe" data-i18n="reviewSwipe">Swipe for more reviews →</p><div id="review-list" class="review-grid" tabindex="0" aria-label="Guest reviews, swipe to explore"><article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>… The food was delicious, the service was excellent, and I&#x27;ll definitely come back next time I&#x27;m in the area!</blockquote><a class="review-author" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" aria-label="Mary Delia Bondoc Read full review">Mary Delia Bondoc<span>Google ↗</span></a></article><article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>… very kind to help us out with cooking all the meat. I enjoy the pork belly and neck with their sides the most.</blockquote><a class="review-author" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" aria-label="Albert Cheese Read full review">Albert Cheese<span>Google ↗</span></a></article><article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>Pigbar is the place to go if you love Korean BBQ. … the staff makes sure the grill is always perfect.</blockquote><a class="review-author" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" aria-label="Guillermo Lamiel Read full review">Guillermo Lamiel<span>Google ↗</span></a></article><article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>The pork here is SOOO GOOOD.
 Super tender and juicy!
@@ -183,16 +186,16 @@ The staff cooks the meat for you as well 😊 …</blockquote><a class="review-a
 
       <section class="visit section-pad" id="visit" aria-labelledby="visit-title">
         <div class="shell">
-          <div class="section-heading"><div><p class="section-kicker">VISIT PIGBAR</p><h2 id="visit-title" data-i18n="visitTitle">See you in Hapjeong.</h2></div><p data-i18n="visitIntro">About 314m from Hapjeong Station Exit 3. There may be a wait after 6 pm.</p></div>
+          <div class="section-heading"><div><p class="section-kicker" data-i18n="visitKicker">VISIT PIGBAR</p><h2 id="visit-title" data-i18n="visitTitle">See you in Hapjeong.</h2></div><p data-i18n="visitIntro">About 314m from Hapjeong Station Exit 3. There may be a wait after 6 pm.</p></div>
           <div class="visit-grid">
             <div class="visit-card"><span class="visit-label" data-i18n="addressLabel">ADDRESS</span><h3 data-i18n="address">1F, 28-7 Dongmak-ro 3-gil, Mapo-gu, Seoul</h3><p data-i18n="station">314m from Hapjeong Station Exit 3</p><div class="visit-links"><a class="button button-primary" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer" data-i18n="naverMap">Naver Map</a><a class="button button-outline" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" data-i18n="googleMap">Google Maps</a></div></div>
-            <div class="visit-card"><span class="visit-label" data-i18n="hoursLabel">OPENING HOURS</span><div class="hours-row"><span data-i18n="hoursTueThuSun">Tue–Thu · Sun</span><strong>17:00–22:30</strong><small data-i18n="lastOrder1">Last order 21:30</small></div><div class="hours-row"><span data-i18n="hoursFriSat">Fri · Sat</span><strong>17:00–23:00</strong><small data-i18n="lastOrder2">Last order 22:00</small></div><div class="hours-row"><span data-i18n="hoursMon">Monday</span><strong data-i18n="closed">Closed</strong></div></div>
+            <div class="visit-card hours-card"><span class="visit-label" data-i18n="hoursLabel">OPENING HOURS</span><div class="hours-row"><span data-i18n="hoursTueThuSun">Tue–Thu · Sun</span><strong>17:00–22:30</strong><small data-i18n="lastOrder1">Last order 21:30</small></div><div class="hours-row"><span data-i18n="hoursFriSat">Fri · Sat</span><strong>17:00–23:00</strong><small data-i18n="lastOrder2">Last order 22:00</small></div><div class="hours-row"><span data-i18n="hoursMon">Monday</span><strong data-i18n="closed">Closed</strong></div></div>
             <div class="visit-card"><span class="visit-label" data-i18n="contactLabel">BOOKING & CONTACT</span><h3>0507-1414-1178</h3><p data-i18n="visitNote">Book through Naver Place. Please check current hours before visiting.</p><a class="text-link" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer" data-i18n="visitReserve">Book and check updates ↗</a></div>
           </div>
         </div>
       </section>
         </main>
-    <nav class="bottom-actions shell" aria-label="Plan your visit"><a href="#menu"><small>MENU</small><strong data-i18n="quickMenu">Menu</strong><span aria-hidden="true">↗</span></a><a href="#visit"><small>VISIT</small><strong data-i18n="quickVisit">Directions</strong><span aria-hidden="true">⌖</span></a><a class="action-reserve" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer"><small>RESERVE</small><strong data-i18n="reserve">Book a table</strong><span aria-hidden="true">↗</span></a></nav>
+    <nav class="bottom-actions shell" aria-label="Plan your visit"><a href="#menu"><strong data-i18n="quickMenu">Menu</strong></a><a href="#visit"><strong data-i18n="quickVisit">Directions</strong></a><a class="action-reserve" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer"><strong data-i18n="reserve">Book a table</strong></a></nav>
 
     <footer class="site-footer"><div class="shell footer-inner"><div><a class="brand" href="#top"><span class="brand-name brand-badge">PIGBAR</span></a><p data-i18n="footerTag">Charcoal, pork and PIGBAR.</p></div><div><p data-i18n="footerSource">Menu and hours: Naver Place (checked Sep 30, 2026)</p></div></div></footer>
     <script src="../locales.js" defer></script>

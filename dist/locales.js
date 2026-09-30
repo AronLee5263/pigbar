@@ -25,9 +25,9 @@ const PIGBAR_LOCALES = {
       "reviewReadFull": "전체 원문 보기",
       "ratingLabel": "네이버 별점 4.88점",
       "freeLabel": "무료",
-      "tagPork": "PORK",
-      "tagBeef": "BEEF",
-      "tagFree": "FREE",
+      "tagPork": "돼지고기",
+      "tagBeef": "소고기",
+      "tagFree": "무료",
       "photoAlts": [
         "숯불 위에서 구워지는 피그바 돼지고기",
         "노릇하게 구운 피그바 목살의 촉촉한 단면",
@@ -40,7 +40,11 @@ const PIGBAR_LOCALES = {
         "피그 하이볼",
         "와인에이드"
       ],
-      "bellyAlt": "피그바 숯불 삼겹살"
+      "bellyAlt": "피그바 숯불 삼겹살",
+      "candidateLabel": "목살 후보 {number}",
+      "candidateAlt": "구운 목살 사진 후보 {number}",
+      "heroPrevious": "이전 사진",
+      "heroNext": "다음 사진"
     }
   },
   "en": {
@@ -83,7 +87,11 @@ const PIGBAR_LOCALES = {
         "Pig highball",
         "Wine ade"
       ],
-      "bellyAlt": "Charcoal-grilled pork belly at PIGBAR"
+      "bellyAlt": "Charcoal-grilled pork belly at PIGBAR",
+      "candidateLabel": "Pork neck option {number}",
+      "candidateAlt": "Grilled pork neck photo option {number}",
+      "heroPrevious": "Previous photo",
+      "heroNext": "Next photo"
     }
   },
   "zh": {
@@ -129,7 +137,7 @@ const PIGBAR_LOCALES = {
       "storyLead": "店员在桌边为您炭火烤制厚切猪肉，您只需享用美味。",
       "point1Title": "低温熟成10天以上",
       "point1Body": "精选韩国国产猪肉，通过熟成提升风味。",
-      "videoCaption": "芒果切花 · PIGBAR",
+      "videoCaption": "芒果切花烤肉 · PIGBAR",
       "menuTitle": "全部菜单",
       "menuAll": "全部",
       "menuGrill": "烤肉",
@@ -146,7 +154,7 @@ const PIGBAR_LOCALES = {
       "dessertTag": "最后的小惊喜",
       "dessertTitle": "最后一口，送您冰淇淋。",
       "dessertBody": "用餐后，每位顾客可免费享用一支韩国Dwaejiba冰淇淋。",
-      "dessertFree": "免费甜点",
+      "dessertFree": "免费甜品",
       "visitTitle": "合井见。",
       "visitIntro": "距合井站3号出口步行约314米。晚上6点后可能需要等位。",
       "addressLabel": "地址",
@@ -179,7 +187,13 @@ const PIGBAR_LOCALES = {
       "experienceFinishBody": "从热汤到芝士炒饭。",
       "signatureSwipe": "左右滑动，查看招牌菜",
       "seeFullMenu": "查看完整菜单与价格 →",
-      "drinkHeading": "烤肉，再配一杯"
+      "drinkHeading": "烤肉，再配一杯",
+      "experienceKicker": "PIGBAR体验",
+      "signatureKicker": "招牌推荐",
+      "storyKicker": "店员桌边烤制",
+      "menuKicker": "全部菜单",
+      "reviewsKicker": "顾客评价",
+      "visitKicker": "到店指南"
     },
     "ui": {
       "languageLabel": "选择语言",
@@ -218,7 +232,11 @@ const PIGBAR_LOCALES = {
         "PIG高球鸡尾酒",
         "葡萄酒气泡饮"
       ],
-      "bellyAlt": "PIGBAR炭火烤五花肉"
+      "bellyAlt": "PIGBAR炭火烤五花肉",
+      "candidateLabel": "猪肩颈肉候选 {number}",
+      "candidateAlt": "烤猪肩颈肉照片候选 {number}",
+      "heroPrevious": "上一张照片",
+      "heroNext": "下一张照片"
     },
     "menu": [
       [
@@ -363,7 +381,7 @@ const PIGBAR_LOCALES = {
       "storyLead": "厚切りの豚肉を、スタッフがテーブルで炭火焼きに。ゆっくりお楽しみください。",
       "point1Title": "10日以上の低温熟成",
       "point1Body": "厳選した韓国産豚肉を熟成させ、旨みを引き出します。",
-      "videoCaption": "マンゴーカット · PIGBAR",
+      "videoCaption": "マンゴーカットの豚肉 · PIGBAR",
       "menuTitle": "全メニュー",
       "menuAll": "すべて",
       "menuGrill": "焼肉",
@@ -413,7 +431,13 @@ const PIGBAR_LOCALES = {
       "experienceFinishBody": "チゲからチャーハンまで。",
       "signatureSwipe": "横にスワイプして料理を見る",
       "seeFullMenu": "全メニューと価格を見る →",
-      "drinkHeading": "焼肉に、もう一杯"
+      "drinkHeading": "焼肉に、もう一杯",
+      "experienceKicker": "PIGBARで過ごす夜",
+      "signatureKicker": "おすすめメニュー",
+      "storyKicker": "スタッフが焼き上げます",
+      "menuKicker": "全メニュー",
+      "reviewsKicker": "お客様の声",
+      "visitKicker": "アクセス"
     },
     "ui": {
       "languageLabel": "言語を選択",
@@ -452,7 +476,11 @@ const PIGBAR_LOCALES = {
         "PIGハイボール",
         "ワインエード"
       ],
-      "bellyAlt": "PIGBARの炭火サムギョプサル"
+      "bellyAlt": "PIGBARの炭火サムギョプサル",
+      "candidateLabel": "肩ロース候補 {number}",
+      "candidateAlt": "焼いた豚肩ロースの写真候補 {number}",
+      "heroPrevious": "前の写真",
+      "heroNext": "次の写真"
     },
     "menu": [
       [
