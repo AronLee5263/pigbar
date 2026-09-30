@@ -70,3 +70,18 @@
 - 가비아 .co.kr 행사: https://kmi.gabia.com/regist/today_domain
 - Cloudflare Registrar 원가 정책: https://www.cloudflare.com/application-services/solutions/low-cost-domain-names/
 - 캐치테이블 사업자 문의: https://biz.catchtable.co.kr/n/main
+
+## 2026-09-30 언어별 접근 개선
+
+- 기본 주소는 영어 HTML을 표시한다. 한국어 주소는 /ko/이며, 기존 /en/은 영어 별칭으로 유지한다.
+- 캐치테이블 링크는 한국어 국내 앱 웹 주소, 영어 기본 글로벌 주소, 중국어 /zh-CN/shop/pigbar, 일본어 /ja-JP/shop/pigbar로 분리한다. 중국어와 일본어 페이지의 실제 표시 언어를 브라우저에서 확인했다.
+- 상단 메뉴는 시그니처·전체 메뉴·리뷰·오시는 길·예약하기이다. 이야기 탭을 제거하되 본문의 영상과 설명은 유지한다.
+- 지도 버튼은 동일한 중립 테두리와 배경을 사용하고 NAVER Map은 녹색, Google Maps는 브랜드 색상으로 표시한다. 모든 언어에서 지도 서비스 이름은 영어이다.
+- 도메인 등록비는 영구 사용료가 아니다. 1년 등록이라면 만료 전에 1년 연장비를 다시 낸다. 여러 해 선납도 기간이 끝나면 갱신이 필요하다.
+- GitHub Free는 공개 저장소의 Pages를 지원한다. 계정 대표 사이트는 1개, 프로젝트 사이트는 저장소마다 1개이다. 공개 저장소는 개수 제한이 없어 여러 프로젝트를 배포할 수 있지만 사이트별 용량·트래픽·사용 정책을 준수해야 한다. 무료 서비스의 영구 유지는 보장하지 않는다.
+- Pages의 거래 중심 상업 서비스 제한을 고려하면 고객용 판매 사업에는 Cloudflare Pages를 우선 제안한다. 단순한 매장 소개 사이트까지 모두 금지된다고 해석하지 않는다.
+
+추가 공식 자료:
+- 가비아 도메인 연장: https://customer.gabia.com/manual/domain/278/780
+- GitHub Pages 사이트 종류: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+- GitHub 요금제와 저장소: https://docs.github.com/en/get-started/learning-about-github/githubs-plans

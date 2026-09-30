@@ -76,7 +76,8 @@ const PIGBAR_LOCALES = {
         "stew": "피그바 소고기 된장찌개",
         "seafood": "피그바 칼칼 해물 순두부찌개",
         "rice": "고기듬뿍 치즈이불 김치볶음밥"
-      }
+      },
+      "languageName": "한국어"
     },
     "enhancements": {
       "experiencePork": "숙성한 보성녹돈",
@@ -103,7 +104,7 @@ const PIGBAR_LOCALES = {
       "visitReserve": "네이버 예약",
       "catchWait": "캐치테이블 웨이팅",
       "bookingHelp": "외국인 방문 안내",
-      "bookingStep1": "캐치테이블 피그바 페이지를 열고 상단에서 언어를 선택하세요.",
+      "bookingStep1": "한국어 캐치테이블의 피그바 페이지가 열립니다.",
       "bookingStep2": "원격 웨이팅 버튼을 누르고 안내에 따라 로그인 또는 가입하세요.",
       "bookingStep3": "웨이팅 접수가 닫혀 있다면 매장으로 방문해 주세요. 실제 접수 가능 여부는 캐치테이블에서 확인하세요.",
       "instagramLabel": "인스타그램",
@@ -188,7 +189,8 @@ const PIGBAR_LOCALES = {
         "stew": "Beef doenjang stew at PIGBAR",
         "seafood": "Spicy seafood soft tofu stew at PIGBAR",
         "rice": "Cheese blanket kimchi fried rice"
-      }
+      },
+      "languageName": "English"
     },
     "enhancements": {
       "experiencePork": "Aged Korean pork",
@@ -215,7 +217,7 @@ const PIGBAR_LOCALES = {
       "visitReserve": "Reserve on Naver",
       "catchWait": "CATCHTABLE waitlist",
       "bookingHelp": "Visiting from overseas?",
-      "bookingStep1": "Open PIGBAR on CATCHTABLE and choose your language at the top.",
+      "bookingStep1": "Open PIGBAR on CATCHTABLE. The page opens in English.",
       "bookingStep2": "Tap Join Remote Waitlist, then sign in or create an account as prompted.",
       "bookingStep3": "If the waitlist is closed, visit the restaurant in person. Check CATCHTABLE for live availability.",
       "instagramLabel": "Instagram",
@@ -398,7 +400,8 @@ const PIGBAR_LOCALES = {
         "stew": "牛肉大酱汤",
         "seafood": "PIGBAR香辣海鲜嫩豆腐汤",
         "rice": "肉多多芝士泡菜炒饭"
-      }
+      },
+      "languageName": "简体中文"
     },
     "menu": [
       [
@@ -524,7 +527,7 @@ const PIGBAR_LOCALES = {
       "visitReserve": "通过Naver预约",
       "catchWait": "CATCHTABLE排队",
       "bookingHelp": "海外游客到店指南",
-      "bookingStep1": "打开CATCHTABLE的PIGBAR页面，在顶部选择语言。",
+      "bookingStep1": "打开CATCHTABLE的PIGBAR页面，即可查看简体中文信息。",
       "bookingStep2": "点击远程排队按钮，按提示登录或注册。",
       "bookingStep3": "若排队已关闭，请直接到店。实时接收情况以CATCHTABLE为准。",
       "instagramLabel": "Instagram",
@@ -707,7 +710,8 @@ const PIGBAR_LOCALES = {
         "stew": "牛肉テンジャンチゲ",
         "seafood": "PIGBARのピリ辛海鮮スンドゥブチゲ",
         "rice": "お肉たっぷりチーズキムチチャーハン"
-      }
+      },
+      "languageName": "日本語"
     },
     "menu": [
       [
@@ -833,7 +837,7 @@ const PIGBAR_LOCALES = {
       "visitReserve": "Naverで予約",
       "catchWait": "CATCHTABLEで順番待ち",
       "bookingHelp": "海外からお越しの方へ",
-      "bookingStep1": "CATCHTABLEのPIGBARページを開き、上部で言語を選びます。",
+      "bookingStep1": "CATCHTABLEのPIGBARページが日本語で開きます。",
       "bookingStep2": "遠隔順番待ちのボタンを押し、案内に従ってログインまたは登録します。",
       "bookingStep3": "受付が終了している場合は直接ご来店ください。最新の受付状況はCATCHTABLEでご確認ください。",
       "instagramLabel": "Instagram",

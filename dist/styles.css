@@ -156,7 +156,6 @@ h2{font-size:36px;line-height:1.25;letter-spacing:-.05em;font-weight:900}
  .header-inner>.brand{position:absolute;left:50%;transform:translateX(-50%)}
  .brand-name{font-size:24px}
  .header-actions{margin-left:auto}
- .header-book{display:none}
  .lang-switch{font-size:11px;gap:4px}
  .nav-toggle{display:block;position:absolute;left:-10px;top:8px}
  .main-nav{display:none;position:absolute;top:60px;left:-18px;right:-18px;background:#251c18;padding:16px 18px;gap:0;border-top:1px solid #ffffff20}
@@ -444,3 +443,23 @@ body.lang-ja{font-family:"Noto Sans JP","Noto Sans KR",sans-serif}
 @media(max-width:600px){.visit-grid{grid-template-columns:1fr}.booking-card{grid-column:auto}}
 
 .instagram-link{width:fit-content;padding:8px 12px;border:1px solid #e8d4cc;border-radius:4px;background:#fff5f1}
+
+/* Header actions and map links stay easy to identify in every language. */
+.header-inner{width:calc(100% - 24px);max-width:none}
+.main-nav{align-items:center}
+.main-nav .nav-book{padding:0 18px;min-height:44px;color:#fff}
+.header-actions{flex:none;margin-left:0}
+.language-menu summary{font-family:"DM Sans","Noto Sans KR","Noto Sans JP","Noto Sans SC",sans-serif}
+.visit-links .map-button{gap:5px;background:#fff;border:1px solid #d8d2cc;min-height:46px;padding:0 18px;font-family:"DM Sans",sans-serif}
+.naver-map-button{color:#007a36}
+.google-map-button{color:#1a73e8}
+.google-wordmark{display:inline-flex;font-size:16px;font-weight:700;letter-spacing:-.5px}
+.google-blue{color:#4285f4}.google-red{color:#ea4335}.google-yellow{color:#fbbc05}.google-green{color:#34a853}
+.visit-links .map-button:hover{background:#f7f7f7;border-color:#bdb6af}
+@media(max-width:850px){
+ .header-inner{width:calc(100% - 16px)}
+ .header-actions{margin-left:auto}
+ .nav-toggle{left:0}
+ .main-nav{left:-8px;right:-8px;align-items:stretch}
+ .main-nav .nav-book{margin-top:6px;padding:10px 18px}
+}

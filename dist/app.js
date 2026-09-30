@@ -1,5 +1,11 @@
 const NAVER_URL = 'https://naver.me/5XJIY3Cf';
 const GOOGLE_URL = 'https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6';
+const CATCHTABLE_URLS = {
+  "ko": "https://app.catchtable.co.kr/ct/shop/pigbar?from=share&type=WAITING",
+  "en": "https://www.catchtable.net/shop/pigbar",
+  "zh": "https://www.catchtable.net/zh-CN/shop/pigbar",
+  "ja": "https://www.catchtable.net/ja-JP/shop/pigbar"
+};
 
 const copy = {
   ko: {
@@ -161,7 +167,21 @@ function maskReviewerName(name) {
   const hidden = length <= 1 ? length : Math.min(length - 1, length <= 5 ? 2 : length === 6 ? 3 : 5);
   return characters.slice(0, length - hidden).join('') + '*'.repeat(hidden);
 }
-let currentLang = 'ko';
+let currentLang = 'en';
+let languageChosen = false;
+try { languageChosen = localStorage.getItem('pigbar.languageChosen') === 'true'; } catch {}
+
+function updateLanguageLabel(lang) {
+  const summary = document.querySelector('.language-menu summary');
+  const label = languageChosen ? PIGBAR_LOCALES[lang].ui.languageName : 'Language';
+  summary.querySelector('span').textContent = label;
+  summary.lang = languageChosen ? PIGBAR_LOCALES[lang].htmlLang : 'en';
+  summary.setAttribute('aria-label', languageChosen ? PIGBAR_LOCALES[lang].ui.languageLabel + ': ' + label : label);
+}
+
+function updateCatchtableLinks(lang) {
+  document.querySelectorAll('[data-catchtable]').forEach(link => { link.href = CATCHTABLE_URLS[lang]; });
+}
 let currentCategory = 'all';
 const menuList = document.getElementById('menu-list');
 const reviewList = document.getElementById('review-list');
@@ -221,6 +241,8 @@ function setLanguage(lang) {
   }
   document.title = copy[lang].pageTitle;
   document.querySelector('meta[name="description"]').content = copy[lang].pageDescription;
+  updateLanguageLabel(lang);
+  updateCatchtableLinks(lang);
   localizeAccessibility();
   renderMenu();
   renderBoardMenu();
@@ -288,6 +310,13 @@ function localizeAccessibility() {
   document.querySelectorAll('.drink-card img').forEach((img, index) => { img.alt = ui.drinkAlts[index]; });
 }
 const languageMenu = document.querySelector('.language-menu');
+document.querySelectorAll('.lang-button').forEach(link => {
+  link.addEventListener('click', () => {
+    languageChosen = true;
+    try { localStorage.setItem('pigbar.languageChosen', 'true'); } catch {}
+    updateLanguageLabel(link.dataset.lang);
+  });
+});
 document.addEventListener('click', event => {
   if (!languageMenu.contains(event.target)) languageMenu.open = false;
 });
@@ -297,8 +326,8 @@ document.addEventListener('keydown', event => {
     languageMenu.querySelector('summary').focus();
   }
 });
-const pageLanguage = document.documentElement.dataset.language || 'ko';
-setLanguage(Object.hasOwn(copy, pageLanguage) ? pageLanguage : 'ko');
+const pageLanguage = document.documentElement.dataset.language || 'en';
+setLanguage(Object.hasOwn(copy, pageLanguage) ? pageLanguage : 'en');
 syncVideoControls();
 
 // Manual store-photo carousel; original photos keep their relative order.

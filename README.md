@@ -1,10 +1,10 @@
 # PIGBAR website
 
-Static Korean/English restaurant website for PIGBAR in Hapjeong.
+Static Korean, English, Chinese and Japanese restaurant website for PIGBAR in Hapjeong.
 
 ## Development
 
-The publishable files are in `dist/`. Run `node preview.mjs`, then open `http://127.0.0.1:4173/`. The English page is `/en/`.
+The publishable files are in `dist/`. Run `node preview.mjs`, then open `http://127.0.0.1:4173/`. The default page is English. Korean is `/ko/`, Chinese is `/zh/` and Japanese is `/ja/`; `/en/` remains an English alias.
 
 ## Deployment
 
@@ -22,6 +22,6 @@ GitHub Pages: https://aronlee5263.github.io/pigbar/
 
 Review cards contain attributed verbatim excerpts, with ellipses for omitted text. They do not claim that every review has five stars. The Korean section keeps the overall Naver rating of 4.88 separately.
 
-The main menu has 16 Naver listings. An accordion holds 24 additional items from menu-board photos dated May–June 2026 and asks visitors to confirm availability and prices.
+The main menu has 16 Naver listings. Three set menus are visible above the menu tabs. An accordion holds 21 additional items from menu-board photos dated May–June 2026 and asks visitors to confirm availability and prices.
 
-The Naver home video is stored locally as a 10-second MP4. Sound starts muted and visitors can enable it. See [MEDIA_HISTORY.md](MEDIA_HISTORY.md) for the previous video and the Git commit needed to restore it.
+The Naver home video is stored locally as a 10-second MP4. The source is silent; only the play/pause control is shown. See [MEDIA_HISTORY.md](MEDIA_HISTORY.md) for the previous video and the Git commit needed to restore it.
