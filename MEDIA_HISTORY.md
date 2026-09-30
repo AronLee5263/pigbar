@@ -30,3 +30,9 @@ Korean cards contain verbatim excerpts of confirmed five-star Naver reviews by y
 - All five cards per language are selected verbatim excerpts, with ellipses for omitted portions. They do not claim every review of the restaurant is five stars.
 - All five banner images are existing actual-store photographs: charcoal grill, pork neck, soybean stew, cheese fried rice and draft beer.
 - The share thumbnail is an original orange-and-white PIGBAR wordmark with a steam motif. The editable SVG and 1200 x 630 PNG are stored in dist/assets/.
+
+
+## Sharing artwork simplification (2026-09-30)
+- Removed the three steam marks from the editable SVG and re-centered the text.
+- Current share image: dist/assets/pigbar-share-v2.png, 1200 x 630 pixels.
+- Both language pages reference the new image URL so image caching can distinguish this revision.
