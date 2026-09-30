@@ -45,3 +45,12 @@ Korean cards contain verbatim excerpts of confirmed five-star Naver reviews by y
 - Text contains only PIGBAR and KOREAN PORK BBQ; the location line and steam symbols are omitted.
 - Korean and English Open Graph and Twitter image tags point to the same versioned public image URL, with the image's actual dimensions declared.
 - The earlier flat orange share thumbnail and SVG are retained for comparison.
+
+
+## Grilled pork-neck photo (2026-09-30)
+- New asset: dist/assets/pork-neck-grilled.jpg (900 x 900).
+- Selected from Naver Place's pork-neck photo category. It shows a moist cross-section of a browned, grilled pork bite held over the charcoal grill.
+- Category: https://pcmap.place.naver.com/restaurant/1006983247/photo?filterType=AI%20View&subFilter=MENU_NAME%3A%EB%AA%A9%EC%82%B4
+- Original image: https://blogfiles.pstatic.net/MjAyNjA0MThfMjg0/MDAxNzc2NDgzMjc1MzAy.CD_gbhdC08H4wTEXpYWfSld2bh2B-2xHvvYdV3GXqKUg.Xyht2oDvIAK4AtrKR2jcJRkVtIptBISLgrYSAB5yk14g.JPEG/900_20260416_190924.jpg/900x900
+- Used in the pork-neck banner and first signature card in all four languages. The previous pork-neck.jpg is retained.
+- The main charcoal-grill photo and approved neon sharing thumbnail remain the same.

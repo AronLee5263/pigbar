@@ -18,7 +18,7 @@ The site is static. Each tag includes the complete dist/ folder (HTML, CSS, Java
     $env:PORT = "4174"
     node preview.mjs
 
-Open http://127.0.0.1:4174/ and http://127.0.0.1:4174/en/.
+Open http://127.0.0.1:4174/, /en/, /zh/ and /ja/ on the same local server.
 If a preview is already running, save files and refresh with Ctrl+F5.
 
 ## Deploy the committed redesign
@@ -63,7 +63,7 @@ This creates a new commit; it does not rewrite Git history.
 - Text-only quick links: labels enlarged by 3px on mobile and shorter tiles.
 - Three drinks are grouped beneath a clear heading and compact rows.
 - Tested at 320px and 390px mobile widths and 1440px desktop width; no horizontal page overflow.
-- Korean and English pages include static Open Graph and Twitter metadata.
+- Korean, English, Simplified Chinese and Japanese pages include static Open Graph and Twitter metadata, canonical URLs and reciprocal hreflang links.
 - Current share artwork: dist/assets/pigbar-share-neon-v3.png, 1731 x 909 pixels.
 - The earlier flat wordmark remains available in dist/assets/pigbar-logo.svg. Browser icon: dist/assets/favicon.svg.
 - The approved sharing artwork uses coral-pink neon with a red-orange glow on a dark background. It contains only PIGBAR and KOREAN PORK BBQ; Outback branding is not copied.
@@ -71,3 +71,13 @@ This creates a new commit; it does not rewrite Git history.
 
 If Kakao still shows the old photo after deployment, clear the cached metadata in the Kakao Developers URL metadata tool, then share the link again.
 Official guide: https://developers.kakao.com/docs/ko/tool/common
+
+## Chinese and Japanese update (2026-09-30)
+
+- Added /zh/ for Simplified Chinese and /ja/ for Japanese, matching the English layout and content.
+- Full menus, additional board items, opening hours, directions, booking links and accessible controls are localized.
+- Mobile uses a native four-language selector; desktop shows four direct links.
+- New grilled pork-neck photo appears in the second banner and first signature card in every language.
+- Chinese and Japanese translate the same selected five-star English Google review excerpts, with a translated-text label beside the source.
+- Verified mobile widths of 320px and 390px, a 900px desktop breakpoint, language switching, menu filtering, source links, image availability and Pages-relative routes.
+- Translation locations and route details are documented in LANGUAGES.md.

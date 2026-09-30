@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-language="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,7 +13,7 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://aronlee5263.github.io/pigbar/en/" />
     <meta property="og:title" content="PIGBAR | Charcoal BBQ, done right." />
-    <meta property="og:description" content="Tender pork neck, charcoal grilling at your table, warm stew and cheesy kimchi fried rice. Visit PIGBAR in Hapjeong, Seoul." />
+    <meta property="og:description" content="Discover PIGBAR in Hapjeong, Seoul: aged Korean pork belly and neck, table-side charcoal grilling, kimchi fried rice, full menu, prices and directions." />
     <meta property="og:image" content="https://aronlee5263.github.io/pigbar/assets/pigbar-share-neon-v3.png" />
     <meta property="og:image:secure_url" content="https://aronlee5263.github.io/pigbar/assets/pigbar-share-neon-v3.png" />
     <meta property="og:image:type" content="image/png" />
@@ -22,10 +22,16 @@
     <meta property="og:image:alt" content="PIGBAR coral-pink neon logo — Korean Pork BBQ" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PIGBAR | Charcoal BBQ, done right." />
-    <meta name="twitter:description" content="Tender pork neck, charcoal grilling at your table, warm stew and cheesy kimchi fried rice. Visit PIGBAR in Hapjeong, Seoul." />
+    <meta name="twitter:description" content="Discover PIGBAR in Hapjeong, Seoul: aged Korean pork belly and neck, table-side charcoal grilling, kimchi fried rice, full menu, prices and directions." />
     <meta name="twitter:image" content="https://aronlee5263.github.io/pigbar/assets/pigbar-share-neon-v3.png" />
-    <link rel="alternate" hreflang="ko" href="../" />
-    <link rel="alternate" hreflang="en" href="./" />
+    <link rel="alternate" hreflang="ko" href="https://aronlee5263.github.io/pigbar/" />
+    <link rel="alternate" hreflang="en" href="https://aronlee5263.github.io/pigbar/en/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://aronlee5263.github.io/pigbar/zh/" />
+    <link rel="alternate" hreflang="ja" href="https://aronlee5263.github.io/pigbar/ja/" />
+    <link rel="alternate" hreflang="x-default" href="https://aronlee5263.github.io/pigbar/" />
+    <meta property="og:locale:alternate" content="ko_KR" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:locale:alternate" content="ja_JP" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -53,8 +59,8 @@
       }
     </script>
   </head>
-  <body>
-    <a class="skip-link" href="#main" data-i18n="skip">본문 바로가기</a>
+  <body class="lang-en">
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
     <header class="site-header">
       <div class="shell header-inner">
@@ -62,21 +68,28 @@
 
           <span class="brand-name">PIGBAR</span>
         </a>
-        <nav class="main-nav" id="main-nav" aria-label="Primary">
-          <a href="#signature" data-i18n="navSignature">시그니처</a>
-          <a href="#story" data-i18n="navStory">피그바 이야기</a>
-          <a href="#menu" data-i18n="navMenu">전체 메뉴</a>
-          <a href="#reviews" data-i18n="navReviews">리뷰</a>
-          <a href="#visit" data-i18n="navVisit">오시는 길</a>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="#signature" data-i18n="navSignature">Highlights</a>
+          <a href="#story" data-i18n="navStory">Our story</a>
+          <a href="#menu" data-i18n="navMenu">Full menu</a>
+          <a href="#reviews" data-i18n="navReviews">Reviews</a>
+          <a href="#visit" data-i18n="navVisit">Visit</a>
         </nav>
         <div class="header-actions">
-          <div class="lang-switch" role="group" aria-label="Language">
-            <a class="lang-button is-active" href="../" data-lang="ko" aria-current="page">KR</a>
-            <span aria-hidden="true">/</span>
-            <a class="lang-button" href="./" data-lang="en">EN</a>
+          <div class="lang-switch" role="group" aria-label="Choose language">
+            <a class="lang-button" href="../" data-lang="ko" lang="ko">KR</a>
+            <a class="lang-button is-active" href="./" data-lang="en" lang="en" aria-current="page">EN</a>
+            <a class="lang-button" href="../zh/" data-lang="zh" lang="zh-Hans">中文</a>
+            <a class="lang-button" href="../ja/" data-lang="ja" lang="ja">日本語</a>
+            <select class="lang-select" id="language-select" aria-label="Choose language">
+              <option value="../" data-lang="ko" lang="ko">한국어</option>
+              <option value="./" data-lang="en" lang="en" selected>English</option>
+              <option value="../zh/" data-lang="zh" lang="zh-Hans">简体中文</option>
+              <option value="../ja/" data-lang="ja" lang="ja">日本語</option>
+            </select>
           </div>
-          <a class="button button-primary header-book" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer" data-i18n="reserve">예약하기</a>
-          <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+          <a class="button button-primary header-book" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer" data-i18n="reserve">Book a table</a>
+          <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
         </div>
       </div>
     </header>
@@ -84,37 +97,37 @@
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-track" id="hero-track" tabindex="0" aria-label="PIGBAR food photos">
-          <figure class="hero-slide"><img src="../assets/charcoal-grill.jpg" alt="Charcoal-grilled pork and smoke" fetchpriority="high" /></figure>
-          <figure class="hero-slide"><img src="../assets/pork-neck.jpg" alt="PIGBAR pork neck" loading="lazy" /></figure>
-          <figure class="hero-slide"><img src="../assets/doenjang.jpg" alt="Beef soybean stew" loading="lazy" /></figure>
+          <figure class="hero-slide"><img src="../assets/charcoal-grill.jpg" alt="Charcoal-grilled pork at PIGBAR" fetchpriority="high" /></figure>
+          <figure class="hero-slide"><img src="../assets/pork-neck-grilled.jpg" alt="A juicy slice of charcoal-grilled pork neck at PIGBAR" loading="lazy" /></figure>
+          <figure class="hero-slide"><img src="../assets/doenjang.jpg" alt="Beef doenjang stew at PIGBAR" loading="lazy" /></figure>
           <figure class="hero-slide"><img src="../assets/fried-rice.jpg" alt="Cheese blanket kimchi fried rice" loading="lazy" /></figure>
           <figure class="hero-slide"><img src="../assets/draft-beer.jpg" alt="Hanmac creamy draft beer" loading="lazy" /></figure>
         </div>
-        <div class="hero-copy"><p class="eyebrow" data-i18n="heroEyebrow">HAPJEONG · KOREAN PORK BBQ</p><h1 id="hero-title" data-i18n="heroTitle">제대로 된 숯불고기</h1></div>
-        <div class="hero-pagination"><div class="hero-dots" aria-label="Photo selection"><button type="button" class="is-active" data-slide="0" aria-label="숯불고기 사진" aria-pressed="true"></button><button type="button" data-slide="1" aria-label="목살 사진" aria-pressed="false"></button><button type="button" data-slide="2" aria-label="된장찌개 사진" aria-pressed="false"></button><button type="button" data-slide="3" aria-label="볶음밥 사진" aria-pressed="false"></button><button type="button" data-slide="4" aria-label="생맥주 사진" aria-pressed="false"></button></div><span id="hero-count" class="hero-count">1 / 5</span></div>
+        <div class="hero-copy"><p class="eyebrow" data-i18n="heroEyebrow">HAPJEONG · KOREAN PORK BBQ</p><h1 id="hero-title" data-i18n="heroTitle">Charcoal BBQ, done right.</h1></div>
+        <div class="hero-pagination"><div class="hero-dots" aria-label="Photo selection"><button type="button" class="is-active" data-slide="0" aria-label="Charcoal-grilled pork at PIGBAR" aria-pressed="true"></button><button type="button" data-slide="1" aria-label="A juicy slice of charcoal-grilled pork neck at PIGBAR" aria-pressed="false"></button><button type="button" data-slide="2" aria-label="Beef doenjang stew at PIGBAR" aria-pressed="false"></button><button type="button" data-slide="3" aria-label="Cheese blanket kimchi fried rice" aria-pressed="false"></button><button type="button" data-slide="4" aria-label="Hanmac creamy draft beer" aria-pressed="false"></button></div><span id="hero-count" class="hero-count">1 / 5</span></div>
       </section>
-      <nav class="quick-nav" aria-label="Quick links"><a href="#menu"><strong data-i18n="quickMenu">메뉴 보기</strong></a><a href="#visit"><strong data-i18n="quickVisit">오는 길</strong></a><a href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer"><strong data-i18n="reserve">예약하기</strong></a></nav>
-      <section class="experience section-pad" aria-labelledby="experience-title"><div class="shell"><p class="section-kicker">THE PIGBAR EXPERIENCE</p><h2 id="experience-title" data-i18n="experienceTitle">맛있는 저녁의 세 가지.</h2><div class="experience-grid"><a href="#signature"><span class="experience-icon" aria-hidden="true">01</span><h3 data-i18n="experiencePork">두툼한 목살</h3><p data-i18n="experiencePorkBody">두툼하게, 부드럽게.</p></a><a href="#story"><span class="experience-icon" aria-hidden="true">02</span><h3 data-i18n="experienceGrill">직접 그릴링</h3><p data-i18n="experienceGrillBody">굽는 건 저희에게.</p></a><a href="#signature"><span class="experience-icon" aria-hidden="true">03</span><h3 data-i18n="experienceFinish">완벽한 마무리</h3><p data-i18n="experienceFinishBody">찌개부터 볶음밥까지.</p></a></div></div></section>
+      <nav class="quick-nav" aria-label="Quick links"><a href="#menu"><strong data-i18n="quickMenu">Menu</strong></a><a href="#visit"><strong data-i18n="quickVisit">Directions</strong></a><a href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer"><strong data-i18n="reserve">Book a table</strong></a></nav>
+      <section class="experience section-pad" aria-labelledby="experience-title"><div class="shell"><p class="section-kicker">THE PIGBAR EXPERIENCE</p><h2 id="experience-title" data-i18n="experienceTitle">Your evening at PIGBAR.</h2><div class="experience-grid"><a href="#signature"><span class="experience-icon" aria-hidden="true">01</span><h3 data-i18n="experiencePork">Tender pork</h3><p data-i18n="experiencePorkBody">Thick cuts. Tender bites.</p></a><a href="#story"><span class="experience-icon" aria-hidden="true">02</span><h3 data-i18n="experienceGrill">We grill</h3><p data-i18n="experienceGrillBody">You sit back and enjoy.</p></a><a href="#signature"><span class="experience-icon" aria-hidden="true">03</span><h3 data-i18n="experienceFinish">The finale</h3><p data-i18n="experienceFinishBody">Warm stew. Cheesy rice.</p></a></div></div></section>
 
       <section class="signature section-pad" id="signature" aria-labelledby="signature-title">
         <div class="shell">
           <div class="section-heading">
-            <div><p class="section-kicker">PIGBAR SIGNATURE</p><h2 id="signature-title" data-i18n="signatureTitle">고기 다음까지<br />기억나는 맛.</h2></div>
-            <p data-i18n="signatureIntro">삼겹살로 시작해, 뜨끈한 찌개와 치즈 덮인 김치볶음밥으로 마무리하세요.</p>
+            <div><p class="section-kicker">PIGBAR SIGNATURE</p><h2 id="signature-title" data-i18n="signatureTitle">PIGBAR signatures</h2></div>
+            <p data-i18n="signatureIntro">Tender pork neck, beef soybean stew and cheesy kimchi fried rice.</p>
           </div>
-          <div class="signature-browse"><span data-i18n="signatureSwipe">옆으로 넘겨 대표 메뉴 보기</span><div><button id="signature-prev" type="button" aria-label="이전 대표 메뉴">←</button><span id="signature-count">1 / 4</span><button id="signature-next" type="button" aria-label="다음 대표 메뉴">→</button></div></div><div class="signature-grid" id="signature-track" tabindex="0">
-            <article class="signature-card signature-featured"><img src="../assets/pork-neck.jpg" alt="Thick-cut pork neck at PIGBAR" loading="lazy" /><div class="signature-info"><span class="pill" data-i18n="sigMain">단골의 선택</span><div><h3 data-i18n="neckName">피그목살</h3><p data-i18n="neckDesc">두툼한 목살, 부드러운 한 입.</p></div><strong>₩17,000</strong></div></article>
-            <article class="signature-card"><img src="../assets/pork-belly.jpg" alt="피그바 숯불 삼겹살" loading="lazy" /><div class="signature-info"><span class="pill" data-i18n="sigBelly">숯불의 풍미</span><div><h3 data-i18n="bellyName">피그삼겹살</h3><p data-i18n="bellyDesc">10일 이상 숙성한 한돈 삼겹살.</p></div><strong>₩17,000</strong></div></article>
+          <div class="signature-browse"><span data-i18n="signatureSwipe">Swipe to explore our signatures</span><div><button id="signature-prev" type="button" aria-label="Previous signature dish">←</button><span id="signature-count">1 / 4</span><button id="signature-next" type="button" aria-label="Next signature dish">→</button></div></div><div class="signature-grid" id="signature-track" tabindex="0">
+            <article class="signature-card signature-featured"><img src="../assets/pork-neck-grilled.jpg" alt="A juicy slice of charcoal-grilled pork neck at PIGBAR" loading="lazy" /><div class="signature-info"><span class="pill" data-i18n="sigMain">A regular favorite</span><div><h3 data-i18n="neckName">Pig Pork Neck</h3><p data-i18n="neckDesc">Thick-cut pork. Tender bites.</p></div><strong>₩17,000</strong></div></article>
+            <article class="signature-card"><img src="../assets/pork-belly.jpg" alt="Charcoal-grilled pork belly at PIGBAR" loading="lazy" /><div class="signature-info"><span class="pill" data-i18n="sigBelly">Charcoal flavor</span><div><h3 data-i18n="bellyName">Pig Pork Belly</h3><p data-i18n="bellyDesc">170g of carefully trimmed, aged Korean pork.</p></div><strong>₩17,000</strong></div></article>
             <article class="signature-card">
-              <img src="../assets/doenjang.jpg" alt="소고기 된장찌개" loading="lazy" />
-              <div class="signature-info"><span class="pill" data-i18n="sigSoup">국물 한 숟갈</span><div><h3 data-i18n="stewName">소고기 된장찌개</h3><p data-i18n="stewDesc">스지와 우삼겹을 넣은 재래식 된장찌개.</p></div><strong>₩7,000</strong></div>
+              <img src="../assets/doenjang.jpg" alt="Beef doenjang stew at PIGBAR" loading="lazy" />
+              <div class="signature-info"><span class="pill" data-i18n="sigSoup">Something warm</span><div><h3 data-i18n="stewName">Beef Doenjang Stew</h3><p data-i18n="stewDesc">Traditional soybean stew with beef tendon and brisket.</p></div><strong>₩7,000</strong></div>
             </article>
             <article class="signature-card">
-              <img src="../assets/fried-rice.jpg" alt="고기듬뿍 치즈이불 김치볶음밥" loading="lazy" />
-              <div class="signature-info"><span class="pill" data-i18n="sigFinish">마지막 한 판</span><div><h3 data-i18n="riceName">고기듬뿍 치즈이불 볶음밥</h3><p data-i18n="riceDesc">돼지고기 김치볶음밥 위에 모짜렐라와 에멘탈 치즈.</p></div><strong>₩8,000</strong></div>
+              <img src="../assets/fried-rice.jpg" alt="Cheese blanket kimchi fried rice" loading="lazy" />
+              <div class="signature-info"><span class="pill" data-i18n="sigFinish">The finale</span><div><h3 data-i18n="riceName">Cheese Blanket Kimchi Fried Rice</h3><p data-i18n="riceDesc">Pork kimchi fried rice under mozzarella and emmental.</p></div><strong>₩8,000</strong></div>
             </article>
           </div>
-          <a class="all-menu-link" href="#menu" data-i18n="seeFullMenu">전체 메뉴와 가격 보기 →</a><h3 class="drink-heading" data-i18n="drinkHeading">고기와 함께 한잔</h3><div class="drink-strip"><article class="drink-card"><img src="../assets/draft-beer.jpg" alt="한맥 크리미 생맥주" loading="lazy" /><div><span>THE PERFECT PAIR</span><h3 data-i18n="draftName">한맥 크리미 생맥주</h3><strong>₩4,500</strong></div></article><article class="drink-card"><img src="../assets/highball.jpg" alt="피그 하이볼" loading="lazy" /><div><span>THE PERFECT PAIR</span><h3 data-i18n="highballName">피그 하이볼</h3><strong>₩6,000</strong></div></article><article class="drink-card"><img src="../assets/wine-ade.jpg" alt="와인에이드" loading="lazy" /><div><span>THE PERFECT PAIR</span><h3 data-i18n="wineName">와인에이드</h3><strong>₩6,000</strong></div></article></div>
+          <a class="all-menu-link" href="#menu" data-i18n="seeFullMenu">See the full menu & prices →</a><h3 class="drink-heading" data-i18n="drinkHeading">A drink with your BBQ</h3><div class="drink-strip"><article class="drink-card"><img src="../assets/draft-beer.jpg" alt="Hanmac creamy draft beer" loading="lazy" /><div><span>THE PERFECT PAIR</span><h3 data-i18n="draftName">Hanmac Creamy Draft Beer</h3><strong>₩4,500</strong></div></article><article class="drink-card"><img src="../assets/highball.jpg" alt="Pig highball" loading="lazy" /><div><span>THE PERFECT PAIR</span><h3 data-i18n="highballName">Pig Highball</h3><strong>₩6,000</strong></div></article><article class="drink-card"><img src="../assets/wine-ade.jpg" alt="Wine ade" loading="lazy" /><div><span>THE PERFECT PAIR</span><h3 data-i18n="wineName">Wine Ade</h3><strong>₩6,000</strong></div></article></div>
         </div>
       </section>
 
@@ -122,63 +135,67 @@
         <div class="shell story-grid">
           <div class="story-copy">
             <p class="section-kicker">TABLESIDE GRILLING</p>
-            <h2 id="story-title" data-i18n="storyTitle">좋은 고기는 <br />굽는 순간까지<br /><em>좋아야 하니까.</em></h2>
-            <p class="story-lead" data-i18n="storyLead">고기를 고르고, 10일 넘게 숙성하고, 먹기 불편한 부분을 덜어냅니다. 숯불 앞에서는 직원이 맛있게 구워드립니다.</p>
+            <h2 id="story-title" data-i18n="storyTitle">We grill. You enjoy.</h2>
+            <p class="story-lead" data-i18n="storyLead">Our team grills your pork over charcoal, right at your table.</p>
             <div class="story-points">
-              <div><span>01</span><div><strong data-i18n="point1Title">10일 이상 저온 숙성</strong><p data-i18n="point1Body">선별한 +1등급 한돈의 맛을 끌어올립니다.</p></div></div>
+              <div><span>01</span><div><strong data-i18n="point1Title">Aged for 10+ days</strong><p data-i18n="point1Body">Selected Korean pork, aged to deepen the flavor.</p></div></div>
             </div>
           </div>
           <div class="video-frame">
-            <video id="grill-video" autoplay muted playsinline loop preload="metadata" poster="../assets/grill-poster.jpg" aria-label="피그바 망고 가브리살 영상">
+            <video id="grill-video" autoplay muted playsinline loop preload="metadata" poster="../assets/grill-poster.jpg" aria-label="PIGBAR mango-cut gabrisal grilling video">
               <source src="../assets/mango-pork.mp4" type="video/mp4" />
             </video>
             <div class="video-shade"></div>
             <div class="video-caption"><span class="live-dot"></span><span data-i18n="videoCaption">MANGO CUT · PIGBAR</span></div>
-            <button id="video-sound" class="video-sound" type="button" aria-label="영상 소리 켜기">♪</button>
-            <button id="video-toggle" class="video-toggle" type="button" aria-label="영상 일시정지">Ⅱ</button>
+            <button id="video-sound" class="video-sound" type="button" aria-label="Unmute video">♪</button>
+            <button id="video-toggle" class="video-toggle" type="button" aria-label="Pause video">Ⅱ</button>
           </div>
         </div>
       </section>
 
       <section class="menu-section section-pad" id="menu" aria-labelledby="menu-title">
         <div class="shell">
-          <div class="section-heading menu-heading"><div><p class="section-kicker">FULL MENU</p><h2 id="menu-title" data-i18n="menuTitle">오늘 먹을<br />모든 메뉴.</h2></div></div>
-          <div class="menu-tabs" role="tablist" aria-label="메뉴 분류">
-            <button class="menu-tab is-active" type="button" role="tab" aria-selected="true" data-category="all" data-i18n="menuAll">전체</button>
-            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-category="grill" data-i18n="menuGrill">고기</button>
-            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-category="side" data-i18n="menuSide">식사·사이드</button>
-            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-category="drink" data-i18n="menuDrink">음료</button>
+          <div class="section-heading menu-heading"><div><p class="section-kicker">FULL MENU</p><h2 id="menu-title" data-i18n="menuTitle">The full menu.</h2></div></div>
+          <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+            <button class="menu-tab is-active" type="button" role="tab" aria-selected="true" data-category="all" data-i18n="menuAll">All</button>
+            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-category="grill" data-i18n="menuGrill">Grill</button>
+            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-category="side" data-i18n="menuSide">Meals & sides</button>
+            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-category="drink" data-i18n="menuDrink">Drinks</button>
           </div>
-          <div id="menu-list" class="menu-list" role="tabpanel"></div>
-          <div class="menu-note"><span data-i18n="menuUpdated">네이버 플레이스 메뉴 최종 업데이트: 2026.09.15</span><a href="https://pcmap.place.naver.com/restaurant/1006983247/menu" target="_blank" rel="noopener noreferrer" data-i18n="checkLatestMenu">방문 전 최신 메뉴 확인 ↗</a></div>
-          <details class="board-menu" id="board-menu"><summary data-i18n="boardSummary">메뉴판 사진 속 추가 메뉴·세트·주류 보기</summary><p data-i18n="boardCaution">아래 항목은 네이버 메뉴판 사진(2026년 5–6월) 기준입니다. 현재 판매 여부와 가격은 방문 전 매장에 확인해 주세요.</p><div id="board-menu-list" class="board-menu-list"></div></details>
+          <div id="menu-list" class="menu-list" role="tabpanel"><article class="menu-item"><h3>Pig Pork Belly<span>PORK</span></h3><strong>₩17,000</strong><p>Aged Korean pork belly, carefully trimmed</p></article><article class="menu-item"><h3>Pig Pork Neck<span>PORK</span></h3><strong>₩17,000</strong><p>Aged Korean pork neck, carefully trimmed</p></article><article class="menu-item"><h3>Mango-Cut Gabrisal (Pork)<span>PORK</span></h3><strong>₩18,000</strong><p>A prized, tender pork cut</p></article><article class="menu-item"><h3>Hand-sliced Thin Pork Belly<span>PORK</span></h3><strong>₩16,000</strong><p>Fresh pork belly hand-sliced to 3–5mm</p></article><article class="menu-item"><h3>Beef Rib Finger Meat<span>BEEF</span></h3><strong>₩18,000</strong><p>Tender, savory beef rib cut</p></article><article class="menu-item"><h3>Soy-marinated Pork Skin<span>PORK</span></h3><strong>₩10,000</strong><p>Thick pork skin marinated for 48 hours</p></article><article class="menu-item"><h3>Beef Doenjang Stew</h3><strong>₩7,000</strong><p>Traditional soybean stew with beef tendon and brisket</p></article><article class="menu-item"><h3>Beef Doenjang Rice Soup</h3><strong>₩8,000</strong><p>Rice simmered in beef soybean stew</p></article><article class="menu-item"><h3>Cheese Blanket Kimchi Fried Rice</h3><strong>₩8,000</strong><p>Pork kimchi fried rice with mozzarella and emmental</p></article><article class="menu-item"><h3>Cheese Bomb Soft Tofu Stew</h3><strong>₩11,000</strong><p>Beef, noodles, sausage and cheese / 10 a day</p></article><article class="menu-item"><h3>Spicy Seafood Soft Tofu Stew</h3><strong>₩9,000</strong><p>Spicy seafood and soft tofu stew</p></article><article class="menu-item"><h3>Chilled Kimchi Noodles</h3><strong>₩7,000</strong><p>Cold kimchi broth with icy slush and toppings</p></article><article class="menu-item"><h3>Hanmac Creamy Draft Beer</h3><strong>₩4,500</strong><p>Cold Korean draft beer</p></article><article class="menu-item"><h3>Pigbar Highball</h3><strong>₩6,000</strong><p>House highball</p></article><article class="menu-item"><h3>Wine Ade</h3><strong>₩6,000</strong><p>A refreshing wine ade</p></article><article class="menu-item"><h3>Pig Bar Ice Cream<span>FREE</span></h3><strong>FREE</strong><p>One complimentary ice cream per guest after the meal</p></article></div>
+          <div class="menu-note"><span data-i18n="menuUpdated">Naver Place listed menu updated Sep 15, 2026</span><a href="https://pcmap.place.naver.com/restaurant/1006983247/menu" target="_blank" rel="noopener noreferrer" data-i18n="checkLatestMenu">Check the latest menu ↗</a></div>
+          <details class="board-menu" id="board-menu"><summary data-i18n="boardSummary">See additional sets, sides and drinks on the menu board</summary><p data-i18n="boardCaution">These items come from Naver menu-board photos dated May–June 2026. Confirm current availability and prices with the restaurant.</p><div id="board-menu-list" class="board-menu-list"><div class="board-menu-item"><span>Couple Set</span><strong>₩59,000</strong></div><div class="board-menu-item"><span>Best Set</span><strong>₩63,000</strong></div><div class="board-menu-item"><span>Signature Set</span><strong>₩86,000</strong></div><div class="board-menu-item"><span>Seafood Hangover Ramyeon</span><strong>₩8,000</strong></div><div class="board-menu-item"><span>Mussel Soup with Dough Flakes</span><strong>₩14,000</strong></div><div class="board-menu-item"><span>Extra Corn</span><strong>₩2,000</strong></div><div class="board-menu-item"><span>Extra Corn Cheese</span><strong>₩3,000</strong></div><div class="board-menu-item"><span>Steamed Rice</span><strong>₩1,000</strong></div><div class="board-menu-item"><span>Soft Drink</span><strong>₩3,000</strong></div><div class="board-menu-item"><span>Tonic Water / Peach Tonic</span><strong>₩3,000</strong></div><div class="board-menu-item"><span>Lemon Slices</span><strong>₩2,000</strong></div><div class="board-menu-item"><span>Soju (Isul, Cheoeum, Jinro, Saero)</span><strong>₩5,000</strong></div><div class="board-menu-item"><span>Seonyang Oak Soju</span><strong>₩6,000</strong></div><div class="board-menu-item"><span>Cheongha / Hallasan</span><strong>₩6,000</strong></div><div class="board-menu-item"><span>Starlight Cheongha</span><strong>₩7,000</strong></div><div class="board-menu-item"><span>Cass / Terra / Kloud Beer</span><strong>₩5,500</strong></div><div class="board-menu-item"><span>Cass Zero</span><strong>₩4,500</strong></div><div class="board-menu-item"><span>Cass Zero Lemon</span><strong>₩4,500</strong></div><div class="board-menu-item"><span>Stella (Bottle)</span><strong>₩6,000</strong></div><div class="board-menu-item"><span>Alpaca Cabernet Sauvignon (Glass)</span><strong>₩6,000</strong></div><div class="board-menu-item"><span>Alpaca Cabernet Sauvignon (Bottle)</span><strong>₩25,000</strong></div><div class="board-menu-item"><span>Les Déesses Muettes Pinot Noir (Bottle)</span><strong>₩33,000</strong></div><div class="board-menu-item"><span>Extra Highball Shot</span><strong>₩3,000</strong></div><div class="board-menu-item"><span>Extra Wine Ade Shot</span><strong>₩2,000</strong></div></div></details>
         </div>
       </section>
 
       <section class="reviews section-pad" id="reviews" aria-labelledby="reviews-title">
         <div class="shell">
-          <div class="section-heading"><div><p class="section-kicker">PEOPLE SAY</p><h2 id="reviews-title" data-i18n="reviewsTitle">한 번 먹으면<br />남는 이야기.</h2></div></div>
-          <div class="review-source"><span class="stars" aria-hidden="true">★★★★★</span><strong id="review-source-title">네이버 플레이스 방문자 리뷰</strong><a id="review-source-link" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer">원문 보기 ↗</a></div>
-          <p class="review-swipe" data-i18n="reviewSwipe">옆으로 넘겨 리뷰 더 보기 →</p><div id="review-list" class="review-grid" tabindex="0"></div>
+          <div class="section-heading"><div><p class="section-kicker">PEOPLE SAY</p><h2 id="reviews-title" data-i18n="reviewsTitle">From our guests.</h2></div></div>
+          <div class="review-source"><span class="stars" aria-label="Selected five-star Google reviews">5.0 / 5</span><strong id="review-source-title">Google reviews</strong><a id="review-source-link" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer">Read on Google ↗</a></div>
+          <p class="review-swipe" data-i18n="reviewSwipe">Swipe for more reviews →</p><div id="review-list" class="review-grid" tabindex="0" aria-label="Guest reviews, swipe to explore"><article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>… The food was delicious, the service was excellent, and I&#x27;ll definitely come back next time I&#x27;m in the area!</blockquote><a class="review-author" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" aria-label="Mary Delia Bondoc Read full review">Mary Delia Bondoc<span>Google ↗</span></a></article><article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>… very kind to help us out with cooking all the meat. I enjoy the pork belly and neck with their sides the most.</blockquote><a class="review-author" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" aria-label="Albert Cheese Read full review">Albert Cheese<span>Google ↗</span></a></article><article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>Pigbar is the place to go if you love Korean BBQ. … the staff makes sure the grill is always perfect.</blockquote><a class="review-author" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" aria-label="Guillermo Lamiel Read full review">Guillermo Lamiel<span>Google ↗</span></a></article><article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>The pork here is SOOO GOOOD.
+Super tender and juicy!
+The staff cooks the meat for you as well 😊 …</blockquote><a class="review-author" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" aria-label="Chloe Teo Read full review">Chloe Teo<span>Google ↗</span></a></article><article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>REALLY DELICIOUS FOOD 😍 the pork was soft and the staff were really friendly!!
+… Short walk from Hapjeong station, great service!</blockquote><a class="review-author" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" aria-label="erika c. Read full review">erika c.<span>Google ↗</span></a></article></div>
         </div>
       </section>
 
-      <section class="dessert"><div class="shell dessert-inner"><span class="dessert-icon" aria-hidden="true">🍦</span><div><span data-i18n="dessertTag">ONE LAST THING</span><h2 data-i18n="dessertTitle">마지막 한 입은 돼지바.</h2><p data-i18n="dessertBody">식사하신 모든 분께 무료 후식으로 드립니다.</p></div><strong data-i18n="dessertFree">FREE DESSERT</strong></div></section>
+      <section class="dessert"><div class="shell dessert-inner"><span class="dessert-icon" aria-hidden="true">🍦</span><div><span data-i18n="dessertTag">ONE LAST THING</span><h2 data-i18n="dessertTitle">Ice cream is on us.</h2><p data-i18n="dessertBody">One Pig Bar ice cream for every guest after the meal.</p></div><strong data-i18n="dessertFree">FREE DESSERT</strong></div></section>
 
       <section class="visit section-pad" id="visit" aria-labelledby="visit-title">
         <div class="shell">
-          <div class="section-heading"><div><p class="section-kicker">VISIT PIGBAR</p><h2 id="visit-title" data-i18n="visitTitle">합정에서 <br />만나요.</h2></div><p data-i18n="visitIntro">합정역 3번 출구에서 도보 약 314m. 저녁 6시 이후에는 대기가 생길 수 있어요.</p></div>
+          <div class="section-heading"><div><p class="section-kicker">VISIT PIGBAR</p><h2 id="visit-title" data-i18n="visitTitle">See you in Hapjeong.</h2></div><p data-i18n="visitIntro">About 314m from Hapjeong Station Exit 3. There may be a wait after 6 pm.</p></div>
           <div class="visit-grid">
-            <div class="visit-card"><span class="visit-label" data-i18n="addressLabel">주소 / ADDRESS</span><h3 data-i18n="address">서울 마포구 독막로3길 28-7 1층</h3><p data-i18n="station">합정역 3번 출구에서 314m</p><div class="visit-links"><a class="button button-primary" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer" data-i18n="naverMap">네이버 지도</a><a class="button button-outline" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" data-i18n="googleMap">Google Maps</a></div></div>
-            <div class="visit-card"><span class="visit-label" data-i18n="hoursLabel">영업시간 / HOURS</span><div class="hours-row"><span data-i18n="hoursTueThuSun">화–목 · 일</span><strong>17:00–22:30</strong><small data-i18n="lastOrder1">라스트오더 21:30</small></div><div class="hours-row"><span data-i18n="hoursFriSat">금 · 토</span><strong>17:00–23:00</strong><small data-i18n="lastOrder2">라스트오더 22:00</small></div><div class="hours-row"><span data-i18n="hoursMon">월요일</span><strong data-i18n="closed">정기휴무</strong></div></div>
-            <div class="visit-card"><span class="visit-label" data-i18n="contactLabel">예약·문의 / CONTACT</span><h3>0507-1414-1178</h3><p data-i18n="visitNote">예약은 네이버 플레이스에서, 방문 전 변동 영업시간도 확인해 주세요.</p><a class="text-link" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer" data-i18n="visitReserve">예약 및 최신 정보 확인 ↗</a></div>
+            <div class="visit-card"><span class="visit-label" data-i18n="addressLabel">ADDRESS</span><h3 data-i18n="address">1F, 28-7 Dongmak-ro 3-gil, Mapo-gu, Seoul</h3><p data-i18n="station">314m from Hapjeong Station Exit 3</p><div class="visit-links"><a class="button button-primary" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer" data-i18n="naverMap">Naver Map</a><a class="button button-outline" href="https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6" target="_blank" rel="noopener noreferrer" data-i18n="googleMap">Google Maps</a></div></div>
+            <div class="visit-card"><span class="visit-label" data-i18n="hoursLabel">OPENING HOURS</span><div class="hours-row"><span data-i18n="hoursTueThuSun">Tue–Thu · Sun</span><strong>17:00–22:30</strong><small data-i18n="lastOrder1">Last order 21:30</small></div><div class="hours-row"><span data-i18n="hoursFriSat">Fri · Sat</span><strong>17:00–23:00</strong><small data-i18n="lastOrder2">Last order 22:00</small></div><div class="hours-row"><span data-i18n="hoursMon">Monday</span><strong data-i18n="closed">Closed</strong></div></div>
+            <div class="visit-card"><span class="visit-label" data-i18n="contactLabel">BOOKING & CONTACT</span><h3>0507-1414-1178</h3><p data-i18n="visitNote">Book through Naver Place. Please check current hours before visiting.</p><a class="text-link" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer" data-i18n="visitReserve">Book and check updates ↗</a></div>
           </div>
         </div>
       </section>
         </main>
-    <nav class="bottom-actions shell" aria-label="Plan your visit"><a href="#menu"><small>MENU</small><strong data-i18n="quickMenu">메뉴 보기</strong><span aria-hidden="true">↗</span></a><a href="#visit"><small>VISIT</small><strong data-i18n="quickVisit">오는 길</strong><span aria-hidden="true">⌖</span></a><a class="action-reserve" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer"><small>RESERVE</small><strong data-i18n="reserve">예약하기</strong><span aria-hidden="true">↗</span></a></nav>
+    <nav class="bottom-actions shell" aria-label="Plan your visit"><a href="#menu"><small>MENU</small><strong data-i18n="quickMenu">Menu</strong><span aria-hidden="true">↗</span></a><a href="#visit"><small>VISIT</small><strong data-i18n="quickVisit">Directions</strong><span aria-hidden="true">⌖</span></a><a class="action-reserve" href="https://naver.me/5XJIY3Cf" target="_blank" rel="noopener noreferrer"><small>RESERVE</small><strong data-i18n="reserve">Book a table</strong><span aria-hidden="true">↗</span></a></nav>
 
-    <footer class="site-footer"><div class="shell footer-inner"><div><a class="brand" href="#top"><span class="brand-name brand-badge">PIGBAR</span></a><p data-i18n="footerTag">숯불, 돼지고기, 그리고 피그바.</p></div><div><p data-i18n="footerSource">메뉴·영업정보: 네이버 플레이스 (2026.09.30 확인)</p></div></div></footer>
+    <footer class="site-footer"><div class="shell footer-inner"><div><a class="brand" href="#top"><span class="brand-name brand-badge">PIGBAR</span></a><p data-i18n="footerTag">Charcoal, pork and PIGBAR.</p></div><div><p data-i18n="footerSource">Menu and hours: Naver Place (checked Sep 30, 2026)</p></div></div></footer>
+    <script src="../locales.js" defer></script>
     <script src="../app.js" defer></script>
   </body>
 </html>

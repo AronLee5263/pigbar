@@ -1,0 +1,557 @@
+// Shared localization for the four static language pages.
+const PIGBAR_LOCALES = {
+  "ko": {
+    "htmlLang": "ko",
+    "ogLocale": "ko_KR",
+    "ui": {
+      "languageLabel": "언어 선택",
+      "home": "피그바 홈",
+      "primary": "주 메뉴",
+      "quickLinks": "바로가기",
+      "planVisit": "방문 안내",
+      "foodPhotos": "피그바 음식 사진",
+      "photoSelection": "사진 선택",
+      "menuCategories": "메뉴 분류",
+      "menuOpen": "메뉴 열기",
+      "menuClose": "메뉴 닫기",
+      "videoLabel": "피그바 망고 가브리살 영상",
+      "videoPlay": "영상 재생",
+      "videoPause": "영상 일시정지",
+      "videoMute": "영상 소리 끄기",
+      "videoUnmute": "영상 소리 켜기",
+      "signaturePrevious": "이전 대표 메뉴",
+      "signatureNext": "다음 대표 메뉴",
+      "reviewRegion": "방문자 리뷰, 옆으로 넘겨 보기",
+      "reviewReadFull": "전체 원문 보기",
+      "ratingLabel": "네이버 별점 4.88점",
+      "freeLabel": "무료",
+      "tagPork": "PORK",
+      "tagBeef": "BEEF",
+      "tagFree": "FREE",
+      "photoAlts": [
+        "숯불 위에서 구워지는 피그바 돼지고기",
+        "노릇하게 구운 피그바 목살의 촉촉한 단면",
+        "피그바 소고기 된장찌개",
+        "고기듬뿍 치즈이불 김치볶음밥",
+        "한맥 크리미 생맥주"
+      ],
+      "drinkAlts": [
+        "한맥 크리미 생맥주",
+        "피그 하이볼",
+        "와인에이드"
+      ],
+      "bellyAlt": "피그바 숯불 삼겹살"
+    }
+  },
+  "en": {
+    "htmlLang": "en",
+    "ogLocale": "en_US",
+    "ui": {
+      "languageLabel": "Choose language",
+      "home": "PIGBAR home",
+      "primary": "Main navigation",
+      "quickLinks": "Quick links",
+      "planVisit": "Plan your visit",
+      "foodPhotos": "PIGBAR food photos",
+      "photoSelection": "Photo selection",
+      "menuCategories": "Menu categories",
+      "menuOpen": "Open menu",
+      "menuClose": "Close menu",
+      "videoLabel": "PIGBAR mango-cut gabrisal grilling video",
+      "videoPlay": "Play video",
+      "videoPause": "Pause video",
+      "videoMute": "Mute video",
+      "videoUnmute": "Unmute video",
+      "signaturePrevious": "Previous signature dish",
+      "signatureNext": "Next signature dish",
+      "reviewRegion": "Guest reviews, swipe to explore",
+      "reviewReadFull": "Read full review",
+      "ratingLabel": "Selected five-star Google reviews",
+      "freeLabel": "FREE",
+      "tagPork": "PORK",
+      "tagBeef": "BEEF",
+      "tagFree": "FREE",
+      "photoAlts": [
+        "Charcoal-grilled pork at PIGBAR",
+        "A juicy slice of charcoal-grilled pork neck at PIGBAR",
+        "Beef doenjang stew at PIGBAR",
+        "Cheese blanket kimchi fried rice",
+        "Hanmac creamy draft beer"
+      ],
+      "drinkAlts": [
+        "Hanmac creamy draft beer",
+        "Pig highball",
+        "Wine ade"
+      ],
+      "bellyAlt": "Charcoal-grilled pork belly at PIGBAR"
+    }
+  },
+  "zh": {
+    "htmlLang": "zh-Hans",
+    "ogLocale": "zh_CN",
+    "copy": {
+      "skip": "跳转到正文",
+      "navSignature": "招牌菜",
+      "navStory": "PIGBAR的故事",
+      "navMenu": "全部菜单",
+      "navReviews": "顾客评价",
+      "navVisit": "到店指南",
+      "reserve": "预约订位",
+      "heroEyebrow": "合井 · 韩式炭火烤猪肉",
+      "heroTitle": "炭火好肉，认真烤。",
+      "seeMenu": "查看菜单与价格",
+      "reserveNaver": "通过Naver预约",
+      "factAge": "天熟成",
+      "factPork": "五花肉与梅花肉",
+      "factStation": "合井站3号出口",
+      "heroPhotoTag": "第一口",
+      "heroPhotoTitle": "PIG五花肉",
+      "beerPhotoTitle": "PIG梅花肉",
+      "heroBottom": "炭火烧旺，美味的晚餐就此开始。",
+      "signatureTitle": "PIGBAR招牌推荐",
+      "signatureIntro": "柔嫩的梅花肉、热腾腾的牛肉大酱汤，还有满满芝士的泡菜炒饭。",
+      "sigMain": "常客之选",
+      "sigSoup": "来一口热汤",
+      "sigFinish": "最后一盘",
+      "sigBelly": "炭火的香气",
+      "bellyName": "PIG五花肉",
+      "bellyDesc": "熟成10天以上的韩国国产猪肉，每份170克。",
+      "neckName": "PIG梅花肉",
+      "neckDesc": "厚切猪肩颈肉，入口柔嫩。",
+      "stewName": "牛肉大酱汤",
+      "stewDesc": "加入牛筋和薄切牛五花肉，用传统韩式大酱熬煮。",
+      "riceName": "肉多多芝士泡菜炒饭",
+      "riceDesc": "猪肉泡菜炒饭，盖上满满的马苏里拉和埃门塔尔芝士。",
+      "draftName": "Hanmac绵密生啤",
+      "highballName": "PIG高球鸡尾酒",
+      "wineName": "葡萄酒气泡饮",
+      "storyTitle": "烤肉，交给我们。",
+      "storyLead": "店员在桌边为您炭火烤制厚切猪肉，您只需享用美味。",
+      "point1Title": "低温熟成10天以上",
+      "point1Body": "精选韩国国产猪肉，通过熟成提升风味。",
+      "videoCaption": "芒果切花 · PIGBAR",
+      "menuTitle": "全部菜单",
+      "menuAll": "全部",
+      "menuGrill": "烤肉",
+      "menuSide": "主食与配菜",
+      "menuDrink": "饮品",
+      "menuUpdated": "Naver Place菜单更新：2026.09.15",
+      "checkLatestMenu": "查看最新菜单 ↗",
+      "boardSummary": "查看菜单板上的套餐、配菜与酒水",
+      "boardCaution": "以下项目来自2026年5月至6月的Naver菜单板照片。当前供应情况和价格，请向店家确认。",
+      "reviewSwipe": "左右滑动，查看更多评价 →",
+      "reviewsTitle": "听听顾客怎么说",
+      "reviewSource": "Google顾客评价（译文）",
+      "reviewLink": "查看Google原文 ↗",
+      "dessertTag": "最后的小惊喜",
+      "dessertTitle": "最后一口，送您冰淇淋。",
+      "dessertBody": "用餐后，每位顾客可免费享用一支韩国Dwaejiba冰淇淋。",
+      "dessertFree": "免费甜点",
+      "visitTitle": "合井见。",
+      "visitIntro": "距合井站3号出口步行约314米。晚上6点后可能需要等位。",
+      "addressLabel": "地址",
+      "address": "首尔市麻浦区 Dongmak-ro 3-gil 28-7，1层",
+      "station": "距合井站3号出口314米",
+      "naverMap": "Naver地图",
+      "googleMap": "Google地图",
+      "hoursLabel": "营业时间",
+      "hoursTueThuSun": "周二至周四、周日",
+      "hoursFriSat": "周五、周六",
+      "hoursMon": "周一",
+      "lastOrder1": "最后点单 21:30",
+      "lastOrder2": "最后点单 22:00",
+      "closed": "固定休息日",
+      "contactLabel": "预约与咨询",
+      "visitNote": "请通过Naver Place预约，来店前也请确认最新营业时间。",
+      "visitReserve": "预约并查看最新信息 ↗",
+      "footerTag": "炭火、猪肉，还有PIGBAR。",
+      "footerSource": "菜单与营业信息：Naver Place（2026.09.30确认）",
+      "pageTitle": "PIGBAR | 首尔合井韩式炭火烤猪肉",
+      "pageDescription": "首尔合井PIGBAR：熟成韩国猪肉、柔嫩梅花肉、店员桌边炭火烤制、牛肉大酱汤与芝士泡菜炒饭。查看完整菜单、价格、营业时间和交通指南。",
+      "quickMenu": "查看菜单",
+      "quickVisit": "交通指南",
+      "experienceTitle": "在PIGBAR，享受一顿好晚餐。",
+      "experiencePork": "厚切梅花肉",
+      "experiencePorkBody": "厚切，也柔嫩。",
+      "experienceGrill": "店员帮您烤",
+      "experienceGrillBody": "轻松坐好，享用美味。",
+      "experienceFinish": "美味收尾",
+      "experienceFinishBody": "从热汤到芝士炒饭。",
+      "signatureSwipe": "左右滑动，查看招牌菜",
+      "seeFullMenu": "查看完整菜单与价格 →",
+      "drinkHeading": "烤肉，再配一杯"
+    },
+    "ui": {
+      "languageLabel": "选择语言",
+      "home": "PIGBAR首页",
+      "primary": "主导航",
+      "quickLinks": "快捷入口",
+      "planVisit": "到店指南",
+      "foodPhotos": "PIGBAR美食照片",
+      "photoSelection": "选择照片",
+      "menuCategories": "菜单分类",
+      "menuOpen": "打开菜单",
+      "menuClose": "关闭菜单",
+      "videoLabel": "PIGBAR芒果切花猪肉烤制视频",
+      "videoPlay": "播放视频",
+      "videoPause": "暂停视频",
+      "videoMute": "关闭视频声音",
+      "videoUnmute": "开启视频声音",
+      "signaturePrevious": "上一道招牌菜",
+      "signatureNext": "下一道招牌菜",
+      "reviewRegion": "顾客评价，可左右滑动",
+      "reviewReadFull": "查看评价原文",
+      "ratingLabel": "精选Google五星评价",
+      "freeLabel": "免费",
+      "tagPork": "猪肉",
+      "tagBeef": "牛肉",
+      "tagFree": "免费",
+      "photoAlts": [
+        "PIGBAR炭火烤猪肉",
+        "PIGBAR厚切梅花肉柔嫩多汁的切面",
+        "牛肉大酱汤",
+        "肉多多芝士泡菜炒饭",
+        "Hanmac绵密生啤"
+      ],
+      "drinkAlts": [
+        "Hanmac绵密生啤",
+        "PIG高球鸡尾酒",
+        "葡萄酒气泡饮"
+      ],
+      "bellyAlt": "PIGBAR炭火烤五花肉"
+    },
+    "menu": [
+      [
+        "PIG五花肉",
+        "熟成10天以上的韩国国产1+等级猪五花肉"
+      ],
+      [
+        "PIG梅花肉",
+        "熟成10天以上的韩国国产1+等级猪肩颈肉"
+      ],
+      [
+        "芒果切花猪肉（Gabrisal）",
+        "每头猪仅有少量的稀少部位，切成芒果花形"
+      ],
+      [
+        "手切薄片五花肉",
+        "新鲜五花肉，手切成3至5毫米薄片"
+      ],
+      [
+        "牛肋条肉",
+        "鲜香有弹性的牛肋间肉"
+      ],
+      [
+        "自制酱油蜂窝猪皮",
+        "用自制酱油腌制48小时的厚切猪皮"
+      ],
+      [
+        "牛肉大酱汤",
+        "用传统大酱熬煮，加入牛筋与薄切牛五花肉"
+      ],
+      [
+        "老爸牛肉大酱汤饭",
+        "将米饭加入牛肉大酱汤，一起熬煮"
+      ],
+      [
+        "肉多多芝士泡菜炒饭",
+        "猪肉泡菜炒饭，配马苏里拉与埃门塔尔芝士"
+      ],
+      [
+        "芝士爆多嫩豆腐汤",
+        "牛五花肉、韩式劲道面、香肠与芝士；每天限量10份"
+      ],
+      [
+        "香辣海鲜嫩豆腐汤",
+        "海鲜与嫩豆腐熬成的香辣热汤"
+      ],
+      [
+        "冰爽泡菜汤面",
+        "带冰沙与配料的清爽泡菜冷汤面"
+      ],
+      [
+        "Hanmac绵密生啤",
+        "冰凉顺滑的韩国生啤"
+      ],
+      [
+        "PIGBAR高球鸡尾酒",
+        "店内特调高球鸡尾酒"
+      ],
+      [
+        "葡萄酒气泡饮",
+        "清爽易饮的葡萄酒气泡饮"
+      ],
+      [
+        "Dwaejiba冰淇淋",
+        "用餐后，每人免费享用一支冰淇淋"
+      ]
+    ],
+    "boardMenu": [
+      "双人套餐",
+      "人气套餐",
+      "招牌套餐",
+      "海鲜解酒拉面",
+      "手撕面片贻贝汤",
+      "加玉米",
+      "加芝士玉米",
+      "米饭",
+      "汽水",
+      "汤力水／蜜桃汤力水",
+      "柠檬片",
+      "烧酒（Chamisul／Chum Churum／Jinro／Saero）",
+      "Seonyang Oak烧酒",
+      "Cheongha清酒／Hallasan烧酒",
+      "Starlight Cheongha气泡酒",
+      "Cass／Terra／Kloud啤酒",
+      "Cass Zero无酒精啤酒",
+      "Cass Zero柠檬味无酒精啤酒",
+      "Stella瓶装啤酒",
+      "Alpaca赤霞珠葡萄酒（杯）",
+      "Alpaca赤霞珠葡萄酒（瓶）",
+      "Les Déesses Muettes黑皮诺葡萄酒（瓶）",
+      "高球加一份基酒",
+      "葡萄酒气泡饮加一份酒"
+    ],
+    "reviews": [
+      "……食物很美味，服务也很棒。下次来这一带，我一定还会再来！",
+      "……他们非常友善，帮我们把所有肉都烤好了。搭配配菜，我最喜欢五花肉和梅花肉。",
+      "如果你喜欢韩式烤肉，PIGBAR就是值得去的地方。……店员总会把肉烤得恰到好处。",
+      "这里的猪肉真的太好吃了。\n超级柔嫩多汁！\n店员还会帮你烤肉 😊 ……",
+      "食物真的非常美味 😍 猪肉很嫩，店员也非常友善！\n……从合井站走一小段路就到，服务很棒！"
+    ]
+  },
+  "ja": {
+    "htmlLang": "ja",
+    "ogLocale": "ja_JP",
+    "copy": {
+      "skip": "本文へスキップ",
+      "navSignature": "おすすめ",
+      "navStory": "PIGBARについて",
+      "navMenu": "全メニュー",
+      "navReviews": "口コミ",
+      "navVisit": "アクセス",
+      "reserve": "予約する",
+      "heroEyebrow": "合井 · 韓国式炭火焼肉",
+      "heroTitle": "本気の炭火焼肉。",
+      "seeMenu": "メニューと価格を見る",
+      "reserveNaver": "Naverで予約する",
+      "factAge": "日熟成",
+      "factPork": "豚バラ・肩ロース",
+      "factStation": "合井駅3番出口から",
+      "heroPhotoTag": "最初のひと口",
+      "heroPhotoTitle": "PIGサムギョプサル",
+      "beerPhotoTitle": "PIGモクサル",
+      "heroBottom": "炭火が熾ったら、おいしい夜の始まり。",
+      "signatureTitle": "PIGBARのおすすめ",
+      "signatureIntro": "やわらかな豚肩ロース、熱々のテンジャンチゲ、チーズたっぷりのキムチチャーハン。",
+      "sigMain": "常連さんの定番",
+      "sigSoup": "温かいひと口",
+      "sigFinish": "締めの一皿",
+      "sigBelly": "炭火の香ばしさ",
+      "bellyName": "PIGサムギョプサル",
+      "bellyDesc": "10日以上熟成した韓国産の豚バラ肉。1皿170g。",
+      "neckName": "PIGモクサル（豚肩ロース）",
+      "neckDesc": "厚切りなのに、しっとりやわらか。",
+      "stewName": "牛肉テンジャンチゲ",
+      "stewDesc": "牛すじと薄切り牛バラ肉を使った、韓国の伝統的な味噌チゲ。",
+      "riceName": "お肉たっぷりチーズキムチチャーハン",
+      "riceDesc": "豚肉入りキムチチャーハンに、モッツァレラとエメンタールチーズをたっぷり。",
+      "draftName": "ハンマック クリーミー生ビール",
+      "highballName": "PIGハイボール",
+      "wineName": "ワインエード",
+      "storyTitle": "焼くのは、おまかせ。",
+      "storyLead": "厚切りの豚肉を、スタッフがテーブルで炭火焼きに。ゆっくりお楽しみください。",
+      "point1Title": "10日以上の低温熟成",
+      "point1Body": "厳選した韓国産豚肉を熟成させ、旨みを引き出します。",
+      "videoCaption": "マンゴーカット · PIGBAR",
+      "menuTitle": "全メニュー",
+      "menuAll": "すべて",
+      "menuGrill": "焼肉",
+      "menuSide": "食事・サイド",
+      "menuDrink": "ドリンク",
+      "menuUpdated": "Naver Placeのメニュー更新：2026.09.15",
+      "checkLatestMenu": "最新メニューを確認 ↗",
+      "boardSummary": "メニュー写真のセット・サイド・ドリンクを見る",
+      "boardCaution": "以下は2026年5〜6月のNaverメニュー写真に掲載された内容です。現在の販売状況と価格は、お店にご確認ください。",
+      "reviewSwipe": "横にスワイプして口コミを見る →",
+      "reviewsTitle": "お客様の声",
+      "reviewSource": "Googleの口コミ（翻訳）",
+      "reviewLink": "Googleで原文を見る ↗",
+      "dessertTag": "最後のお楽しみ",
+      "dessertTitle": "締めに、アイスをどうぞ。",
+      "dessertBody": "お食事後、皆さまに韓国の「テジバー」アイスを1本ずつサービス。",
+      "dessertFree": "無料デザート",
+      "visitTitle": "合井でお待ちしています。",
+      "visitIntro": "合井（ハプチョン）駅3番出口から約314m。18時以降はお待ちいただく場合があります。",
+      "addressLabel": "住所",
+      "address": "ソウル市麻浦区 Dongmak-ro 3-gil 28-7・1階",
+      "station": "合井駅3番出口から314m",
+      "naverMap": "Naverマップ",
+      "googleMap": "Googleマップ",
+      "hoursLabel": "営業時間",
+      "hoursTueThuSun": "火〜木・日",
+      "hoursFriSat": "金・土",
+      "hoursMon": "月曜日",
+      "lastOrder1": "ラストオーダー 21:30",
+      "lastOrder2": "ラストオーダー 22:00",
+      "closed": "定休日",
+      "contactLabel": "予約・お問い合わせ",
+      "visitNote": "ご予約はNaver Placeから。ご来店前に最新の営業時間もご確認ください。",
+      "visitReserve": "予約・最新情報はこちら ↗",
+      "footerTag": "炭火、豚肉、そしてPIGBAR。",
+      "footerSource": "メニュー・営業情報：Naver Place（2026.09.30確認）",
+      "pageTitle": "PIGBAR | ソウル・合井の韓国式炭火焼肉",
+      "pageDescription": "ソウル・合井のPIGBAR。熟成した韓国産豚肉、やわらかな豚肩ロース、スタッフによる炭火グリル、牛肉テンジャンチゲとチーズキムチチャーハン。全メニュー・価格・営業時間・アクセスをご案内。",
+      "quickMenu": "メニュー",
+      "quickVisit": "アクセス",
+      "experienceTitle": "PIGBARで、おいしい夜を。",
+      "experiencePork": "厚切りモクサル",
+      "experiencePorkBody": "厚切り、やわらか。",
+      "experienceGrill": "スタッフが焼きます",
+      "experienceGrillBody": "ゆっくりお楽しみください。",
+      "experienceFinish": "おいしい締め",
+      "experienceFinishBody": "チゲからチャーハンまで。",
+      "signatureSwipe": "横にスワイプして料理を見る",
+      "seeFullMenu": "全メニューと価格を見る →",
+      "drinkHeading": "焼肉に、もう一杯"
+    },
+    "ui": {
+      "languageLabel": "言語を選択",
+      "home": "PIGBARホーム",
+      "primary": "メインナビゲーション",
+      "quickLinks": "クイックリンク",
+      "planVisit": "ご来店のご案内",
+      "foodPhotos": "PIGBARの料理写真",
+      "photoSelection": "写真を選択",
+      "menuCategories": "メニューの種類",
+      "menuOpen": "メニューを開く",
+      "menuClose": "メニューを閉じる",
+      "videoLabel": "PIGBARのマンゴーカット・カブリサルの動画",
+      "videoPlay": "動画を再生",
+      "videoPause": "動画を一時停止",
+      "videoMute": "動画をミュート",
+      "videoUnmute": "動画の音声をオン",
+      "signaturePrevious": "前のおすすめ料理",
+      "signatureNext": "次のおすすめ料理",
+      "reviewRegion": "お客様の口コミ。横にスワイプできます",
+      "reviewReadFull": "口コミの原文を見る",
+      "ratingLabel": "選りすぐりのGoogle星5つの口コミ",
+      "freeLabel": "無料",
+      "tagPork": "豚肉",
+      "tagBeef": "牛肉",
+      "tagFree": "無料",
+      "photoAlts": [
+        "PIGBARの炭火焼き豚肉",
+        "しっとりジューシーな炭火焼きモクサルの断面",
+        "牛肉テンジャンチゲ",
+        "お肉たっぷりチーズキムチチャーハン",
+        "ハンマック クリーミー生ビール"
+      ],
+      "drinkAlts": [
+        "ハンマック クリーミー生ビール",
+        "PIGハイボール",
+        "ワインエード"
+      ],
+      "bellyAlt": "PIGBARの炭火サムギョプサル"
+    },
+    "menu": [
+      [
+        "PIGサムギョプサル",
+        "10日以上熟成した、韓国産1+等級の豚バラ肉"
+      ],
+      [
+        "PIGモクサル（豚肩ロース）",
+        "10日以上熟成した、韓国産1+等級の豚肩ロース"
+      ],
+      [
+        "マンゴーカット・カブリサル",
+        "豚1頭から少量しか取れない希少部位を、マンゴーのように格子状にカット"
+      ],
+      [
+        "手切りの薄切りサムギョプサル",
+        "生の豚バラ肉を、3〜5mmの厚さに手切り"
+      ],
+      [
+        "牛カルビ（肋間肉）",
+        "弾力があり、香ばしい牛の肋間肉"
+      ],
+      [
+        "自家製醤油だれの蜂の巣カット豚皮",
+        "厚切りの豚皮を、自家製醤油だれに48時間漬け込み"
+      ],
+      [
+        "牛肉テンジャンチゲ",
+        "牛すじと薄切り牛バラ肉入りの、韓国味噌チゲ"
+      ],
+      [
+        "お父さんのテンジャンチゲご飯",
+        "牛肉テンジャンチゲにご飯を入れて煮込んだ一品"
+      ],
+      [
+        "お肉たっぷりチーズキムチチャーハン",
+        "豚肉入りキムチチャーハンに、モッツァレラとエメンタールチーズ"
+      ],
+      [
+        "チーズたっぷりスンドゥブチゲ",
+        "牛バラ肉・チョルミョン・ソーセージ・チーズ入り。1日10食限定"
+      ],
+      [
+        "ピリ辛海鮮スンドゥブチゲ",
+        "海鮮とやわらかな豆腐の、ピリ辛チゲ"
+      ],
+      [
+        "シャリシャリ氷のキムチスープ麺",
+        "シャーベット状の氷と具を添えた、冷たいキムチスープの麺"
+      ],
+      [
+        "ハンマック クリーミー生ビール",
+        "冷たく、なめらかな韓国の生ビール"
+      ],
+      [
+        "PIGBARハイボール",
+        "お店特製のハイボール"
+      ],
+      [
+        "ワインエード",
+        "すっきり楽しめるワインエード"
+      ],
+      [
+        "テジバーアイス",
+        "お食事後、皆さまに1本ずつ無料でサービス"
+      ]
+    ],
+    "boardMenu": [
+      "ペアセット",
+      "人気セット",
+      "シグネチャーセット",
+      "海鮮たっぷりヘジャンラーメン",
+      "すいとん入りムール貝スープ",
+      "コーン追加",
+      "コーンチーズ追加",
+      "ライス",
+      "ソフトドリンク",
+      "トニックウォーター／ピーチトニック",
+      "レモンスライス",
+      "焼酎（チャミスル・チョウムチョロム・ジンロ・セロ）",
+      "ソニャンオーク焼酎",
+      "チョンハ／ハルラサン",
+      "ピョルビッチョンハ",
+      "カス／テラ／クラウドビール",
+      "カスゼロ",
+      "カスゼロ レモン",
+      "ステラ（瓶）",
+      "アルパカ カベルネ・ソーヴィニヨン（グラス）",
+      "アルパカ カベルネ・ソーヴィニヨン（ボトル）",
+      "Les Déesses Muettes ピノ・ノワール（ボトル）",
+      "ハイボールのショット追加",
+      "ワインエードのショット追加"
+    ],
+    "reviews": [
+      "…料理はおいしく、サービスも素晴らしかったです。この辺りに来たら、絶対にまた訪れます！",
+      "…スタッフはとても親切で、お肉を全部焼いてくれました。付け合わせと一緒に食べる豚バラと豚肩ロースが特に好きです。",
+      "韓国焼肉が好きなら、PIGBARは行くべきお店です。…スタッフがお肉をいつも最高の焼き加減にしてくれます。",
+      "ここの豚肉は本当においしいです。\nとてもやわらかくてジューシー！\nスタッフがお肉を焼いてくれます 😊 …",
+      "本当においしい料理でした 😍 豚肉はやわらかく、スタッフもとても親切でした！\n…合井駅から少し歩くだけで、サービスも素晴らしいです！"
+    ]
+  }
+};

@@ -60,10 +60,14 @@ Object.assign(copy.en, {
   storyTitle:'We grill. You enjoy.', storyLead:'Our team grills your pork over charcoal, right at your table.',
   menuTitle:'The full menu.', reviewsTitle:'From our guests.', visitTitle:'See you in Hapjeong.'
 });
+// Keep names, ingredients and prices aligned across language pages.
+for (const lang of ['zh', 'ja']) {
+  copy[lang] = {...copy.en, ...PIGBAR_LOCALES[lang].copy};
+}
 const menu = [
   {category:'grill',ko:'피그삼겹살',en:'Pig Pork Belly',descKo:'+1등급 한돈 삼겹살, 10일 이상 숙성',descEn:'Aged Korean pork belly, carefully trimmed',price:17000,tag:'PORK'},
   {category:'grill',ko:'피그목살',en:'Pig Pork Neck',descKo:'+1등급 한돈 목살, 10일 이상 숙성',descEn:'Aged Korean pork neck, carefully trimmed',price:17000,tag:'PORK'},
-  {category:'grill',ko:'망고 가브리살',en:'Mango Cut Pork Jowl',descKo:'한 마리에서 소량만 나오는 희귀부위',descEn:'A prized, tender pork cut',price:18000,tag:'PORK'},
+  {category:'grill',ko:'망고 가브리살',en:'Mango-Cut Gabrisal (Pork)',descKo:'한 마리에서 소량만 나오는 희귀부위',descEn:'A prized, tender pork cut',price:18000,tag:'PORK'},
   {category:'grill',ko:'칼맛 생대패 삼겹살',en:'Hand-sliced Thin Pork Belly',descKo:'생삼겹을 3–5mm로 직접 썰어냄',descEn:'Fresh pork belly hand-sliced to 3–5mm',price:16000,tag:'PORK'},
   {category:'grill',ko:'소갈비살',en:'Beef Rib Finger Meat',descKo:'탱글하고 고소한 늑간살',descEn:'Tender, savory beef rib cut',price:18000,tag:'BEEF'},
   {category:'grill',ko:'수제 간장 벌집껍데기',en:'Soy-marinated Pork Skin',descKo:'수제 간장 양념에 48시간 숙성',descEn:'Thick pork skin marinated for 48 hours',price:10000,tag:'PORK'},
@@ -127,6 +131,16 @@ reviews.en.push(
   {text:'The pork here is SOOO GOOOD.\nSuper tender and juicy!\nThe staff cooks the meat for you as well 😊 …',author:'Chloe Teo',date:'Google',url:GOOGLE_URL},
   {text:'REALLY DELICIOUS FOOD 😍 the pork was soft and the staff were really friendly!!\n… Short walk from Hapjeong station, great service!',author:'erika c.',date:'Google',url:GOOGLE_URL}
 );
+for (const lang of ['zh', 'ja']) {
+  const localized = PIGBAR_LOCALES[lang];
+  menu.forEach((item, index) => {
+    item[lang] = localized.menu[index][0];
+    item['desc' + lang[0].toUpperCase() + lang.slice(1)] = localized.menu[index][1];
+  });
+  boardMenu.forEach((item, index) => { item[lang] = localized.boardMenu[index]; });
+  // These are translations of the same selected reviews, with original authors and links.
+  reviews[lang] = reviews.en.map((item, index) => ({...item, text:localized.reviews[index]}));
+}
 let currentLang = 'ko';
 let currentCategory = 'all';
 const menuList = document.getElementById('menu-list');
@@ -135,26 +149,27 @@ const reviewList = document.getElementById('review-list');
 function renderMenu() {
   const shown = menu.filter(item => currentCategory === 'all' || item.category === currentCategory);
   menuList.innerHTML = shown.map(item => {
-    const name = currentLang === 'ko' ? item.ko : item.en;
-    const desc = currentLang === 'ko' ? item.descKo : item.descEn;
-    const price = item.price ? `₩${item.price.toLocaleString('ko-KR')}` : (currentLang === 'ko' ? '무료' : 'FREE');
-    const tag = item.tag ? `<span>${item.tag}</span>` : '';
+    const name = item[currentLang];
+    const desc = item['desc' + currentLang[0].toUpperCase() + currentLang.slice(1)];
+    const price = item.price ? `₩${item.price.toLocaleString('ko-KR')}` : PIGBAR_LOCALES[currentLang].ui.freeLabel;
+    const tags = {PORK:PIGBAR_LOCALES[currentLang].ui.tagPork, BEEF:PIGBAR_LOCALES[currentLang].ui.tagBeef, FREE:PIGBAR_LOCALES[currentLang].ui.tagFree};
+    const tag = item.tag ? `<span>${tags[item.tag]}</span>` : '';
     return `<article class="menu-item"><h3>${name}${tag}</h3><strong>${price}</strong><p>${desc}</p></article>`;
   }).join('');
 }
 
 function renderBoardMenu() {
-  document.getElementById('board-menu-list').innerHTML = boardMenu.map(item => `<div class="board-menu-item"><span>${currentLang === 'ko' ? item.ko : item.en}</span><strong>₩${item.price.toLocaleString('ko-KR')}</strong></div>`).join('');
+  document.getElementById('board-menu-list').innerHTML = boardMenu.map(item => `<div class="board-menu-item"><span>${item[currentLang]}</span><strong>₩${item.price.toLocaleString('ko-KR')}</strong></div>`).join('');
 }
 
 function renderReviews() {
   const list = reviews[currentLang];
-  reviewList.setAttribute('aria-label', currentLang === 'ko' ? '방문자 리뷰, 옆으로 넘겨 보기' : 'Guest reviews, swipe to explore');
-  reviewList.innerHTML = list.map(item => `<article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>${item.text}</blockquote><a class="review-author" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${item.author} ${currentLang === 'ko' ? '전체 원문 보기' : 'read full review'}">${item.author}<span>${item.date} ↗</span></a></article>`).join('');
+  reviewList.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui.reviewRegion);
+  reviewList.innerHTML = list.map(item => `<article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>${item.text}</blockquote><a class="review-author" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${item.author} ${PIGBAR_LOCALES[currentLang].ui.reviewReadFull}">${item.author}<span>${item.date} ↗</span></a></article>`).join('');
   document.getElementById('review-source-title').textContent = copy[currentLang].reviewSource;
   const rating = document.querySelector('.review-source .stars');
   rating.textContent = currentLang === 'ko' ? '4.88 / 5' : '5.0 / 5';
-  rating.setAttribute('aria-label', currentLang === 'ko' ? '네이버 별점 4.88점' : 'Selected five-star reviews');
+  rating.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui.ratingLabel);
   const link = document.getElementById('review-source-link');
   link.textContent = copy[currentLang].reviewLink;
   link.href = currentLang === 'ko' ? NAVER_URL : GOOGLE_URL;
@@ -162,8 +177,9 @@ function renderReviews() {
 
 function setLanguage(lang) {
   currentLang = lang;
-  document.documentElement.lang = lang;
-  document.body.classList.toggle('lang-en', lang === 'en');
+  document.documentElement.lang = PIGBAR_LOCALES[lang].htmlLang;
+  document.documentElement.dataset.language = lang;
+  for (const code of ['ko','en','zh','ja']) document.body.classList.toggle('lang-' + code, code === lang);
   for (const element of document.querySelectorAll('[data-i18n]')) {
     element.innerHTML = copy[lang][element.dataset.i18n];
   }
@@ -175,7 +191,9 @@ function setLanguage(lang) {
   }
   document.title = copy[lang].pageTitle;
   document.querySelector('meta[name="description"]').content = copy[lang].pageDescription;
-  document.querySelector('.nav-toggle').setAttribute('aria-label',lang === 'ko' ? '메뉴 열기' : 'Open menu');
+  localizeAccessibility();
+  const languageSelect = document.getElementById('language-select');
+  languageSelect.value = languageSelect.querySelector('[data-lang="' + lang + '"]').value;
   renderMenu();
   renderBoardMenu();
   renderReviews();
@@ -196,10 +214,12 @@ const nav = document.getElementById('main-nav');
 navToggle.addEventListener('click', () => {
   const open = nav.classList.toggle('is-open');
   navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui[open ? 'menuClose' : 'menuOpen']);
 });
 nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   nav.classList.remove('is-open');
   navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui.menuOpen);
 }));
 
 const video = document.getElementById('grill-video');
@@ -208,18 +228,18 @@ videoToggle.addEventListener('click', () => {
   if (video.paused) {
     video.play().catch(() => {});
     videoToggle.textContent = 'Ⅱ';
-    videoToggle.setAttribute('aria-label', currentLang === 'ko' ? '영상 일시정지' : 'Pause video');
+    videoToggle.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui.videoPause);
   } else {
     video.pause();
     videoToggle.textContent = '▶';
-    videoToggle.setAttribute('aria-label', currentLang === 'ko' ? '영상 재생' : 'Play video');
+    videoToggle.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui.videoPlay);
   }
 });
 const videoSound = document.getElementById('video-sound');
 videoSound.addEventListener('click', () => {
   video.muted = !video.muted;
   videoSound.classList.toggle('is-on', !video.muted);
-  videoSound.setAttribute('aria-label', currentLang === 'ko' ? (video.muted ? '영상 소리 켜기' : '영상 소리 끄기') : (video.muted ? 'Unmute video' : 'Mute video'));
+  videoSound.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui[video.muted ? 'videoUnmute' : 'videoMute']);
   videoSound.setAttribute('aria-pressed', String(!video.muted));
 });
 
@@ -231,7 +251,21 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 }
 
 
-setLanguage(/(^|\/)en(\/|$)/.test(location.pathname) ? 'en' : 'ko');
+function localizeAccessibility() {
+  const ui = PIGBAR_LOCALES[currentLang].ui;
+  const labels = {'.header-inner > .brand':'home', '#main-nav':'primary', '.lang-switch':'languageLabel', '#language-select':'languageLabel', '.quick-nav':'quickLinks', '.bottom-actions':'planVisit', '#hero-track':'foodPhotos', '.hero-dots':'photoSelection', '.menu-tabs':'menuCategories', '.nav-toggle':'menuOpen', '#grill-video':'videoLabel', '#video-toggle':video.paused ? 'videoPlay' : 'videoPause', '#video-sound':video.muted ? 'videoUnmute' : 'videoMute', '#signature-prev':'signaturePrevious', '#signature-next':'signatureNext'};
+  for (const [selector, key] of Object.entries(labels)) document.querySelector(selector).setAttribute('aria-label', ui[key]);
+  document.querySelectorAll('.hero-slide img').forEach((img, index) => { img.alt = ui.photoAlts[index]; });
+  document.querySelectorAll('[data-slide]').forEach((button, index) => button.setAttribute('aria-label', ui.photoAlts[index]));
+  const signatureAlts = [ui.photoAlts[1], ui.bellyAlt, ui.photoAlts[2], ui.photoAlts[3]];
+  document.querySelectorAll('.signature-card img').forEach((img, index) => { img.alt = signatureAlts[index]; });
+  document.querySelectorAll('.drink-card img').forEach((img, index) => { img.alt = ui.drinkAlts[index]; });
+}
+document.getElementById('language-select').addEventListener('change', event => {
+  window.location.assign(event.target.value);
+});
+const pageLanguage = document.documentElement.dataset.language || 'ko';
+setLanguage(Object.hasOwn(copy, pageLanguage) ? pageLanguage : 'ko');
 
 // Manual photo carousel: swipe or use the dots, with no automatic motion.
 const heroTrack = document.getElementById('hero-track');
@@ -255,9 +289,6 @@ heroTrack.addEventListener('keydown', event => {
   const current = Math.round(heroTrack.scrollLeft / heroTrack.clientWidth);
   showHeroSlide(Math.max(0, Math.min(heroDots.length - 1, current + (event.key === 'ArrowRight' ? 1 : -1))));
 });
-if (currentLang === 'en') {
-  ['Charcoal pork photo', 'Pork neck photo', 'Soybean stew photo', 'Kimchi fried rice photo', 'Draft beer photo'].forEach((label, index) => heroDots[index].setAttribute('aria-label', label));
-}
 // Signature cards show a visible next card and explicit browsing controls.
 const signatureTrack = document.getElementById('signature-track');
 const signatureCards = [...signatureTrack.querySelectorAll('.signature-card')];
@@ -283,8 +314,4 @@ signatureTrack.addEventListener('keydown', event => {
   event.preventDefault();
   showSignature(signatureIndex + (event.key === 'ArrowRight' ? 1 : -1));
 });
-if (currentLang === 'en') {
-  signaturePrevious.setAttribute('aria-label','Previous signature dish');
-  signatureNext.setAttribute('aria-label','Next signature dish');
-}
 updateSignaturePosition();

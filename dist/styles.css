@@ -319,3 +319,34 @@ h2{font-size:36px;line-height:1.25;letter-spacing:-.05em;font-weight:900}
  .video-caption{font-size:8px}
  .review-card{flex-basis:88%}
 }
+/* Four-language navigation stays clear of the centered mobile wordmark. */
+.lang-select{display:none}
+.lang-switch{gap:10px}
+body.lang-zh{font-family:"Noto Sans SC","Noto Sans KR",sans-serif}
+body.lang-ja{font-family:"Noto Sans JP","Noto Sans KR",sans-serif}
+.lang-zh .review-card blockquote,.lang-ja .review-card blockquote{word-break:normal;overflow-wrap:anywhere}
+.lang-ja .experience h3{white-space:normal}
+@media(max-width:850px){
+ .lang-switch .lang-button{display:none}
+ .lang-select{display:block;width:86px;min-height:44px;background:#251c18;color:#fff;border:1px solid #ffffff35;border-radius:4px;padding:7px 4px;font:700 11px "DM Sans","Noto Sans JP","Noto Sans SC",sans-serif;color-scheme:dark}
+ .header-actions{margin-left:auto;gap:0}
+}
+@media(max-width:600px){
+ .lang-zh .hero h1{font-size:clamp(27px,7.8vw,36px);letter-spacing:-.035em}
+ .lang-ja .hero h1{font-size:clamp(26px,7.7vw,35px);letter-spacing:-.035em}
+ .lang-zh .experience h2,.lang-ja .experience h2{font-size:clamp(20px,5.6vw,24px)}
+ .lang-ja .experience h3{font-size:12px;line-height:1.5;min-height:36px}
+ .lang-ja #visit-title{font-size:clamp(20px,5.7vw,25px);letter-spacing:-.035em}
+ .lang-ja .dessert h2{font-size:clamp(16px,4.6vw,20px)}
+ .lang-zh .signature-info h3,.lang-ja .signature-info h3{font-size:18px;word-break:normal;overflow-wrap:anywhere}
+ .lang-ja .drink-card h3{font-size:12px}
+ .lang-ja .signature-browse>span{max-width:150px}
+ .lang-ja .hours-row{column-gap:8px}
+}
+
+/* CJK sentences may wrap inside the three compact experience columns. */
+.experience-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.experience-grid>a{min-width:0}
+.lang-ja .experience p:not(.section-kicker),.lang-zh .experience p:not(.section-kicker){word-break:normal;overflow-wrap:anywhere}
+
+.lang-ja .signature-info h3,.lang-zh .signature-info h3{word-break:normal;overflow-wrap:anywhere}
