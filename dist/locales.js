@@ -33,7 +33,9 @@ const PIGBAR_LOCALES = {
         "노릇하게 구운 피그바 목살의 촉촉한 단면",
         "피그바 소고기 된장찌개",
         "고기듬뿍 치즈이불 김치볶음밥",
-        "한맥 크리미 생맥주"
+        "한맥 크리미 생맥주",
+        "피그바 소갈비살 대표 메뉴 사진",
+        "피그바 수제 간장 벌집껍데기 대표 메뉴 사진"
       ],
       "drinkAlts": [
         "한맥 크리미 생맥주",
@@ -41,10 +43,17 @@ const PIGBAR_LOCALES = {
         "와인에이드"
       ],
       "bellyAlt": "피그바 숯불 삼겹살",
-      "candidateLabel": "목살 후보 {number}",
-      "candidateAlt": "구운 목살 사진 후보 {number}",
       "heroPrevious": "이전 사진",
-      "heroNext": "다음 사진"
+      "heroNext": "다음 사진",
+      "selectedNeckAlts": {
+        "01": "노릇하게 구운 피그바 목살",
+        "04": "숯불 연기와 함께 놓인 구운 피그바 목살",
+        "05": "그릴 위에 올린 두툼한 피그바 목살과 고추",
+        "07": "숯불 위 피그바 목살"
+      },
+      "neckPhotoLabel": "피그목살",
+      "beefPhotoLabel": "소갈비살",
+      "skinPhotoLabel": "수제 간장 벌집껍데기"
     }
   },
   "en": {
@@ -80,7 +89,9 @@ const PIGBAR_LOCALES = {
         "A juicy slice of charcoal-grilled pork neck at PIGBAR",
         "Beef doenjang stew at PIGBAR",
         "Cheese blanket kimchi fried rice",
-        "Hanmac creamy draft beer"
+        "Hanmac creamy draft beer",
+        "PIGBAR beef rib meat, official menu photo",
+        "PIGBAR soy-marinated honeycomb pork skin, official menu photo"
       ],
       "drinkAlts": [
         "Hanmac creamy draft beer",
@@ -88,10 +99,17 @@ const PIGBAR_LOCALES = {
         "Wine ade"
       ],
       "bellyAlt": "Charcoal-grilled pork belly at PIGBAR",
-      "candidateLabel": "Pork neck option {number}",
-      "candidateAlt": "Grilled pork neck photo option {number}",
       "heroPrevious": "Previous photo",
-      "heroNext": "Next photo"
+      "heroNext": "Next photo",
+      "selectedNeckAlts": {
+        "01": "Golden grilled pork neck at PIGBAR",
+        "04": "Grilled pork neck beside a smoking charcoal grill at PIGBAR",
+        "05": "Thick pork neck and peppers on the grill at PIGBAR",
+        "07": "Pork neck over charcoal at PIGBAR"
+      },
+      "neckPhotoLabel": "Pork neck",
+      "beefPhotoLabel": "Beef rib meat",
+      "skinPhotoLabel": "Soy-marinated pork skin"
     }
   },
   "zh": {
@@ -225,7 +243,9 @@ const PIGBAR_LOCALES = {
         "PIGBAR厚切梅花肉柔嫩多汁的切面",
         "牛肉大酱汤",
         "肉多多芝士泡菜炒饭",
-        "Hanmac绵密生啤"
+        "Hanmac绵密生啤",
+        "PIGBAR牛肋条肉官方菜单照片",
+        "PIGBAR酱油腌蜂窝纹猪皮官方菜单照片"
       ],
       "drinkAlts": [
         "Hanmac绵密生啤",
@@ -233,10 +253,17 @@ const PIGBAR_LOCALES = {
         "葡萄酒气泡饮"
       ],
       "bellyAlt": "PIGBAR炭火烤五花肉",
-      "candidateLabel": "猪肩颈肉候选 {number}",
-      "candidateAlt": "烤猪肩颈肉照片候选 {number}",
       "heroPrevious": "上一张照片",
-      "heroNext": "下一张照片"
+      "heroNext": "下一张照片",
+      "selectedNeckAlts": {
+        "01": "PIGBAR烤至金黄的梅花肉",
+        "04": "PIGBAR炭火烟气旁的烤梅花肉",
+        "05": "PIGBAR烤网上的厚切梅花肉与青椒",
+        "07": "PIGBAR炭火上的梅花肉"
+      },
+      "neckPhotoLabel": "梅花肉",
+      "beefPhotoLabel": "牛肋条肉",
+      "skinPhotoLabel": "酱油腌猪皮"
     },
     "menu": [
       [
@@ -469,7 +496,9 @@ const PIGBAR_LOCALES = {
         "しっとりジューシーな炭火焼きモクサルの断面",
         "牛肉テンジャンチゲ",
         "お肉たっぷりチーズキムチチャーハン",
-        "ハンマック クリーミー生ビール"
+        "ハンマック クリーミー生ビール",
+        "PIGBARの牛カルビ、公式メニュー写真",
+        "PIGBARのしょうゆ漬け豚皮、公式メニュー写真"
       ],
       "drinkAlts": [
         "ハンマック クリーミー生ビール",
@@ -477,10 +506,17 @@ const PIGBAR_LOCALES = {
         "ワインエード"
       ],
       "bellyAlt": "PIGBARの炭火サムギョプサル",
-      "candidateLabel": "肩ロース候補 {number}",
-      "candidateAlt": "焼いた豚肩ロースの写真候補 {number}",
       "heroPrevious": "前の写真",
-      "heroNext": "次の写真"
+      "heroNext": "次の写真",
+      "selectedNeckAlts": {
+        "01": "こんがり焼いたPIGBARの豚肩ロース",
+        "04": "炭火の煙と焼き上げたPIGBARの豚肩ロース",
+        "05": "グリルに並ぶPIGBARの厚切り豚肩ロースと青唐辛子",
+        "07": "炭火の上のPIGBARの豚肩ロース"
+      },
+      "neckPhotoLabel": "豚肩ロース",
+      "beefPhotoLabel": "牛カルビ",
+      "skinPhotoLabel": "しょうゆ漬け豚皮"
     },
     "menu": [
       [

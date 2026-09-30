@@ -114,24 +114,24 @@ const boardMenu = [
 
 const reviews = {
   ko: [
-    {text:'합정역 근처에서 삼겹살, 목살 먹으러 방문한 피그바! 고기 질도 좋고 직원분이 직접 구워주는 고기집이라 편하게 먹을 수 있었어요. 특히 목살이 촉촉하고 부드러워서 맛있었습니다. …',author:'younju0516',date:'2026.08.08',url:'https://m.place.naver.com/my/5f04312aee4be03dee262124/review?v=2'},
-    {text:'고기 맛있어요!! 가브리살 목살 삼겹살 다 맛있구 합정 상수 사이에 있어요. 숯불에 직접 구워주시고 매장은 6테이블 정도로 아담한데 테이블당 4명씩 충분히 앉을수있어요. …',author:'Su Yeoun Jung',date:'2026.09.02',url:'https://m.place.naver.com/my/5e8852538f87a842bc8b3a1b/review?v=2'},
-    {text:'어후~~ 하나도 남김없이 다 먹었네요!!!\n소갈비살, 삼겹, 목살 다 너무 부드럽고 고소하니 맛있어요\n특히 껍데기.. 두툼하면서 쫄깃하고 부드러운게 완전 취저입니다!!! …',author:'skymin1003',date:'2026.09.11',url:'https://m.place.naver.com/my/5ea7e2908f87a842bc6c93ed/review?v=2'}
+    {text:'합정역 근처에서 삼겹살, 목살 먹으러 방문한 피그바! 고기 질도 좋고 직원분이 직접 구워주는 고기집이라 편하게 먹을 수 있었어요. 특히 목살이 촉촉하고 부드러워서 맛있었습니다. …',author:'younj*****',date:'2026.08.08',url:'https://m.place.naver.com/my/5f04312aee4be03dee262124/review?v=2'},
+    {text:'고기 맛있어요!! 가브리살 목살 삼겹살 다 맛있구 합정 상수 사이에 있어요. 숯불에 직접 구워주시고 매장은 6테이블 정도로 아담한데 테이블당 4명씩 충분히 앉을수있어요. …',author:'Su Yeoun*****',date:'2026.09.02',url:'https://m.place.naver.com/my/5e8852538f87a842bc8b3a1b/review?v=2'},
+    {text:'어후~~ 하나도 남김없이 다 먹었네요!!!\n소갈비살, 삼겹, 목살 다 너무 부드럽고 고소하니 맛있어요\n특히 껍데기.. 두툼하면서 쫄깃하고 부드러운게 완전 취저입니다!!! …',author:'skymi*****',date:'2026.09.11',url:'https://m.place.naver.com/my/5ea7e2908f87a842bc6c93ed/review?v=2'}
   ],
   en: [
-    {text:"… The food was delicious, the service was excellent, and I'll definitely come back next time I'm in the area!",author:'Mary Delia Bondoc',date:'Google',url:GOOGLE_URL},
-    {text:'… very kind to help us out with cooking all the meat. I enjoy the pork belly and neck with their sides the most.',author:'Albert Cheese',date:'Google',url:GOOGLE_URL},
-    {text:'Pigbar is the place to go if you love Korean BBQ. … the staff makes sure the grill is always perfect.',author:'Guillermo Lamiel',date:'Google',url:GOOGLE_URL}
+    {text:"… The food was delicious, the service was excellent, and I'll definitely come back next time I'm in the area!",author:'Mary Delia B*****',date:'Google',url:GOOGLE_URL},
+    {text:'… very kind to help us out with cooking all the meat. I enjoy the pork belly and neck with their sides the most.',author:'Albert C*****',date:'Google',url:GOOGLE_URL},
+    {text:'Pigbar is the place to go if you love Korean BBQ. … the staff makes sure the grill is always perfect.',author:'Guillermo L*****',date:'Google',url:GOOGLE_URL}
   ]
 };
 
 reviews.ko.push(
-  {text:'작년부터 왔는데 삼겹 목살 진짜 한결같이 잡내없이 맛있어요🥹\n항상 잘 구워주셔서 열심히 먹기만 하면 된답니다-!\n… 된장술밥은 고기랑 같이 먹으면 그냥 뒤집어집니다🫶🏻',author:'애엉잉',date:'2026.09.23',url:'https://pcmap.place.naver.com/restaurant/1006983247/review/visitor'},
-  {text:'… 고기 구성은 소갈빗살+삼겹+목살+껍데기+소고기 된장찌게였는데 다 맛있었어요~\n반찬구성도 적당하게 좋았고 무엇보다 친절하게 잘 챙겨주셔서 기분좋게 먹었습니다. …',author:'미유찡',date:'2026.09.12',url:'https://pcmap.place.naver.com/restaurant/1006983247/review/visitor'}
+  {text:'작년부터 왔는데 삼겹 목살 진짜 한결같이 잡내없이 맛있어요🥹\n항상 잘 구워주셔서 열심히 먹기만 하면 된답니다-!\n… 된장술밥은 고기랑 같이 먹으면 그냥 뒤집어집니다🫶🏻',author:'*****',date:'2026.09.23',url:'https://pcmap.place.naver.com/restaurant/1006983247/review/visitor'},
+  {text:'… 고기 구성은 소갈빗살+삼겹+목살+껍데기+소고기 된장찌게였는데 다 맛있었어요~\n반찬구성도 적당하게 좋았고 무엇보다 친절하게 잘 챙겨주셔서 기분좋게 먹었습니다. …',author:'*****',date:'2026.09.12',url:'https://pcmap.place.naver.com/restaurant/1006983247/review/visitor'}
 );
 reviews.en.push(
-  {text:'The pork here is SOOO GOOOD.\nSuper tender and juicy!\nThe staff cooks the meat for you as well 😊 …',author:'Chloe Teo',date:'Google',url:GOOGLE_URL},
-  {text:'REALLY DELICIOUS FOOD 😍 the pork was soft and the staff were really friendly!!\n… Short walk from Hapjeong station, great service!',author:'erika c.',date:'Google',url:GOOGLE_URL}
+  {text:'The pork here is SOOO GOOOD.\nSuper tender and juicy!\nThe staff cooks the meat for you as well 😊 …',author:'Chlo*****',date:'Google',url:GOOGLE_URL},
+  {text:'REALLY DELICIOUS FOOD 😍 the pork was soft and the staff were really friendly!!\n… Short walk from Hapjeong station, great service!',author:'eri*****',date:'Google',url:GOOGLE_URL}
 );
 for (const lang of ['zh', 'ja']) {
   const localized = PIGBAR_LOCALES[lang];
@@ -142,6 +142,15 @@ for (const lang of ['zh', 'ja']) {
   boardMenu.forEach((item, index) => { item[lang] = localized.boardMenu[index]; });
   // These are translations of the same selected reviews, with original authors and links.
   reviews[lang] = reviews.en.map((item, index) => ({...item, text:localized.reviews[index]}));
+}
+// Names are stored masked; enforce the same rule for future review entries.
+function maskReviewerName(name) {
+  const value = String(name).trim();
+  if (value.endsWith('*****')) return value;
+  const characters = typeof Intl.Segmenter === 'function'
+    ? Array.from(new Intl.Segmenter(undefined, {granularity:'grapheme'}).segment(value), item => item.segment)
+    : Array.from(value);
+  return characters.slice(0, -5).join('') + '*****';
 }
 let currentLang = 'ko';
 let currentCategory = 'all';
@@ -167,7 +176,10 @@ function renderBoardMenu() {
 function renderReviews() {
   const list = reviews[currentLang];
   reviewList.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui.reviewRegion);
-  reviewList.innerHTML = list.map(item => `<article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>${item.text}</blockquote><a class="review-author" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${item.author} ${PIGBAR_LOCALES[currentLang].ui.reviewReadFull}">${item.author}<span>${item.date} ↗</span></a></article>`).join('');
+  reviewList.innerHTML = list.map(item => {
+    const author = maskReviewerName(item.author);
+    return `<article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>${item.text}</blockquote><a class="review-author" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${author} ${PIGBAR_LOCALES[currentLang].ui.reviewReadFull}">${author}<span>${item.date} ↗</span></a></article>`;
+  }).join('');
   document.getElementById('review-source-title').textContent = copy[currentLang].reviewSource;
   const rating = document.querySelector('.review-source .stars');
   rating.textContent = currentLang === 'ko' ? '4.88 / 5' : '5.0 / 5';
@@ -257,10 +269,10 @@ function localizeAccessibility() {
   const labels = {'.header-inner > .brand':'home', '#main-nav':'primary', '.lang-switch':'languageLabel', '.quick-nav':'quickLinks', '.bottom-actions':'planVisit', '#hero-track':'foodPhotos', '.hero-pagination':'photoSelection', '#hero-prev':'heroPrevious', '#hero-next':'heroNext', '.menu-tabs':'menuCategories', '.nav-toggle':'menuOpen', '#grill-video':'videoLabel', '#video-toggle':video.paused ? 'videoPlay' : 'videoPause', '#video-sound':video.muted ? 'videoUnmute' : 'videoMute', '#signature-prev':'signaturePrevious', '#signature-next':'signatureNext'};
   for (const [selector, key] of Object.entries(labels)) document.querySelector(selector).setAttribute('aria-label', ui[key]);
   document.querySelectorAll('.hero-slide img').forEach(img => {
-    img.alt = img.dataset.candidate ? ui.candidateAlt.replace('{number}', img.dataset.candidate) : ui.photoAlts[Number(img.dataset.photo)];
+    img.alt = img.dataset.selectedNeck ? ui.selectedNeckAlts[img.dataset.selectedNeck] : ui.photoAlts[Number(img.dataset.photo)];
   });
-  document.querySelectorAll('.hero-slide[data-candidate]').forEach(slide => {
-    slide.querySelector('figcaption').textContent = ui.candidateLabel.replace('{number}', slide.dataset.candidate);
+  document.querySelectorAll('.hero-photo-label[data-caption]').forEach(caption => {
+    caption.textContent = ui[caption.dataset.caption];
   });
   const signatureAlts = [ui.photoAlts[1], ui.bellyAlt, ui.photoAlts[2], ui.photoAlts[3]];
   document.querySelectorAll('.signature-card img').forEach((img, index) => { img.alt = signatureAlts[index]; });
@@ -279,7 +291,7 @@ document.addEventListener('keydown', event => {
 const pageLanguage = document.documentElement.dataset.language || 'ko';
 setLanguage(Object.hasOwn(copy, pageLanguage) ? pageLanguage : 'ko');
 
-// Manual photo carousel; numbered options keep the user's choices unambiguous.
+// Manual store-photo carousel; original photos keep their relative order.
 const heroTrack = document.getElementById('hero-track');
 const heroSlides = [...heroTrack.querySelectorAll('.hero-slide')];
 const heroPrevious = document.getElementById('hero-prev');

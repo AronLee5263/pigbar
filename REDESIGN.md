@@ -102,3 +102,10 @@ Tool: https://developers.kakao.com/tool/debugger/sharing
 Official cache explanation: https://devtalk.kakao.com/t/topic/33298
 
 Keep using https://aronlee5263.github.io/pigbar/ when resetting the Korean page. Reset the exact language URL separately if an older preview is shown for it.
+
+## Selected banner photos and reviewer-name masking (2026-09-30)
+
+- Original five banners are retained. Inserted selected neck photos 01, 04, 05 and 07, plus official Naver representative photos of beef rib meat and soy-marinated honeycomb pork skin. Total: 11 slides.
+- The selected photos use dish-name captions, without temporary candidate text. Existing mobile framing and signature cards are retained.
+- All four languages mask the final five visible characters of reviewer nicknames as *****. Names with five characters or fewer are fully masked. The same masked names are stored in deployed JavaScript and static HTML, including aria-labels.
+- The approved neon sharing image remains unchanged; the user confirmed Kakao cache clearing worked.

@@ -62,3 +62,11 @@ Korean cards contain verbatim excerpts of confirmed five-star Naver reviews by y
 - The current first signature-card image remains pork-neck-grilled.jpg.
 - Exact original URLs and candidate ordering are recorded in PHOTO_OPTIONS.json; see PHOTO_OPTIONS.md.
 - The approved coral-pink neon share image is unchanged. The public page already references pigbar-share-neon-v3.png, and that image returned HTTP 200 with image/png when checked.
+
+## Selected photos and official menu additions (2026-09-30)
+
+- Selected neck options: 01, 04, 05 and 07. Original five banner images and existing signature-card images are preserved. Other six options are removed from current assets.
+- Source menu page: https://pcmap.place.naver.com/restaurant/1006983247/menu/list
+- 소갈비살: dist/assets/beef-rib.webp, 900 x 1200. Original: https://ldb-phinf.pstatic.net/20260515_196/1778822239891Ydj6E_JPEG/%BC%D2%B0%A5%BA%F1%BB%EC.jpg
+- 수제 간장 벌집껍데기: dist/assets/soy-honeycomb-skin.webp, 900 x 1200. Original: https://ldb-phinf.pstatic.net/20240108_249/1704641147440k1NzU_JPEG/%B2%AE%B5%A5%B1%E23.jpg
+- Review names are masked in static HTML, accessibility labels and deployed JavaScript data. Review text, ratings and source links are preserved.
