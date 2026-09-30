@@ -88,12 +88,14 @@ h1,h2,h3,p{margin-top:0}
 .signature-info p{color:#ebdad0;font-size:12px;line-height:1.55;word-break:keep-all;margin:0}
 .signature-info>strong{font-family:"DM Sans";font-size:18px}
 .signature-featured h3{font-size:32px}
-.beer-strip{display:grid;grid-template-columns:85px 1fr auto;gap:21px;align-items:center;margin-top:15px;padding:13px 25px 13px 13px;border:1px solid #d6c8b9;border-radius:8px}
-.beer-strip img{height:78px;border-radius:5px;object-position:26% center}
-.beer-strip div{display:flex;flex-direction:column;gap:5px}
-.beer-strip div span{font:800 10px "DM Sans";letter-spacing:.16em;color:#d75028}
-.beer-strip div strong{font-size:17px;letter-spacing:-.035em}
-.beer-price{font-size:13px;font-weight:800;white-space:nowrap}
+.drink-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:15px}
+.drink-card{display:flex;align-items:center;gap:15px;padding:13px;border:1px solid #d6c8b9;border-radius:8px;min-width:0}
+.drink-card img{width:82px;height:90px;object-fit:cover;border-radius:5px;flex-shrink:0}
+.drink-card div{display:flex;flex-direction:column;gap:6px}
+.drink-card span{font:800 9px "DM Sans";letter-spacing:.14em;color:#d75028}
+.drink-card h3{font-size:15px;line-height:1.4;letter-spacing:-.035em;margin:0;word-break:keep-all}
+.drink-card strong{font:800 16px "DM Sans"}
+
 
 .story{background:#191719;overflow:hidden}
 .story-grid{display:grid;grid-template-columns:46% 54%;gap:42px;align-items:center}
@@ -106,7 +108,7 @@ h1,h2,h3,p{margin-top:0}
 .story-points strong{font-size:15px}
 .story-points p{color:#a89b95;font-size:12px;line-height:1.5;margin:5px 0 0}
 .video-frame{height:560px;position:relative;overflow:hidden;border-radius:8px;background:#29201d}
-.video-frame video{width:100%;height:100%;object-fit:cover}
+.video-frame video{width:100%;height:100%;object-fit:contain;background:#0d0d0f}
 .video-shade{position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.6));pointer-events:none}
 .video-caption{position:absolute;left:25px;bottom:24px;display:flex;align-items:center;gap:10px;font:800 11px "DM Sans";letter-spacing:.17em}
 .live-dot{width:8px;height:8px;background:var(--hot);border-radius:50%;box-shadow:0 0 0 5px rgba(243,74,35,.15)}
@@ -174,5 +176,25 @@ h1,h2,h3,p{margin-top:0}
 
 @media(max-width:1100px){.main-nav{gap:16px}.main-nav a{font-size:12px}.hero h1{font-size:clamp(55px,6vw,75px)}.hero-facts{gap:14px}.hero-facts span{padding-right:14px}.story-grid{gap:10px}.signature-card{min-height:410px}.signature-info h3{font-size:20px}}
 @media(max-width:850px){.shell{width:min(100% - 42px,1320px)}.site-header{height:68px}.nav-toggle{display:block}.header-book{display:none}.main-nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:12px 21px 18px;background:#161417;border-bottom:1px solid #4a3935}.main-nav.is-open{display:flex}.main-nav a{padding:13px 5px;font-size:14px}.hero{min-height:0}.hero-grid{grid-template-columns:1fr;gap:35px;padding-block:70px 40px;min-height:0}.hero-copy{padding:0}.hero h1{font-size:clamp(57px,10vw,83px)}.hero-visual{height:470px;padding-left:0}.hero-stamp{right:-10px}.hero-facts{margin-top:34px}.section-pad{padding-block:85px}.signature-grid{grid-template-columns:1fr 1fr}.signature-featured{grid-column:1/-1}.signature-card{min-height:380px}.signature-featured{min-height:450px}.story-grid{grid-template-columns:1fr;gap:38px}.story-copy{padding-right:0}.story h2{font-size:60px}.video-frame{height:450px}.review-grid{grid-template-columns:1fr 1fr}.visit-grid{grid-template-columns:1fr 1fr}.visit-card:first-child{grid-column:1/-1;min-height:250px}}
-@media(max-width:600px){.shell{width:min(100% - 34px,1320px)}.brand-name{font-size:19px}.brand-place{display:none}.header-actions{gap:15px}.hero-grid{padding-top:53px;gap:34px}.eyebrow{font-size:9px;margin-bottom:20px}.hero h1{font-size:clamp(49px,14vw,68px);line-height:1.14;margin-bottom:20px}.hero-lead{font-size:14px;line-height:1.7;margin-bottom:23px}.hero-buttons .button{min-height:44px;font-size:11px;padding:0 14px}.hero-facts{gap:0;justify-content:space-between;margin-top:30px}.hero-facts span{display:block;padding-right:10px;margin-right:10px}.hero-facts strong{display:block;font-size:15px}.hero-facts small{font-size:9px}.hero-visual{height:390px;grid-template-columns:1.26fr .74fr;gap:7px}.hero-main-photo,.hero-side-photo{border-radius:8px}.hero-side-photo{height:76%}.hero-main-photo figcaption{bottom:18px;left:17px}.hero-main-photo figcaption strong{font-size:21px}.hero-side-photo figcaption{left:11px;bottom:15px;font-size:12px}.hero-stamp{width:78px;height:78px;top:-19px;right:-8px;font-size:8px}.hero-stamp span{font-size:15px}.hero-bottom{height:50px;font-size:9px}.hero-bottom span:last-child{display:none}.section-pad{padding-block:67px}.section-heading{display:block;margin-bottom:27px}.section-heading h2,.story h2{font-size:clamp(42px,11.5vw,58px)}.section-heading>p{margin:16px 0 0;font-size:13px;line-height:1.7}.signature-grid{display:block}.signature-card,.signature-featured{min-height:320px;margin-bottom:10px}.signature-featured{min-height:395px}.signature-info h3{font-size:22px}.signature-featured h3{font-size:29px}.beer-strip{grid-template-columns:70px 1fr;gap:12px;padding:9px;margin-top:0}.beer-strip img{height:70px}.beer-strip div strong{font-size:13px}.beer-price{grid-column:2;font-size:10px;margin-top:-12px}.story h2{margin:16px 0}.story-lead{font-size:13px}.story-points>div{padding:13px 0}.video-frame{height:330px}.menu-list,.board-menu-list{grid-template-columns:1fr}.menu-item{min-height:85px;padding:16px 0}.menu-item h3{font-size:15px}.menu-item p{font-size:11px}.menu-note{display:block;line-height:1.7}.menu-note a{display:block;margin-top:8px}.review-grid{grid-template-columns:1fr}.review-card{min-height:170px;padding:22px}.review-card p{font-size:14px;margin:12px 0 auto}.dessert{padding:28px 0}.dessert-inner{gap:12px}.dessert-icon{font-size:40px}.dessert h2{font-size:21px}.dessert p{font-size:11px}.dessert-inner>strong{display:none}.visit-grid{grid-template-columns:1fr}.visit-card:first-child{grid-column:auto}.visit-card{min-height:0;padding:22px}.visit-card h3{margin-top:18px;font-size:20px}.visit-links{margin-top:22px}.footer-inner{display:block}.footer-inner>div:last-child{text-align:left;margin-top:30px}}
+@media(max-width:600px){.shell{width:min(100% - 34px,1320px)}.brand-name{font-size:19px}.brand-place{display:none}.header-actions{gap:15px}.hero-grid{padding-top:53px;gap:34px}.eyebrow{font-size:9px;margin-bottom:20px}.hero h1{font-size:clamp(49px,14vw,68px);line-height:1.14;margin-bottom:20px}.hero-lead{font-size:14px;line-height:1.7;margin-bottom:23px}.hero-buttons .button{min-height:44px;font-size:11px;padding:0 14px}.hero-facts{gap:0;justify-content:space-between;margin-top:30px}.hero-facts span{display:block;padding-right:10px;margin-right:10px}.hero-facts strong{display:block;font-size:15px}.hero-facts small{font-size:9px}.hero-visual{height:390px;grid-template-columns:1.26fr .74fr;gap:7px}.hero-main-photo,.hero-side-photo{border-radius:8px}.hero-side-photo{height:76%}.hero-main-photo figcaption{bottom:18px;left:17px}.hero-main-photo figcaption strong{font-size:21px}.hero-side-photo figcaption{left:11px;bottom:15px;font-size:12px}.hero-stamp{width:78px;height:78px;top:-19px;right:-8px;font-size:8px}.hero-stamp span{font-size:15px}.hero-bottom{height:50px;font-size:9px}.hero-bottom span:last-child{display:none}.section-pad{padding-block:67px}.section-heading{display:block;margin-bottom:27px}.section-heading h2,.story h2{font-size:clamp(42px,11.5vw,58px)}.section-heading>p{margin:16px 0 0;font-size:13px;line-height:1.7}.signature-grid{display:block}.signature-card,.signature-featured{min-height:320px;margin-bottom:10px}.signature-featured{min-height:395px}.signature-info h3{font-size:22px}.signature-featured h3{font-size:29px}.drink-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:15px}
+.drink-card{display:flex;align-items:center;gap:15px;padding:13px;border:1px solid #d6c8b9;border-radius:8px;min-width:0}
+.drink-card img{width:82px;height:90px;object-fit:cover;border-radius:5px;flex-shrink:0}
+.drink-card div{display:flex;flex-direction:column;gap:6px}
+.drink-card span{font:800 9px "DM Sans";letter-spacing:.14em;color:#d75028}
+.drink-card h3{font-size:15px;line-height:1.4;letter-spacing:-.035em;margin:0;word-break:keep-all}
+.drink-card strong{font:800 16px "DM Sans"}
+.story h2{margin:16px 0}.story-lead{font-size:13px}.story-points>div{padding:13px 0}.video-frame{height:330px}.menu-list,.board-menu-list{grid-template-columns:1fr}.menu-item{min-height:85px;padding:16px 0}.menu-item h3{font-size:15px}.menu-item p{font-size:11px}.menu-note{display:block;line-height:1.7}.menu-note a{display:block;margin-top:8px}.review-grid{grid-template-columns:1fr}.review-card{min-height:170px;padding:22px}.review-card p{font-size:14px;margin:12px 0 auto}.dessert{padding:28px 0}.dessert-inner{gap:12px}.dessert-icon{font-size:40px}.dessert h2{font-size:21px}.dessert p{font-size:11px}.dessert-inner>strong{display:none}.visit-grid{grid-template-columns:1fr}.visit-card:first-child{grid-column:auto}.visit-card{min-height:0;padding:22px}.visit-card h3{margin-top:18px;font-size:20px}.visit-links{margin-top:22px}.footer-inner{display:block}.footer-inner>div:last-child{text-align:left;margin-top:30px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+.video-sound{position:absolute;right:74px;bottom:18px;width:42px;height:42px;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(0,0,0,.45);color:#fff;font-size:21px}
+.video-sound.is-on{background:var(--hot);color:#170e0a;border-color:var(--hot)}
+.review-card{min-height:310px}
+.review-rating{display:flex;align-items:center;gap:12px}
+.review-source .stars{flex-shrink:0;white-space:nowrap}
+.review-card .stars{font-size:22px;letter-spacing:.1em}
+.review-rating strong{font:800 18px "DM Sans";color:#ffae6d}
+.review-card blockquote{font-size:17px;line-height:1.8;letter-spacing:-.025em;word-break:keep-all;white-space:pre-line;margin:22px 0 auto}
+.review-author{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;color:#e7d4c8;margin-top:25px}
+.review-author span{font-size:10px;color:#b19f95;white-space:nowrap}
+@media(max-width:1100px){.drink-card{gap:11px}.drink-card img{width:65px;height:84px}.drink-card h3{font-size:13px}}
+@media(max-width:600px){.drink-strip{grid-template-columns:1fr;gap:9px}.drink-card{padding:10px;gap:17px}.drink-card img{width:74px;height:78px}.drink-card h3{font-size:16px}.drink-card strong{font-size:16px}.drink-card div{flex:1}.review-card{min-height:260px}.review-card blockquote{font-size:16px}.video-frame{height:530px}.video-caption{left:17px;font-size:9px;letter-spacing:.09em}}

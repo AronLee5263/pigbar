@@ -6,37 +6,37 @@ const copy = {
     skip: '본문 바로가기', navSignature: '시그니처', navStory: '피그바 이야기', navMenu: '전체 메뉴', navReviews: '리뷰', navVisit: '오시는 길', reserve: '예약하기',
     heroEyebrow: 'HAPJEONG · CHARCOAL PORK BBQ', heroLine1: '한 점의', heroLine2: '제대로 된', heroLine3: '돼지고기.',
     heroLead: '10일 이상 숙성한 한돈 삼겹살과 목살. 손질부터 굽기까지 피그바가 책임집니다.', seeMenu: '메뉴와 가격 보기', reserveNaver: '네이버에서 예약',
-    factAge: '일 숙성', factPork: '삼겹살·목살', factStation: '합정역 3번 출구', heroPhotoTag: 'THE FIRST BITE', heroPhotoTitle: '피그삼겹살', beerPhotoTitle: '목살 × 생맥주', heroBottom: '숯불이 올라오면, 저녁이 시작됩니다.',
+    factAge: '일 숙성', factPork: '삼겹살·목살', factStation: '합정역 3번 출구', heroPhotoTag: 'THE FIRST BITE', heroPhotoTitle: '피그삼겹살', beerPhotoTitle: '피그목살', heroBottom: '숯불이 올라오면, 저녁이 시작됩니다.',
     signatureTitle: '고기 다음까지<br />기억나는 맛.', signatureIntro: '삼겹살로 시작해, 뜨끈한 찌개와 치즈 덮인 김치볶음밥으로 마무리하세요.',
     sigMain: '가장 먼저', sigSoup: '국물 한 숟갈', sigFinish: '마지막 한 판', bellyName: '피그삼겹살', bellyDesc: '10일 이상 숙성한 +1등급 한돈. 손질한 170g 한 접시.',
     stewName: '소고기 된장찌개', stewDesc: '스지와 우삼겹을 넣은 재래식 된장찌개.', riceName: '고기듬뿍 치즈이불 볶음밥', riceDesc: '돼지고기 김치볶음밥 위에 모짜렐라와 에멘탈 치즈.',
-    beerStripTag: 'THE PERFECT PAIR', beerStripTitle: '숯불 한 점, 차가운 생맥주 한 모금.', beerStripPrice: '한맥 크리미 생맥주 · ₩4,500',
+    draftName: '한맥 크리미 생맥주', highballName: '피그 하이볼', wineName: '와인에이드',
     storyTitle: '좋은 고기는<br />굽는 순간까지<br /><em>좋아야 하니까.</em>', storyLead: '고기를 고르고, 10일 넘게 숙성하고, 먹기 불편한 부분을 덜어냅니다. 숯불 앞에서는 직원이 맛있게 구워드립니다.',
-    point1Title: '10일 이상 저온 숙성', point1Body: '선별한 +1등급 한돈의 맛을 끌어올립니다.', point2Title: '한 점까지 직접 손질', point2Body: '근막·오돌뼈 등 식감을 해치는 부위를 제거합니다.', point3Title: '숯불 그릴링 서비스', point3Body: '처음부터 끝까지 편하게 드실 수 있도록 구워드립니다.', videoCaption: 'THE SOUND OF DINNER',
-    menuTitle: '오늘 먹을<br />모든 메뉴.', menuIntro: '네이버 플레이스 최신 등록 메뉴 16종과 메뉴판 사진 속 추가 항목. 돼지고기부터 무료 후식까지.', menuAll: '전체', menuGrill: '고기', menuSide: '식사·사이드', menuDrink: '음료', menuUpdated: '네이버 플레이스 등록 메뉴 업데이트: 2026.09.15', checkLatestMenu: '방문 전 최신 메뉴 확인 ↗', boardSummary:'메뉴판 사진 속 추가 메뉴·세트·주류 보기', boardCaution:'아래 항목은 네이버 메뉴판 사진(2026년 5–6월) 기준입니다. 현재 판매 여부와 가격은 방문 전 매장에 확인해 주세요.',
-    reviewsTitle: '한 번 먹으면<br />남는 이야기.', reviewsIntro: '한국어는 네이버 방문자 리뷰를, 영어는 별점 5점의 Google 리뷰를 바탕으로 요약했습니다.', dessertTag: 'ONE LAST THING', dessertTitle: '마지막 한 입은 돼지바.', dessertBody: '식사하신 모든 분께 무료 후식으로 드립니다.', dessertFree: 'FREE DESSERT',
+    point1Title: '10일 이상 저온 숙성', point1Body: '선별한 +1등급 한돈의 맛을 끌어올립니다.', videoCaption: 'MANGO CUT · PIGBAR',
+    menuTitle: '오늘 먹을<br />모든 메뉴.', menuAll: '전체', menuGrill: '고기', menuSide: '식사·사이드', menuDrink: '음료', menuUpdated: '네이버 플레이스 등록 메뉴 업데이트: 2026.09.15', checkLatestMenu: '방문 전 최신 메뉴 확인 ↗', boardSummary:'메뉴판 사진 속 추가 메뉴·세트·주류 보기', boardCaution:'아래 항목은 네이버 메뉴판 사진(2026년 5–6월) 기준입니다. 현재 판매 여부와 가격은 방문 전 매장에 확인해 주세요.',
+    reviewsTitle: '한 번 먹으면<br />남는 이야기.', dessertTag: 'ONE LAST THING', dessertTitle: '마지막 한 입은 돼지바.', dessertBody: '식사하신 모든 분께 무료 후식으로 드립니다.', dessertFree: 'FREE DESSERT',
     visitTitle: '합정에서<br />만나요.', visitIntro: '합정역 3번 출구에서 도보 약 314m. 저녁 6시 이후에는 대기가 생길 수 있어요.', addressLabel: '주소 / ADDRESS', address: '서울 마포구 독막로3길 28-7 1층', station: '합정역 3번 출구에서 314m', naverMap: '네이버 지도', googleMap: 'Google Maps',
-    hoursLabel: '영업시간 / HOURS', hoursTueThuSun: '화–목 · 일', hoursFriSat: '금 · 토', hoursMon: '월요일', lastOrder1: '라스트오더 21:30', lastOrder2: '라스트오더 22:00', closed: '정기휴무', specialClosure: '2026.10.06–10.07 임시 휴무',
-    contactLabel: '예약·문의 / CONTACT', visitNote: '예약은 네이버 플레이스에서, 방문 전 변동 영업시간도 확인해 주세요.', visitReserve: '예약 및 최신 정보 확인 ↗', footerTag: '숯불, 돼지고기, 그리고 좋은 저녁.', footerSource: '메뉴·영업정보: 네이버 플레이스 (2026.09.29 확인)', footerMedia: '시안용 연출 이미지와 Pexels 스톡 영상 사용. 실제 매장 사진·영상으로 교체 권장.',
+    hoursLabel: '영업시간 / HOURS', hoursTueThuSun: '화–목 · 일', hoursFriSat: '금 · 토', hoursMon: '월요일', lastOrder1: '라스트오더 21:30', lastOrder2: '라스트오더 22:00', closed: '정기휴무',
+    contactLabel: '예약·문의 / CONTACT', visitNote: '예약은 네이버 플레이스에서, 방문 전 변동 영업시간도 확인해 주세요.', visitReserve: '예약 및 최신 정보 확인 ↗', footerTag: '숯불, 돼지고기, 그리고 피그바.', footerSource: '메뉴·영업정보: 네이버 플레이스 (2026.09.30 확인)',
     reviewSource: '네이버 플레이스 방문자 리뷰', reviewLink: '원문 보기 ↗', pageTitle: '피그바 PIGBAR | 합정 숯불 돼지고기', pageDescription: '피그바 PIGBAR 합정·홍대. 10일 이상 숙성한 한돈 삼겹살과 목살, 숯불 그릴링, 치즈이불 김치볶음밥. 메뉴, 가격, 영업시간, 오시는 길을 확인하세요.'
   },
   en: {
     skip: 'Skip to content', navSignature: 'Highlights', navStory: 'Our story', navMenu: 'Full menu', navReviews: 'Reviews', navVisit: 'Visit', reserve: 'Book a table',
     heroEyebrow: 'HAPJEONG · CHARCOAL PORK BBQ', heroLine1: 'Come for', heroLine2: 'the pork.', heroLine3: 'Stay for more.',
     heroLead: 'Korean pork belly and neck, aged for over 10 days. We prepare it carefully and grill it at your table.', seeMenu: 'Explore the menu', reserveNaver: 'Reserve on Naver',
-    factAge: 'days aged', factPork: 'pork belly & neck', factStation: 'from Hapjeong Exit 3', heroPhotoTag: 'THE FIRST BITE', heroPhotoTitle: 'Pork belly', beerPhotoTitle: 'Pork neck × draft beer', heroBottom: 'When the charcoal is ready, dinner begins.',
+    factAge: 'days aged', factPork: 'pork belly & neck', factStation: 'from Hapjeong Exit 3', heroPhotoTag: 'THE FIRST BITE', heroPhotoTitle: 'Pork belly', beerPhotoTitle: 'Pork neck', heroBottom: 'When the charcoal is ready, dinner begins.',
     signatureTitle: 'More to love<br />after the grill.', signatureIntro: 'Start with pork belly. Finish with a bubbling stew and cheesy pork kimchi fried rice.',
     sigMain: 'Start here', sigSoup: 'Something warm', sigFinish: 'The finale', bellyName: 'Pig Pork Belly', bellyDesc: '170g of carefully trimmed, aged Korean pork.',
     stewName: 'Beef Doenjang Stew', stewDesc: 'Traditional soybean stew with beef tendon and brisket.', riceName: 'Cheese Blanket Kimchi Fried Rice', riceDesc: 'Pork kimchi fried rice under mozzarella and emmental.',
-    beerStripTag: 'THE PERFECT PAIR', beerStripTitle: 'Charcoal grilled pork. Ice cold draft beer.', beerStripPrice: 'Hanmac creamy draft beer · ₩4,500',
+    draftName: 'Hanmac Creamy Draft Beer', highballName: 'Pig Highball', wineName: 'Wine Ade',
     storyTitle: 'Good pork<br />deserves a<br /><em>great finish.</em>', storyLead: 'We select our pork, age it for more than 10 days and trim each cut. Our team grills it over charcoal at your table.',
-    point1Title: 'Aged for 10+ days', point1Body: 'Selected Korean pork, aged to deepen the flavor.', point2Title: 'Trimmed by hand', point2Body: 'Tough membranes and cartilage are removed.', point3Title: 'Grilled for you', point3Body: 'Our team helps cook your pork from start to finish.', videoCaption: 'THE SOUND OF DINNER',
-    menuTitle: 'The full<br />menu.', menuIntro: 'The 16 current Naver Place listings plus extra items photographed on the in-store menu.', menuAll: 'All', menuGrill: 'Grill', menuSide: 'Meals & sides', menuDrink: 'Drinks', menuUpdated: 'Naver Place listed menu updated Sep 15, 2026', checkLatestMenu: 'Check the latest menu ↗', boardSummary:'See additional sets, sides and drinks on the menu board', boardCaution:'These items come from Naver menu-board photos dated May–June 2026. Confirm current availability and prices with the restaurant.',
-    reviewsTitle: 'Worth<br />talking about.', reviewsIntro: 'English highlights below paraphrase selected five-star Google reviews. Korean highlights use Naver visitor reviews.', dessertTag: 'ONE LAST THING', dessertTitle: 'Ice cream is on us.', dessertBody: 'One Pig Bar ice cream for every guest after the meal.', dessertFree: 'FREE DESSERT',
+    point1Title: 'Aged for 10+ days', point1Body: 'Selected Korean pork, aged to deepen the flavor.', videoCaption: 'MANGO CUT · PIGBAR',
+    menuTitle: 'The full<br />menu.', menuAll: 'All', menuGrill: 'Grill', menuSide: 'Meals & sides', menuDrink: 'Drinks', menuUpdated: 'Naver Place listed menu updated Sep 15, 2026', checkLatestMenu: 'Check the latest menu ↗', boardSummary:'See additional sets, sides and drinks on the menu board', boardCaution:'These items come from Naver menu-board photos dated May–June 2026. Confirm current availability and prices with the restaurant.',
+    reviewsTitle: 'Worth<br />talking about.', dessertTag: 'ONE LAST THING', dessertTitle: 'Ice cream is on us.', dessertBody: 'One Pig Bar ice cream for every guest after the meal.', dessertFree: 'FREE DESSERT',
     visitTitle: 'See you in<br />Hapjeong.', visitIntro: 'About 314m from Hapjeong Station Exit 3. There may be a wait after 6 pm.', addressLabel: 'ADDRESS', address: '1F, 28-7 Dongmak-ro 3-gil, Mapo-gu, Seoul', station: '314m from Hapjeong Station Exit 3', naverMap: 'Naver Map', googleMap: 'Google Maps',
-    hoursLabel: 'OPENING HOURS', hoursTueThuSun: 'Tue–Thu · Sun', hoursFriSat: 'Fri · Sat', hoursMon: 'Monday', lastOrder1: 'Last order 21:30', lastOrder2: 'Last order 22:00', closed: 'Closed', specialClosure: 'Special closure Oct 6–7, 2026',
-    contactLabel: 'BOOKING & CONTACT', visitNote: 'Book through Naver Place. Please check current hours before visiting.', visitReserve: 'Book and check updates ↗', footerTag: 'Charcoal, pork and a good evening.', footerSource: 'Menu and hours: Naver Place (checked Sep 29, 2026)', footerMedia: 'Concept food imagery and Pexels stock footage. Replace with actual restaurant media before official launch.',
-    reviewSource: 'Selected five-star Google reviews', reviewLink: 'Read on Google ↗', pageTitle: 'PIGBAR | Korean Pork BBQ in Hapjeong, Seoul', pageDescription: 'Discover PIGBAR in Hapjeong, Seoul: aged Korean pork belly and neck, table-side charcoal grilling, kimchi fried rice, full menu, prices and directions.'
+    hoursLabel: 'OPENING HOURS', hoursTueThuSun: 'Tue–Thu · Sun', hoursFriSat: 'Fri · Sat', hoursMon: 'Monday', lastOrder1: 'Last order 21:30', lastOrder2: 'Last order 22:00', closed: 'Closed',
+    contactLabel: 'BOOKING & CONTACT', visitNote: 'Book through Naver Place. Please check current hours before visiting.', visitReserve: 'Book and check updates ↗', footerTag: 'Charcoal, pork and PIGBAR.', footerSource: 'Menu and hours: Naver Place (checked Sep 30, 2026)',
+    reviewSource: 'Google reviews', reviewLink: 'Read on Google ↗', pageTitle: 'PIGBAR | Korean Pork BBQ in Hapjeong, Seoul', pageDescription: 'Discover PIGBAR in Hapjeong, Seoul: aged Korean pork belly and neck, table-side charcoal grilling, kimchi fried rice, full menu, prices and directions.'
   }
 };
 
@@ -88,14 +88,14 @@ const boardMenu = [
 
 const reviews = {
   ko: [
-    {text:'삼겹살과 목살은 육즙이 좋고, 직원이 직접 구워줘 편하게 먹었다는 후기가 많아요.',meta:'네이버 방문자 리뷰 요약 · 고기와 그릴링'},
-    {text:'치즈가 듬뿍 올라간 순두부찌개와 다양한 사이드메뉴도 재방문 이유로 꼽혔어요.',meta:'네이버 방문자 리뷰 요약 · 사이드메뉴'},
-    {text:'친절한 응대, 숯불 향, 무료 돼지바 후식까지 저녁의 마무리가 좋았다는 평가예요.',meta:'네이버 방문자 리뷰 요약 · 서비스'}
+    {text:'합정역 근처에서 삼겹살, 목살 먹으러 방문한 피그바! 고기 질도 좋고 직원분이 직접 구워주는 고기집이라 편하게 먹을 수 있었어요. 특히 목살이 촉촉하고 부드러워서 맛있었습니다. …',author:'younju0516',date:'2026.08.08',url:'https://m.place.naver.com/my/5f04312aee4be03dee262124/review?v=2'},
+    {text:'고기 맛있어요!! 가브리살 목살 삼겹살 다 맛있구 합정 상수 사이에 있어요. 숯불에 직접 구워주시고 매장은 6테이블 정도로 아담한데 테이블당 4명씩 충분히 앉을수있어요. …',author:'Su Yeoun Jung',date:'2026.09.02',url:'https://m.place.naver.com/my/5e8852538f87a842bc8b3a1b/review?v=2'},
+    {text:'어후~~ 하나도 남김없이 다 먹었네요!!!\n소갈비살, 삼겹, 목살 다 너무 부드럽고 고소하니 맛있어요\n특히 껍데기.. 두툼하면서 쫄깃하고 부드러운게 완전 취저입니다!!! …',author:'skymin1003',date:'2026.09.11',url:'https://m.place.naver.com/my/5ea7e2908f87a842bc6c93ed/review?v=2'}
   ],
   en: [
-    {text:'Pork and sides are worth the detour; the meal ends with complimentary ice cream.',meta:'Rash C · 5★ Google review · Oct 2023'},
-    {text:'The pork belly and neck are flavorful, and the team takes care of the grill.',meta:'Guillermo L · 5★ Google review · Sep 2025'},
-    {text:'Tender pork, friendly staff and an easy walk from Hapjeong Station.',meta:'Erika C · 5★ Google review · Jan 2026'}
+    {text:"… The food was delicious, the service was excellent, and I'll definitely come back next time I'm in the area!",author:'Mary Delia Bondoc',date:'Google',url:GOOGLE_URL},
+    {text:'… very kind to help us out with cooking all the meat. I enjoy the pork belly and neck with their sides the most.',author:'Albert Cheese',date:'Google',url:GOOGLE_URL},
+    {text:'Pigbar is the place to go if you love Korean BBQ. … the staff makes sure the grill is always perfect.',author:'Guillermo Lamiel',date:'Google',url:GOOGLE_URL}
   ]
 };
 
@@ -121,10 +121,10 @@ function renderBoardMenu() {
 
 function renderReviews() {
   const list = reviews[currentLang];
-  reviewList.innerHTML = list.map(item => `<article class="review-card">${currentLang === 'en' ? '<span class="stars" aria-label="5 stars">★★★★★</span>' : '<span class="review-label">NAVER VISITOR REVIEWS</span>'}<p>${item.text}</p><small>${item.meta}</small></article>`).join('');
+  reviewList.innerHTML = list.map(item => `<article class="review-card"><div class="review-rating"><span class="stars" aria-label="5 / 5">★★★★★</span><strong>5.0</strong></div><blockquote>${item.text}</blockquote><a class="review-author" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${item.author} ${currentLang === 'ko' ? '전체 원문 보기' : 'read full review'}">${item.author}<span>${item.date} ↗</span></a></article>`).join('');
   document.getElementById('review-source-title').textContent = copy[currentLang].reviewSource;
   const rating = document.querySelector('.review-source .stars');
-  rating.textContent = currentLang === 'ko' ? '4.88 / 5' : '★★★★★';
+  rating.textContent = currentLang === 'ko' ? '4.88 / 5' : '5.0 / 5';
   rating.setAttribute('aria-label', currentLang === 'ko' ? '네이버 별점 4.88점' : 'Selected five-star reviews');
   const link = document.getElementById('review-source-link');
   link.textContent = copy[currentLang].reviewLink;
@@ -186,6 +186,14 @@ videoToggle.addEventListener('click', () => {
     videoToggle.setAttribute('aria-label', currentLang === 'ko' ? '영상 재생' : 'Play video');
   }
 });
+const videoSound = document.getElementById('video-sound');
+videoSound.addEventListener('click', () => {
+  video.muted = !video.muted;
+  videoSound.classList.toggle('is-on', !video.muted);
+  videoSound.setAttribute('aria-label', currentLang === 'ko' ? (video.muted ? '영상 소리 켜기' : '영상 소리 끄기') : (video.muted ? 'Unmute video' : 'Mute video'));
+  videoSound.setAttribute('aria-pressed', String(!video.muted));
+});
+
 video.querySelector('source').addEventListener('error', () => { videoToggle.hidden = true; });
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   video.removeAttribute('autoplay');
@@ -193,7 +201,5 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   videoToggle.textContent = '▶';
 }
 
-const closure = document.getElementById('special-closure');
-if (new Date() >= new Date('2026-10-08T00:00:00+09:00')) closure.hidden = true;
 
-setLanguage(location.pathname.startsWith('/en/') ? 'en' : 'ko');
+setLanguage(/(^|\/)en(\/|$)/.test(location.pathname) ? 'en' : 'ko');
