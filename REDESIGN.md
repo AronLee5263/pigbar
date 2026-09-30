@@ -109,3 +109,15 @@ Keep using https://aronlee5263.github.io/pigbar/ when resetting the Korean page.
 - The selected photos use dish-name captions, without temporary candidate text. Existing mobile framing and signature cards are retained.
 - All four languages mask the final five visible characters of reviewer nicknames as *****. Names with five characters or fewer are fully masked. The same masked names are stored in deployed JavaScript and static HTML, including aria-labels.
 - The approved neon sharing image remains unchanged; the user confirmed Kakao cache clearing worked.
+
+
+## Further mobile UX refinement (2026-09-30)
+
+- 9 hero images; all captions sit at bottom right. Added seafood tofu stew.
+- Explicit downward-scroll link to the experience section. Motion stops after three cycles and is disabled for reduced-motion users.
+- Experience copy covers aged Boseong Nokdon pork, charcoal grilling by staff and beer/soju/highballs/wine. The brand and aging statement comes from the user's supplied brief.
+- 6 signature cards: official neck photo, pork belly, mango gabrisal, beef doenjang, seafood tofu and cheesy fried rice. Removed the section's repeated introductory paragraph.
+- Localized handwritten recommendation labels and 3 visible set menus with compositions from the supplied boards.
+- Booking entry points first open the reservation guide, including seven-table capacity, cut-off times, Naver booking and the confirmed CATCHTABLE international waitlist page. Instagram is included with its icon.
+- No direct booking API, live availability or automatic menu/review synchronization is claimed.
+- The drinks image layout and Kakao-only zoom behavior are preserved as requested; recommendations are documented in SALES_HANDOFF.md.

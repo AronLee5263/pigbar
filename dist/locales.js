@@ -17,8 +17,6 @@ const PIGBAR_LOCALES = {
       "videoLabel": "피그바 망고 가브리살 영상",
       "videoPlay": "영상 재생",
       "videoPause": "영상 일시정지",
-      "videoMute": "영상 소리 끄기",
-      "videoUnmute": "영상 소리 켜기",
       "signaturePrevious": "이전 대표 메뉴",
       "signatureNext": "다음 대표 메뉴",
       "reviewRegion": "방문자 리뷰, 옆으로 넘겨 보기",
@@ -29,13 +27,14 @@ const PIGBAR_LOCALES = {
       "tagBeef": "소고기",
       "tagFree": "무료",
       "photoAlts": [
-        "숯불 위에서 구워지는 피그바 돼지고기",
+        "피그바 숯불 망고 가브리살",
         "노릇하게 구운 피그바 목살의 촉촉한 단면",
         "피그바 소고기 된장찌개",
         "고기듬뿍 치즈이불 김치볶음밥",
         "한맥 크리미 생맥주",
         "피그바 소갈비살 대표 메뉴 사진",
-        "피그바 수제 간장 벌집껍데기 대표 메뉴 사진"
+        "피그바 수제 간장 벌집껍데기 대표 메뉴 사진",
+        "피그바 칼칼 해물 순두부찌개"
       ],
       "drinkAlts": [
         "한맥 크리미 생맥주",
@@ -53,7 +52,64 @@ const PIGBAR_LOCALES = {
       },
       "neckPhotoLabel": "피그목살",
       "beefPhotoLabel": "소갈비살",
-      "skinPhotoLabel": "수제 간장 벌집껍데기"
+      "skinPhotoLabel": "수제 간장 벌집껍데기",
+      "menuMarks": {
+        "best": "베스트!",
+        "value": "가성비!",
+        "signature": "시그니처",
+        "pick": "강력추천"
+      },
+      "setDescriptions": [
+        "삼겹살 + 목살 + 가브리살 + 껍데기 + 콘치즈",
+        "소갈비살 + 삼겹살 + 목살 + 껍데기 + 소고기 된장찌개",
+        "소갈비살 + 목살 2 + 가브리살 + 껍데기 + 소고기 된장찌개 + 살얼음 김치말이국수"
+      ],
+      "gabriPhotoLabel": "망고 가브리살",
+      "stewPhotoLabel": "소고기 된장찌개",
+      "ricePhotoLabel": "치즈이불 김치볶음밥",
+      "beerPhotoLabel": "한맥 크리미 생맥주",
+      "seafoodPhotoLabel": "칼칼 해물 순두부찌개",
+      "signatureAlts": {
+        "neck": "숯불 위 두툼한 피그바 목살",
+        "belly": "피그바 숯불 삼겹살",
+        "gabri": "피그바 숯불 망고 가브리살",
+        "stew": "피그바 소고기 된장찌개",
+        "seafood": "피그바 칼칼 해물 순두부찌개",
+        "rice": "고기듬뿍 치즈이불 김치볶음밥"
+      }
+    },
+    "enhancements": {
+      "experiencePork": "숙성한 보성녹돈",
+      "experiencePorkBody": "10일 이상 숙성한 좋은 고기.",
+      "experienceGrill": "숯불, 직접 그릴링",
+      "experienceGrillBody": "맛있게 구워드립니다.",
+      "experienceFinish": "취향대로 한잔",
+      "experienceFinishBody": "맥주·소주·하이볼·와인.",
+      "storyLead": "숯불에 맛있게, 직원이 직접 구워드립니다.",
+      "scrollMore": "아래로 더 보기",
+      "gabriName": "망고 가브리살",
+      "gabriDesc": "망고 모양으로 손질한 부드러운 희귀부위.",
+      "seafoodName": "칼칼 해물 순두부찌개",
+      "seafoodDesc": "해물과 부드러운 순두부, 칼칼한 국물.",
+      "sigGabri": "망고 모양의 한 입",
+      "sigSeafood": "칼칼한 마무리",
+      "setsHeading": "함께 먹기 좋은 세트",
+      "bookingIntro": "테이블 7개의 작은 매장입니다. 예약은 아래 시간까지 받고 있어요.",
+      "bookingWeekdays": "화–목",
+      "bookingFridaySunday": "금 · 일",
+      "bookingSaturday": "토",
+      "bookingCutoff": "마지막 예약 시간",
+      "bookingFallback": "예약이 마감되면 네이버에서 예약할 수 없습니다. 매장에 방문하시거나 캐치테이블에서 원격 웨이팅을 확인해 주세요.",
+      "visitReserve": "네이버 예약",
+      "catchWait": "캐치테이블 웨이팅",
+      "bookingHelp": "외국인 방문 안내",
+      "bookingStep1": "캐치테이블 피그바 페이지를 열고 상단에서 언어를 선택하세요.",
+      "bookingStep2": "원격 웨이팅 버튼을 누르고 안내에 따라 로그인 또는 가입하세요.",
+      "bookingStep3": "웨이팅 접수가 닫혀 있다면 매장으로 방문해 주세요. 실제 접수 가능 여부는 캐치테이블에서 확인하세요.",
+      "instagramLabel": "인스타그램",
+      "boardSummary": "추가 식사·사이드·주류 보기",
+      "boardCaution": "첨부 메뉴판 기준입니다. 판매 여부와 가격은 방문 전 매장에 확인해 주세요.",
+      "visitNote": "예약 시간과 웨이팅 안내를 확인해 주세요."
     }
   },
   "en": {
@@ -73,8 +129,6 @@ const PIGBAR_LOCALES = {
       "videoLabel": "PIGBAR mango-cut gabrisal grilling video",
       "videoPlay": "Play video",
       "videoPause": "Pause video",
-      "videoMute": "Mute video",
-      "videoUnmute": "Unmute video",
       "signaturePrevious": "Previous signature dish",
       "signatureNext": "Next signature dish",
       "reviewRegion": "Guest reviews, swipe to explore",
@@ -85,13 +139,14 @@ const PIGBAR_LOCALES = {
       "tagBeef": "BEEF",
       "tagFree": "FREE",
       "photoAlts": [
-        "Charcoal-grilled pork at PIGBAR",
+        "Mango-cut gabrisal over charcoal at PIGBAR",
         "A juicy slice of charcoal-grilled pork neck at PIGBAR",
         "Beef doenjang stew at PIGBAR",
         "Cheese blanket kimchi fried rice",
         "Hanmac creamy draft beer",
         "PIGBAR beef rib meat, official menu photo",
-        "PIGBAR soy-marinated honeycomb pork skin, official menu photo"
+        "PIGBAR soy-marinated honeycomb pork skin, official menu photo",
+        "Spicy seafood soft tofu stew at PIGBAR"
       ],
       "drinkAlts": [
         "Hanmac creamy draft beer",
@@ -109,7 +164,64 @@ const PIGBAR_LOCALES = {
       },
       "neckPhotoLabel": "Pork neck",
       "beefPhotoLabel": "Beef rib meat",
-      "skinPhotoLabel": "Soy-marinated pork skin"
+      "skinPhotoLabel": "Soy-marinated pork skin",
+      "menuMarks": {
+        "best": "BEST!",
+        "value": "Best value!",
+        "signature": "Signature",
+        "pick": "Our pick!"
+      },
+      "setDescriptions": [
+        "Pork belly + pork neck + gabrisal + pork skin + corn cheese",
+        "Beef rib meat + pork belly + pork neck + pork skin + beef doenjang stew",
+        "Beef rib meat + 2 pork neck portions + gabrisal + pork skin + beef doenjang stew + chilled kimchi noodles"
+      ],
+      "gabriPhotoLabel": "Mango-cut gabrisal",
+      "stewPhotoLabel": "Beef doenjang stew",
+      "ricePhotoLabel": "Cheesy kimchi fried rice",
+      "beerPhotoLabel": "Hanmac draft beer",
+      "seafoodPhotoLabel": "Seafood soft tofu stew",
+      "signatureAlts": {
+        "neck": "Thick pork neck over charcoal at PIGBAR",
+        "belly": "Charcoal-grilled pork belly at PIGBAR",
+        "gabri": "Mango-cut gabrisal over charcoal at PIGBAR",
+        "stew": "Beef doenjang stew at PIGBAR",
+        "seafood": "Spicy seafood soft tofu stew at PIGBAR",
+        "rice": "Cheese blanket kimchi fried rice"
+      }
+    },
+    "enhancements": {
+      "experiencePork": "Aged Korean pork",
+      "experiencePorkBody": "Boseong Nokdon. Aged 10+ days.",
+      "experienceGrill": "Charcoal grilling",
+      "experienceGrillBody": "We grill it for you.",
+      "experienceFinish": "Your kind of drink",
+      "experienceFinishBody": "Beer, soju, highballs & wine.",
+      "storyLead": "Our team grills it over charcoal, right at your table.",
+      "scrollMore": "Explore below",
+      "gabriName": "Mango-Cut Gabrisal",
+      "gabriDesc": "A tender, prized pork cut with a mango-style crosshatch.",
+      "seafoodName": "Spicy Seafood Soft Tofu Stew",
+      "seafoodDesc": "Seafood and silky tofu in a spicy broth.",
+      "sigGabri": "A special pork cut",
+      "sigSeafood": "A spicy finish",
+      "setsHeading": "Sets to share",
+      "bookingIntro": "We have just seven tables. The latest reservation times are listed below.",
+      "bookingWeekdays": "Tue–Thu",
+      "bookingFridaySunday": "Fri · Sun",
+      "bookingSaturday": "Sat",
+      "bookingCutoff": "Latest reservation",
+      "bookingFallback": "If Naver reservations are full, walk in or check the remote waitlist on CATCHTABLE.",
+      "visitReserve": "Reserve on Naver",
+      "catchWait": "CATCHTABLE waitlist",
+      "bookingHelp": "Visiting from overseas?",
+      "bookingStep1": "Open PIGBAR on CATCHTABLE and choose your language at the top.",
+      "bookingStep2": "Tap Join Remote Waitlist, then sign in or create an account as prompted.",
+      "bookingStep3": "If the waitlist is closed, visit the restaurant in person. Check CATCHTABLE for live availability.",
+      "instagramLabel": "Instagram",
+      "boardSummary": "More meals, sides & drinks",
+      "boardCaution": "Based on the supplied menu boards. Please confirm availability and prices before visiting.",
+      "visitNote": "Check reservation times and the waitlist guide below."
     }
   },
   "zh": {
@@ -227,8 +339,6 @@ const PIGBAR_LOCALES = {
       "videoLabel": "PIGBAR芒果切花猪肉烤制视频",
       "videoPlay": "播放视频",
       "videoPause": "暂停视频",
-      "videoMute": "关闭视频声音",
-      "videoUnmute": "开启视频声音",
       "signaturePrevious": "上一道招牌菜",
       "signatureNext": "下一道招牌菜",
       "reviewRegion": "顾客评价，可左右滑动",
@@ -239,13 +349,14 @@ const PIGBAR_LOCALES = {
       "tagBeef": "牛肉",
       "tagFree": "免费",
       "photoAlts": [
-        "PIGBAR炭火烤猪肉",
+        "PIGBAR炭火芒果切法猪背脊肉",
         "PIGBAR厚切梅花肉柔嫩多汁的切面",
         "牛肉大酱汤",
         "肉多多芝士泡菜炒饭",
         "Hanmac绵密生啤",
         "PIGBAR牛肋条肉官方菜单照片",
-        "PIGBAR酱油腌蜂窝纹猪皮官方菜单照片"
+        "PIGBAR酱油腌蜂窝纹猪皮官方菜单照片",
+        "PIGBAR香辣海鲜嫩豆腐汤"
       ],
       "drinkAlts": [
         "Hanmac绵密生啤",
@@ -263,7 +374,31 @@ const PIGBAR_LOCALES = {
       },
       "neckPhotoLabel": "梅花肉",
       "beefPhotoLabel": "牛肋条肉",
-      "skinPhotoLabel": "酱油腌猪皮"
+      "skinPhotoLabel": "酱油腌猪皮",
+      "menuMarks": {
+        "best": "人气推荐",
+        "value": "超值推荐",
+        "signature": "招牌",
+        "pick": "强烈推荐"
+      },
+      "setDescriptions": [
+        "五花肉 + 梅花肉 + 猪背脊肉 + 猪皮 + 玉米芝士",
+        "牛肋条肉 + 五花肉 + 梅花肉 + 猪皮 + 牛肉大酱汤",
+        "牛肋条肉 + 梅花肉2份 + 猪背脊肉 + 猪皮 + 牛肉大酱汤 + 冰爽泡菜汤面"
+      ],
+      "gabriPhotoLabel": "芒果切法猪背脊肉",
+      "stewPhotoLabel": "牛肉大酱汤",
+      "ricePhotoLabel": "芝士泡菜炒饭",
+      "beerPhotoLabel": "Hanmac生啤",
+      "seafoodPhotoLabel": "海鲜嫩豆腐汤",
+      "signatureAlts": {
+        "neck": "PIGBAR炭火厚切梅花肉",
+        "belly": "PIGBAR炭火烤五花肉",
+        "gabri": "PIGBAR炭火芒果切法猪背脊肉",
+        "stew": "牛肉大酱汤",
+        "seafood": "PIGBAR香辣海鲜嫩豆腐汤",
+        "rice": "肉多多芝士泡菜炒饭"
+      }
     },
     "menu": [
       [
@@ -363,7 +498,40 @@ const PIGBAR_LOCALES = {
       "如果你喜欢韩式烤肉，PIGBAR就是值得去的地方。……店员总会把肉烤得恰到好处。",
       "这里的猪肉真的太好吃了。\n超级柔嫩多汁！\n店员还会帮你烤肉 😊 ……",
       "食物真的非常美味 😍 猪肉很嫩，店员也非常友善！\n……从合井站走一小段路就到，服务很棒！"
-    ]
+    ],
+    "enhancements": {
+      "experiencePork": "熟成韩国产猪肉",
+      "experiencePorkBody": "宝城绿豚，熟成10天以上。",
+      "experienceGrill": "炭火烤肉服务",
+      "experienceGrillBody": "由店员为您烤制。",
+      "experienceFinish": "按喜好选一杯",
+      "experienceFinishBody": "啤酒、烧酒、嗨棒和葡萄酒。",
+      "storyLead": "店员在您的餐桌旁，用炭火烤出好滋味。",
+      "scrollMore": "下滑查看更多",
+      "gabriName": "芒果切法猪背脊肉",
+      "gabriDesc": "珍稀猪肉部位，切成芒果般的花纹。",
+      "seafoodName": "香辣海鲜嫩豆腐汤",
+      "seafoodDesc": "海鲜与嫩豆腐，搭配香辣汤底。",
+      "sigGabri": "芒果花纹的珍稀部位",
+      "sigSeafood": "香辣收尾",
+      "setsHeading": "适合分享的套餐",
+      "bookingIntro": "本店只有7张餐桌，最晚可预约的到店时间如下。",
+      "bookingWeekdays": "周二至周四",
+      "bookingFridaySunday": "周五 · 周日",
+      "bookingSaturday": "周六",
+      "bookingCutoff": "最晚预约时间",
+      "bookingFallback": "Naver预约满额时将无法订位。您可以直接到店，或通过CATCHTABLE查看远程排队。",
+      "visitReserve": "通过Naver预约",
+      "catchWait": "CATCHTABLE排队",
+      "bookingHelp": "海外游客到店指南",
+      "bookingStep1": "打开CATCHTABLE的PIGBAR页面，在顶部选择语言。",
+      "bookingStep2": "点击远程排队按钮，按提示登录或注册。",
+      "bookingStep3": "若排队已关闭，请直接到店。实时接收情况以CATCHTABLE为准。",
+      "instagramLabel": "Instagram",
+      "boardSummary": "更多餐点、配菜和酒水",
+      "boardCaution": "依据所提供的菜单照片。到店前请确认供应情况和价格。",
+      "visitNote": "请查看下方的预约时间与排队指南。"
+    }
   },
   "ja": {
     "htmlLang": "ja",
@@ -480,8 +648,6 @@ const PIGBAR_LOCALES = {
       "videoLabel": "PIGBARのマンゴーカット・カブリサルの動画",
       "videoPlay": "動画を再生",
       "videoPause": "動画を一時停止",
-      "videoMute": "動画をミュート",
-      "videoUnmute": "動画の音声をオン",
       "signaturePrevious": "前のおすすめ料理",
       "signatureNext": "次のおすすめ料理",
       "reviewRegion": "お客様の口コミ。横にスワイプできます",
@@ -492,13 +658,14 @@ const PIGBAR_LOCALES = {
       "tagBeef": "牛肉",
       "tagFree": "無料",
       "photoAlts": [
-        "PIGBARの炭火焼き豚肉",
+        "PIGBARの炭火マンゴーカット・カブリサル",
         "しっとりジューシーな炭火焼きモクサルの断面",
         "牛肉テンジャンチゲ",
         "お肉たっぷりチーズキムチチャーハン",
         "ハンマック クリーミー生ビール",
         "PIGBARの牛カルビ、公式メニュー写真",
-        "PIGBARのしょうゆ漬け豚皮、公式メニュー写真"
+        "PIGBARのしょうゆ漬け豚皮、公式メニュー写真",
+        "PIGBARのピリ辛海鮮スンドゥブチゲ"
       ],
       "drinkAlts": [
         "ハンマック クリーミー生ビール",
@@ -516,7 +683,31 @@ const PIGBAR_LOCALES = {
       },
       "neckPhotoLabel": "豚肩ロース",
       "beefPhotoLabel": "牛カルビ",
-      "skinPhotoLabel": "しょうゆ漬け豚皮"
+      "skinPhotoLabel": "しょうゆ漬け豚皮",
+      "menuMarks": {
+        "best": "人気!",
+        "value": "お得!",
+        "signature": "名物",
+        "pick": "おすすめ!"
+      },
+      "setDescriptions": [
+        "サムギョプサル + 豚肩ロース + カブリサル + 豚皮 + コーンチーズ",
+        "牛カルビ + サムギョプサル + 豚肩ロース + 豚皮 + 牛肉テンジャンチゲ",
+        "牛カルビ + 豚肩ロース2人前 + カブリサル + 豚皮 + 牛肉テンジャンチゲ + 冷たいキムチそうめん"
+      ],
+      "gabriPhotoLabel": "マンゴーカットのカブリサル",
+      "stewPhotoLabel": "牛肉テンジャンチゲ",
+      "ricePhotoLabel": "チーズキムチチャーハン",
+      "beerPhotoLabel": "ハンマック生ビール",
+      "seafoodPhotoLabel": "海鮮スンドゥブチゲ",
+      "signatureAlts": {
+        "neck": "PIGBARの厚切り炭火豚肩ロース",
+        "belly": "PIGBARの炭火サムギョプサル",
+        "gabri": "PIGBARの炭火マンゴーカット・カブリサル",
+        "stew": "牛肉テンジャンチゲ",
+        "seafood": "PIGBARのピリ辛海鮮スンドゥブチゲ",
+        "rice": "お肉たっぷりチーズキムチチャーハン"
+      }
     },
     "menu": [
       [
@@ -616,6 +807,39 @@ const PIGBAR_LOCALES = {
       "韓国焼肉が好きなら、PIGBARは行くべきお店です。…スタッフがお肉をいつも最高の焼き加減にしてくれます。",
       "ここの豚肉は本当においしいです。\nとてもやわらかくてジューシー！\nスタッフがお肉を焼いてくれます 😊 …",
       "本当においしい料理でした 😍 豚肉はやわらかく、スタッフもとても親切でした！\n…合井駅から少し歩くだけで、サービスも素晴らしいです！"
-    ]
+    ],
+    "enhancements": {
+      "experiencePork": "熟成した韓国産豚肉",
+      "experiencePorkBody": "宝城緑豚を10日以上熟成。",
+      "experienceGrill": "炭火で焼くサービス",
+      "experienceGrillBody": "スタッフがお焼きします。",
+      "experienceFinish": "お好みの一杯を",
+      "experienceFinishBody": "ビール・焼酎・ハイボール・ワイン。",
+      "storyLead": "スタッフがテーブルで、炭火でおいしく焼き上げます。",
+      "scrollMore": "下へスクロール",
+      "gabriName": "マンゴーカットのカブリサル",
+      "gabriDesc": "マンゴーのように切り込みを入れた希少な豚肉の部位。",
+      "seafoodName": "ピリ辛海鮮スンドゥブチゲ",
+      "seafoodDesc": "海鮮とやわらかな豆腐を、ピリ辛のスープで。",
+      "sigGabri": "マンゴーカットの希少部位",
+      "sigSeafood": "ピリ辛の締め",
+      "setsHeading": "シェアするセット",
+      "bookingIntro": "テーブル7卓の小さなお店です。ご予約できる最終来店時間は以下のとおりです。",
+      "bookingWeekdays": "火〜木",
+      "bookingFridaySunday": "金・日",
+      "bookingSaturday": "土",
+      "bookingCutoff": "最終予約時間",
+      "bookingFallback": "Naverの予約が満席の場合は予約できません。直接ご来店いただくか、CATCHTABLEで遠隔順番待ちをご確認ください。",
+      "visitReserve": "Naverで予約",
+      "catchWait": "CATCHTABLEで順番待ち",
+      "bookingHelp": "海外からお越しの方へ",
+      "bookingStep1": "CATCHTABLEのPIGBARページを開き、上部で言語を選びます。",
+      "bookingStep2": "遠隔順番待ちのボタンを押し、案内に従ってログインまたは登録します。",
+      "bookingStep3": "受付が終了している場合は直接ご来店ください。最新の受付状況はCATCHTABLEでご確認ください。",
+      "instagramLabel": "Instagram",
+      "boardSummary": "その他のお食事・サイド・ドリンク",
+      "boardCaution": "提供されたメニュー写真に基づきます。販売状況と価格はご来店前にご確認ください。",
+      "visitNote": "下の予約時間と順番待ちの案内をご確認ください。"
+    }
   }
 };

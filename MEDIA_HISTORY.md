@@ -70,3 +70,16 @@ Korean cards contain verbatim excerpts of confirmed five-star Naver reviews by y
 - 소갈비살: dist/assets/beef-rib.webp, 900 x 1200. Original: https://ldb-phinf.pstatic.net/20260515_196/1778822239891Ydj6E_JPEG/%BC%D2%B0%A5%BA%F1%BB%EC.jpg
 - 수제 간장 벌집껍데기: dist/assets/soy-honeycomb-skin.webp, 900 x 1200. Original: https://ldb-phinf.pstatic.net/20240108_249/1704641147440k1NzU_JPEG/%B2%AE%B5%A5%B1%E23.jpg
 - Review names are masked in static HTML, accessibility labels and deployed JavaScript data. Review text, ratings and source links are preserved.
+
+
+## Menu and UX refinement (2026-09-30)
+
+- Removed prior banner positions 2, 3 and 5. Current banner contains 9 images, including seafood soft tofu stew. Existing asset files remain available for rollback.
+- Dish labels now sit at bottom right; the first image is identified as mango-cut gabrisal per the user's correction.
+- Signature pork-neck image matches attachment 4: pork-neck-official.webp. Source: https://ldb-phinf.pstatic.net/20260514_89/1778741410056FOpxB_JPEG/IMG_0823.jpg
+- Seafood stew: seafood-tofu.webp. Source: https://ldb-phinf.pstatic.net/20260514_72/1778741653985FgM8j_JPEG/8A7D1DA6-79E9-4989-AA53-31CA1F4389CA.jpg
+- Recommendation marks follow the three supplied menu-board images, rather than inferred popularity.
+- The original 18.11-second Naver mango video was also inspected. Its AAC track decodes to silence (mean and max volume -91 dB); the current 10-second trailer has no audio track. The current visual clip is preserved; the sound button is removed at the user’s request. Downloaded test originals remain outside the repository.
+- Short review names preserve at least one grapheme when possible: up to 5 characters hide the last 2, 6 hide the last 3, longer names hide the last 5. A single-character name is replaced by one asterisk. Published author data and ARIA labels use the same mask.
+
+- Alternative video reference supplied by user: https://naver.me/xnO08RTf . Remember for a later comparison; explicitly not used on the current website.

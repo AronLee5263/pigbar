@@ -8,7 +8,8 @@
     "width": 959,
     "height": 1200,
     "bytes": 175654,
-    "selected": true
+    "selected": true,
+    "activeInHero": false
   },
   {
     "number": 4,
@@ -19,7 +20,8 @@
     "width": 959,
     "height": 1200,
     "bytes": 200576,
-    "selected": true
+    "selected": true,
+    "activeInHero": true
   },
   {
     "number": 5,
@@ -30,7 +32,8 @@
     "width": 959,
     "height": 1200,
     "bytes": 170524,
-    "selected": true
+    "selected": true,
+    "activeInHero": false
   },
   {
     "number": 7,
@@ -41,6 +44,7 @@
     "width": 900,
     "height": 1200,
     "bytes": 172150,
-    "selected": true
+    "selected": true,
+    "activeInHero": true
   }
 ]

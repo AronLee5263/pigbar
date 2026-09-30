@@ -1,11 +1,17 @@
-# Selected store photos
+# Current store-photo gallery
 
-The user selected pork-neck alternatives 01, 04, 05 and 07. The other six alternatives are removed from the current website and asset directory; the earlier comparison commit preserves them in Git history.
+Prior banner positions 2, 3 and 5 were removed at the user's request. The current order has 9 manually browsed slides:
 
-The five original banner images are preserved in their original relative order: charcoal-grill.jpg, pork-neck-grilled.jpg, doenjang.jpg, fried-rice.jpg and draft-beer.jpg. Four selected pork-neck photos and two official Naver menu photos are inserted between the original pork-neck image and the stew image. There are 11 manually browsed slides.
+1. charcoal-grill.jpg (mango gabrisal; confirmed by user)
+2. pork-neck-option-04.webp
+3. pork-neck-option-07.webp
+4. beef-rib.webp
+5. soy-honeycomb-skin.webp
+6. doenjang.jpg
+7. fried-rice.jpg
+8. seafood-tofu.webp
+9. draft-beer.jpg
 
-PHOTO_OPTIONS.json records the original candidate numbers and source URLs of the four selected neck photos. Captions show localized dish names; temporary candidate labels are removed. The signature cards retain their existing images.
+PHOTO_OPTIONS.json preserves provenance for the earlier four selected neck alternatives. Alternatives 01 and 05 are retained on disk for rollback and do not appear in the current gallery.
 
-The additional official representative menu images are beef-rib.webp and soy-honeycomb-skin.webp, confirmed on Naver Place's menu page. Their original URLs are recorded in MEDIA_HISTORY.md.
-
-The approved neon sharing thumbnail remains pigbar-share-neon-v3.png. The user confirmed that clearing Kakao's cached metadata made it appear correctly.
+The signature section uses pork-neck-official.webp to match attachment 4 and now contains six dishes. Additional sources are recorded in MEDIA_HISTORY.md.

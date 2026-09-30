@@ -66,6 +66,8 @@ Object.assign(copy.en, {
 for (const lang of ['zh', 'ja']) {
   copy[lang] = {...copy.en, ...PIGBAR_LOCALES[lang].copy};
 }
+for (const lang of ['ko', 'en', 'zh', 'ja']) Object.assign(copy[lang], PIGBAR_LOCALES[lang].enhancements);
+
 const menu = [
   {category:'grill',ko:'피그삼겹살',en:'Pig Pork Belly',descKo:'+1등급 한돈 삼겹살, 10일 이상 숙성',descEn:'Aged Korean pork belly, carefully trimmed',price:17000,tag:'PORK'},
   {category:'grill',ko:'피그목살',en:'Pig Pork Neck',descKo:'+1등급 한돈 목살, 10일 이상 숙성',descEn:'Aged Korean pork neck, carefully trimmed',price:17000,tag:'PORK'},
@@ -112,6 +114,11 @@ const boardMenu = [
   {ko:'와인에이드 샷 추가',en:'Extra Wine Ade Shot',price:2000}
 ];
 
+const menuMarks = {1:'best', 2:'best', 5:'best', 7:'best', 8:'pick', 9:'signature', 11:'best'};
+for (const [index, mark] of Object.entries(menuMarks)) menu[Number(index)].mark = mark;
+boardMenu[1].mark = 'best';
+boardMenu[2].mark = 'value';
+
 const reviews = {
   ko: [
     {text:'합정역 근처에서 삼겹살, 목살 먹으러 방문한 피그바! 고기 질도 좋고 직원분이 직접 구워주는 고기집이라 편하게 먹을 수 있었어요. 특히 목살이 촉촉하고 부드러워서 맛있었습니다. …',author:'younj*****',date:'2026.08.08',url:'https://m.place.naver.com/my/5f04312aee4be03dee262124/review?v=2'},
@@ -126,8 +133,8 @@ const reviews = {
 };
 
 reviews.ko.push(
-  {text:'작년부터 왔는데 삼겹 목살 진짜 한결같이 잡내없이 맛있어요🥹\n항상 잘 구워주셔서 열심히 먹기만 하면 된답니다-!\n… 된장술밥은 고기랑 같이 먹으면 그냥 뒤집어집니다🫶🏻',author:'*****',date:'2026.09.23',url:'https://pcmap.place.naver.com/restaurant/1006983247/review/visitor'},
-  {text:'… 고기 구성은 소갈빗살+삼겹+목살+껍데기+소고기 된장찌게였는데 다 맛있었어요~\n반찬구성도 적당하게 좋았고 무엇보다 친절하게 잘 챙겨주셔서 기분좋게 먹었습니다. …',author:'*****',date:'2026.09.12',url:'https://pcmap.place.naver.com/restaurant/1006983247/review/visitor'}
+  {text:'작년부터 왔는데 삼겹 목살 진짜 한결같이 잡내없이 맛있어요🥹\n항상 잘 구워주셔서 열심히 먹기만 하면 된답니다-!\n… 된장술밥은 고기랑 같이 먹으면 그냥 뒤집어집니다🫶🏻',author:'애**',date:'2026.09.23',url:'https://pcmap.place.naver.com/restaurant/1006983247/review/visitor'},
+  {text:'… 고기 구성은 소갈빗살+삼겹+목살+껍데기+소고기 된장찌게였는데 다 맛있었어요~\n반찬구성도 적당하게 좋았고 무엇보다 친절하게 잘 챙겨주셔서 기분좋게 먹었습니다. …',author:'미**',date:'2026.09.12',url:'https://pcmap.place.naver.com/restaurant/1006983247/review/visitor'}
 );
 reviews.en.push(
   {text:'The pork here is SOOO GOOOD.\nSuper tender and juicy!\nThe staff cooks the meat for you as well 😊 …',author:'Chlo*****',date:'Google',url:GOOGLE_URL},
@@ -146,17 +153,25 @@ for (const lang of ['zh', 'ja']) {
 // Names are stored masked; enforce the same rule for future review entries.
 function maskReviewerName(name) {
   const value = String(name).trim();
-  if (value.endsWith('*****')) return value;
+  if (/\*+$/.test(value)) return value;
   const characters = typeof Intl.Segmenter === 'function'
     ? Array.from(new Intl.Segmenter(undefined, {granularity:'grapheme'}).segment(value), item => item.segment)
     : Array.from(value);
-  return characters.slice(0, -5).join('') + '*****';
+  const length = characters.length;
+  const hidden = length <= 1 ? length : Math.min(length - 1, length <= 5 ? 2 : length === 6 ? 3 : 5);
+  return characters.slice(0, length - hidden).join('') + '*'.repeat(hidden);
 }
 let currentLang = 'ko';
 let currentCategory = 'all';
 const menuList = document.getElementById('menu-list');
 const reviewList = document.getElementById('review-list');
 
+function menuMark(mark) {
+  return mark ? '<span class="menu-mark menu-mark-' + mark + '">' + PIGBAR_LOCALES[currentLang].ui.menuMarks[mark] + '</span>' : '';
+}
+function renderSets() {
+  document.getElementById('set-menu-list').innerHTML = boardMenu.slice(0,3).map((item,index) => '<article class="set-card"><div class="set-card-title"><h3>' + item[currentLang] + '</h3>' + menuMark(item.mark) + '</div><p>' + PIGBAR_LOCALES[currentLang].ui.setDescriptions[index] + '</p><strong>₩' + item.price.toLocaleString('ko-KR') + '</strong></article>').join('');
+}
 function renderMenu() {
   const shown = menu.filter(item => currentCategory === 'all' || item.category === currentCategory);
   menuList.innerHTML = shown.map(item => {
@@ -165,12 +180,12 @@ function renderMenu() {
     const price = item.price ? `₩${item.price.toLocaleString('ko-KR')}` : PIGBAR_LOCALES[currentLang].ui.freeLabel;
     const tags = {PORK:PIGBAR_LOCALES[currentLang].ui.tagPork, BEEF:PIGBAR_LOCALES[currentLang].ui.tagBeef, FREE:PIGBAR_LOCALES[currentLang].ui.tagFree};
     const tag = item.tag ? `<span>${tags[item.tag]}</span>` : '';
-    return `<article class="menu-item"><h3>${name}${tag}</h3><strong>${price}</strong><p>${desc}</p></article>`;
+    return `<article class="menu-item"><h3><span class="menu-name">${name}</span>${menuMark(item.mark)}${tag}</h3><strong>${price}</strong><p>${desc}</p></article>`;
   }).join('');
 }
 
 function renderBoardMenu() {
-  document.getElementById('board-menu-list').innerHTML = boardMenu.map(item => `<div class="board-menu-item"><span>${item[currentLang]}</span><strong>₩${item.price.toLocaleString('ko-KR')}</strong></div>`).join('');
+  document.getElementById('board-menu-list').innerHTML = boardMenu.slice(3).map(item => `<div class="board-menu-item"><span>${item[currentLang]}</span><strong>₩${item.price.toLocaleString('ko-KR')}</strong></div>`).join('');
 }
 
 function renderReviews() {
@@ -209,6 +224,7 @@ function setLanguage(lang) {
   localizeAccessibility();
   renderMenu();
   renderBoardMenu();
+  renderSets();
   renderReviews();
 }
 
@@ -237,24 +253,18 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
 
 const video = document.getElementById('grill-video');
 const videoToggle = document.getElementById('video-toggle');
-videoToggle.addEventListener('click', () => {
+function syncVideoControls() {
+  const ui = PIGBAR_LOCALES[currentLang].ui;
+  videoToggle.textContent = video.paused ? '▶' : 'Ⅱ';
+  videoToggle.setAttribute('aria-label', ui[video.paused ? 'videoPlay' : 'videoPause']);
+}
+videoToggle.addEventListener('click', async () => {
   if (video.paused) {
-    video.play().catch(() => {});
-    videoToggle.textContent = 'Ⅱ';
-    videoToggle.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui.videoPause);
-  } else {
-    video.pause();
-    videoToggle.textContent = '▶';
-    videoToggle.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui.videoPlay);
-  }
+    try { await video.play(); } catch { syncVideoControls(); }
+  } else video.pause();
 });
-const videoSound = document.getElementById('video-sound');
-videoSound.addEventListener('click', () => {
-  video.muted = !video.muted;
-  videoSound.classList.toggle('is-on', !video.muted);
-  videoSound.setAttribute('aria-label', PIGBAR_LOCALES[currentLang].ui[video.muted ? 'videoUnmute' : 'videoMute']);
-  videoSound.setAttribute('aria-pressed', String(!video.muted));
-});
+video.addEventListener('play', syncVideoControls);
+video.addEventListener('pause', syncVideoControls);
 
 video.querySelector('source').addEventListener('error', () => { videoToggle.hidden = true; });
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -266,7 +276,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 function localizeAccessibility() {
   const ui = PIGBAR_LOCALES[currentLang].ui;
-  const labels = {'.header-inner > .brand':'home', '#main-nav':'primary', '.lang-switch':'languageLabel', '.quick-nav':'quickLinks', '.bottom-actions':'planVisit', '#hero-track':'foodPhotos', '.hero-pagination':'photoSelection', '#hero-prev':'heroPrevious', '#hero-next':'heroNext', '.menu-tabs':'menuCategories', '.nav-toggle':'menuOpen', '#grill-video':'videoLabel', '#video-toggle':video.paused ? 'videoPlay' : 'videoPause', '#video-sound':video.muted ? 'videoUnmute' : 'videoMute', '#signature-prev':'signaturePrevious', '#signature-next':'signatureNext'};
+  const labels = {'.header-inner > .brand':'home', '#main-nav':'primary', '.lang-switch':'languageLabel', '.quick-nav':'quickLinks', '.bottom-actions':'planVisit', '#hero-track':'foodPhotos', '.hero-pagination':'photoSelection', '#hero-prev':'heroPrevious', '#hero-next':'heroNext', '.menu-tabs':'menuCategories', '.nav-toggle':'menuOpen', '#grill-video':'videoLabel', '#video-toggle':video.paused ? 'videoPlay' : 'videoPause', '#signature-prev':'signaturePrevious', '#signature-next':'signatureNext'};
   for (const [selector, key] of Object.entries(labels)) document.querySelector(selector).setAttribute('aria-label', ui[key]);
   document.querySelectorAll('.hero-slide img').forEach(img => {
     img.alt = img.dataset.selectedNeck ? ui.selectedNeckAlts[img.dataset.selectedNeck] : ui.photoAlts[Number(img.dataset.photo)];
@@ -274,8 +284,7 @@ function localizeAccessibility() {
   document.querySelectorAll('.hero-photo-label[data-caption]').forEach(caption => {
     caption.textContent = ui[caption.dataset.caption];
   });
-  const signatureAlts = [ui.photoAlts[1], ui.bellyAlt, ui.photoAlts[2], ui.photoAlts[3]];
-  document.querySelectorAll('.signature-card img').forEach((img, index) => { img.alt = signatureAlts[index]; });
+  document.querySelectorAll('.signature-card img').forEach(img => { img.alt = ui.signatureAlts[img.dataset.signatureAlt]; });
   document.querySelectorAll('.drink-card img').forEach((img, index) => { img.alt = ui.drinkAlts[index]; });
 }
 const languageMenu = document.querySelector('.language-menu');
@@ -290,6 +299,7 @@ document.addEventListener('keydown', event => {
 });
 const pageLanguage = document.documentElement.dataset.language || 'ko';
 setLanguage(Object.hasOwn(copy, pageLanguage) ? pageLanguage : 'ko');
+syncVideoControls();
 
 // Manual store-photo carousel; original photos keep their relative order.
 const heroTrack = document.getElementById('hero-track');
@@ -329,7 +339,9 @@ const signatureNext = document.getElementById('signature-next');
 let signatureIndex = 0;
 function updateSignaturePosition() {
   const stride = signatureCards[1].offsetLeft - signatureCards[0].offsetLeft;
-  signatureIndex = Math.min(signatureCards.length - 1, Math.round(signatureTrack.scrollLeft / stride));
+  const end = signatureTrack.scrollWidth - signatureTrack.clientWidth;
+  const atEnd = end > 0 && signatureTrack.scrollLeft >= end - 2;
+  signatureIndex = atEnd ? signatureCards.length - 1 : Math.min(signatureCards.length - 1, Math.round(signatureTrack.scrollLeft / stride));
   document.getElementById('signature-count').textContent = (signatureIndex + 1) + ' / ' + signatureCards.length;
   signaturePrevious.disabled = signatureIndex === 0;
   signatureNext.disabled = signatureIndex === signatureCards.length - 1;
@@ -347,3 +359,4 @@ signatureTrack.addEventListener('keydown', event => {
   showSignature(signatureIndex + (event.key === 'ArrowRight' ? 1 : -1));
 });
 updateSignaturePosition();
+window.addEventListener('resize', updateSignaturePosition);
