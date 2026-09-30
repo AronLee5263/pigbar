@@ -40,6 +40,26 @@ const copy = {
   }
 };
 
+Object.assign(copy.ko, {
+  quickMenu:'메뉴 보기', quickVisit:'오는 길', experienceTitle:'맛있는 저녁의 세 가지.',
+  experiencePork:'두툼한 목살', experiencePorkBody:'두툼하게, 부드럽게.',
+  experienceGrill:'직접 그릴링', experienceGrillBody:'굽는 건 저희에게.',
+  experienceFinish:'완벽한 마무리', experienceFinishBody:'찌개부터 볶음밥까지.',
+  signatureTitle:'피그바의 한 끼.', signatureIntro:'부드러운 목살, 뜨끈한 된장찌개, 치즈 덮인 김치볶음밥.',
+  sigMain:'단골의 선택', neckName:'피그목살', neckDesc:'두툼한 목살, 부드러운 한 입.',
+  storyTitle:'굽는 건 저희에게.', storyLead:'두툼한 고기를 숯불에 맛있게. 직원이 테이블에서 직접 구워드립니다.',
+  menuTitle:'오늘의 메뉴.', reviewsTitle:'다녀간 사람들의 이야기.', visitTitle:'합정에서 만나요.'
+});
+Object.assign(copy.en, {
+  quickMenu:'Menu', quickVisit:'Directions', experienceTitle:'Your evening at PIGBAR.',
+  experiencePork:'Tender pork', experiencePorkBody:'Thick cuts. Tender bites.',
+  experienceGrill:'We grill', experienceGrillBody:'You sit back and enjoy.',
+  experienceFinish:'The finale', experienceFinishBody:'Warm stew. Cheesy rice.',
+  signatureTitle:'The PIGBAR table.', signatureIntro:'Tender pork neck, beef soybean stew and cheesy kimchi fried rice.',
+  sigMain:'A regular favorite', neckName:'Pig Pork Neck', neckDesc:'Thick-cut pork. Tender bites.',
+  storyTitle:'We grill. You enjoy.', storyLead:'Our team grills your pork over charcoal, right at your table.',
+  menuTitle:'The full menu.', reviewsTitle:'From our guests.', visitTitle:'See you in Hapjeong.'
+});
 const menu = [
   {category:'grill',ko:'피그삼겹살',en:'Pig Pork Belly',descKo:'+1등급 한돈 삼겹살, 10일 이상 숙성',descEn:'Aged Korean pork belly, carefully trimmed',price:17000,tag:'PORK'},
   {category:'grill',ko:'피그목살',en:'Pig Pork Neck',descKo:'+1등급 한돈 목살, 10일 이상 숙성',descEn:'Aged Korean pork neck, carefully trimmed',price:17000,tag:'PORK'},
@@ -204,3 +224,28 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 
 setLanguage(/(^|\/)en(\/|$)/.test(location.pathname) ? 'en' : 'ko');
+
+// Manual photo carousel: swipe or use the dots, with no automatic motion.
+const heroTrack = document.getElementById('hero-track');
+const heroDots = [...document.querySelectorAll('[data-slide]')];
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+function showHeroSlide(index) {
+  heroTrack.scrollTo({left: heroTrack.clientWidth * index, behavior: reducedMotion.matches ? 'auto' : 'smooth'});
+}
+heroDots.forEach((dot, index) => dot.addEventListener('click', () => showHeroSlide(index)));
+heroTrack.addEventListener('scroll', () => {
+  const index = Math.round(heroTrack.scrollLeft / heroTrack.clientWidth);
+  heroDots.forEach((dot, position) => {
+    dot.classList.toggle('is-active', position === index);
+    dot.setAttribute('aria-pressed', String(position === index));
+  });
+}, {passive:true});
+heroTrack.addEventListener('keydown', event => {
+  if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+  event.preventDefault();
+  const current = Math.round(heroTrack.scrollLeft / heroTrack.clientWidth);
+  showHeroSlide(Math.max(0, Math.min(2, current + (event.key === 'ArrowRight' ? 1 : -1))));
+});
+if (currentLang === 'en') {
+  ['Charcoal pork photo', 'Kimchi fried rice photo', 'Soybean stew photo'].forEach((label, index) => heroDots[index].setAttribute('aria-label', label));
+}
