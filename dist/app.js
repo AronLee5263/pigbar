@@ -4,8 +4,8 @@ const GOOGLE_URL = 'https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6';
 const copy = {
   ko: {
     skip: '본문 바로가기', navSignature: '시그니처', navStory: '피그바 이야기', navMenu: '전체 메뉴', navReviews: '리뷰', navVisit: '오시는 길', reserve: '예약하기',
-    heroEyebrow: 'HAPJEONG · CHARCOAL PORK BBQ', heroLine1: '한 점의', heroLine2: '제대로 된', heroLine3: '돼지고기.',
-    heroLead: '10일 이상 숙성한 한돈 삼겹살과 목살. 손질부터 굽기까지 피그바가 책임집니다.', seeMenu: '메뉴와 가격 보기', reserveNaver: '네이버에서 예약',
+    heroEyebrow: 'HAPJEONG · KOREAN PORK BBQ', heroTitle: '제대로 된 숯불고기',
+    seeMenu: '메뉴와 가격 보기', reserveNaver: '네이버에서 예약',
     factAge: '일 숙성', factPork: '삼겹살·목살', factStation: '합정역 3번 출구', heroPhotoTag: 'THE FIRST BITE', heroPhotoTitle: '피그삼겹살', beerPhotoTitle: '피그목살', heroBottom: '숯불이 올라오면, 저녁이 시작됩니다.',
     signatureTitle: '고기 다음까지<br />기억나는 맛.', signatureIntro: '삼겹살로 시작해, 뜨끈한 찌개와 치즈 덮인 김치볶음밥으로 마무리하세요.',
     sigMain: '가장 먼저', sigSoup: '국물 한 숟갈', sigFinish: '마지막 한 판', bellyName: '피그삼겹살', bellyDesc: '10일 이상 숙성한 +1등급 한돈. 손질한 170g 한 접시.',
@@ -22,8 +22,8 @@ const copy = {
   },
   en: {
     skip: 'Skip to content', navSignature: 'Highlights', navStory: 'Our story', navMenu: 'Full menu', navReviews: 'Reviews', navVisit: 'Visit', reserve: 'Book a table',
-    heroEyebrow: 'HAPJEONG · CHARCOAL PORK BBQ', heroLine1: 'Come for', heroLine2: 'the pork.', heroLine3: 'Stay for more.',
-    heroLead: 'Korean pork belly and neck, aged for over 10 days. We prepare it carefully and grill it at your table.', seeMenu: 'Explore the menu', reserveNaver: 'Reserve on Naver',
+    heroEyebrow: 'HAPJEONG · KOREAN PORK BBQ', heroTitle: 'Charcoal BBQ, done right.',
+    seeMenu: 'Explore the menu', reserveNaver: 'Reserve on Naver',
     factAge: 'days aged', factPork: 'pork belly & neck', factStation: 'from Hapjeong Exit 3', heroPhotoTag: 'THE FIRST BITE', heroPhotoTitle: 'Pork belly', beerPhotoTitle: 'Pork neck', heroBottom: 'When the charcoal is ready, dinner begins.',
     signatureTitle: 'More to love<br />after the grill.', signatureIntro: 'Start with pork belly. Finish with a bubbling stew and cheesy pork kimchi fried rice.',
     sigMain: 'Start here', sigSoup: 'Something warm', sigFinish: 'The finale', bellyName: 'Pig Pork Belly', bellyDesc: '170g of carefully trimmed, aged Korean pork.',

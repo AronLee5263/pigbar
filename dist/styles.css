@@ -316,3 +316,28 @@ h1,h2,h3,p{margin-top:0}
   .lang-en .hero h1{font-size:clamp(30px,8.6vw,42px)}
   .lang-en #visit-title{font-size:clamp(23px,6.6vw,30px)}
 }
+/* Food-first hero: one photograph, one headline, two clear next steps. */
+.hero-food-first{isolation:isolate;min-height:0;height:650px;background:#211612}
+.hero-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;z-index:-2}
+.hero-food-first:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.72),rgba(0,0,0,.05) 36%,rgba(0,0,0,.02) 62%,rgba(0,0,0,.7))}
+.hero-food-first .hero-grid{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;height:100%;min-height:0;padding-block:44px 36px;gap:0}
+.hero-food-first .hero-copy{padding:0;width:100%}
+.hero-food-first .eyebrow{margin:0 0 12px;color:#f5ede3;letter-spacing:.14em;font-size:11px;text-shadow:0 1px 5px #000}
+.hero-food-first h1{font-size:clamp(36px,4vw,58px);line-height:1.2;letter-spacing:-.06em;max-width:none;margin:0;white-space:nowrap;color:#fff9ef;text-shadow:0 2px 16px #0005}
+.hero-food-first .hero-buttons{gap:10px;width:auto}
+.hero-food-first .button{min-height:48px;font-size:14px;padding-inline:24px;border-radius:8px}
+.hero-food-first .button-outline{background:#fff8eb;color:#241610;border-color:#fff8eb}
+.hero-food-first .button-outline:hover{background:#fff}
+@media(max-width:850px){
+  .hero-food-first{height:580px}
+}
+@media(max-width:600px){
+  .hero-food-first{height:clamp(460px,calc(100svh - 100px),640px)}
+  .hero-food-first .hero-grid{padding-block:24px;gap:0}
+  .hero-food-first .eyebrow{font-size:9px;letter-spacing:.12em;margin-bottom:9px}
+  .hero-food-first h1{font-size:clamp(25px,7.4vw,36px);line-height:1.2;letter-spacing:-.06em}
+  .hero-food-first .hero-buttons{width:100%;gap:8px}
+  .hero-food-first .button{flex:1;min-width:0;min-height:48px;padding-inline:10px;font-size:13px}
+  .lang-en .hero-food-first h1{font-size:clamp(19px,5.7vw,27px);letter-spacing:-.035em}
+  .lang-en .hero-food-first .hero-buttons .button{font-size:12px}
+}
