@@ -50,10 +50,24 @@ This creates a new commit; it does not rewrite Git history.
 ## Design choices
 
 - Centered mobile logo, left menu and right language switch.
-- Three manually swiped food banners with accessible dot buttons.
+- Five manually swiped store-photo banners with accessible dots and a photo counter.
 - One-line Korean and English headline, without the old description or numerical facts.
 - Three compact experience columns: tender pork, staff grilling, stew and rice.
-- Pork neck as the first signature dish; original menu prices and reviews retained.
-- Compact video, light content sections, overlapping review cards and short dessert banner.
+- Four signature dishes, pork neck first, with a visible next card, navigation controls and a link to the complete menu.
+- Portrait video at its original 9:16 ratio without side letterboxing; five verified five-star review excerpts in each language.
 - Directions and hours near the bottom, followed by menu/directions/reservation tiles.
 - Original Pexels video remains documented in MEDIA_HISTORY.md and Git history.
+## Refinement and sharing preview (2026-09-30)
+
+- Stronger, single-line headline with a darker photo overlay.
+- Text-only quick links: labels enlarged by 3px on mobile and shorter tiles.
+- Three drinks are grouped beneath a clear heading and compact rows.
+- Tested at 320px and 390px mobile widths and 1440px desktop width; no horizontal page overflow.
+- Korean and English pages include static Open Graph and Twitter metadata.
+- Share artwork: dist/assets/pigbar-share-v1.png, 1200 x 630 pixels.
+- Editable wordmark artwork: dist/assets/pigbar-logo.svg. Browser icon: dist/assets/favicon.svg.
+- The orange PIGBAR wordmark and steam motif are original; Outback branding is not copied.
+- Public share preview can be checked after deploying this commit. Local preview cannot expose the public image URL to external crawlers.
+
+If Kakao still shows the old photo after deployment, clear the cached metadata in the Kakao Developers URL metadata tool, then share the link again.
+Official guide: https://developers.kakao.com/docs/ko/tool/common

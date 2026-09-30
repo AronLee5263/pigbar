@@ -45,7 +45,7 @@ Object.assign(copy.ko, {
   experiencePork:'두툼한 목살', experiencePorkBody:'두툼하게, 부드럽게.',
   experienceGrill:'직접 그릴링', experienceGrillBody:'굽는 건 저희에게.',
   experienceFinish:'완벽한 마무리', experienceFinishBody:'찌개부터 볶음밥까지.',
-  signatureTitle:'피그바의 한 끼.', signatureIntro:'부드러운 목살, 뜨끈한 된장찌개, 치즈 덮인 김치볶음밥.',
+  signatureSwipe:'옆으로 넘겨 대표 메뉴 보기', sigBelly:'숯불의 풍미', seeFullMenu:'전체 메뉴와 가격 보기 →', drinkHeading:'고기와 함께 한잔', signatureTitle:'피그바의 대표 메뉴', signatureIntro:'부드러운 목살, 뜨끈한 된장찌개, 치즈 덮인 김치볶음밥.',
   sigMain:'단골의 선택', neckName:'피그목살', neckDesc:'두툼한 목살, 부드러운 한 입.',
   storyTitle:'굽는 건 저희에게.', storyLead:'두툼한 고기를 숯불에 맛있게. 직원이 테이블에서 직접 구워드립니다.',
   menuTitle:'오늘의 메뉴.', reviewsTitle:'다녀간 사람들의 이야기.', visitTitle:'합정에서 만나요.'
@@ -55,7 +55,7 @@ Object.assign(copy.en, {
   experiencePork:'Tender pork', experiencePorkBody:'Thick cuts. Tender bites.',
   experienceGrill:'We grill', experienceGrillBody:'You sit back and enjoy.',
   experienceFinish:'The finale', experienceFinishBody:'Warm stew. Cheesy rice.',
-  signatureTitle:'The PIGBAR table.', signatureIntro:'Tender pork neck, beef soybean stew and cheesy kimchi fried rice.',
+  signatureSwipe:'Swipe to explore our signatures', sigBelly:'Charcoal flavor', seeFullMenu:'See the full menu & prices →', drinkHeading:'A drink with your BBQ', signatureTitle:'PIGBAR signatures', signatureIntro:'Tender pork neck, beef soybean stew and cheesy kimchi fried rice.',
   sigMain:'A regular favorite', neckName:'Pig Pork Neck', neckDesc:'Thick-cut pork. Tender bites.',
   storyTitle:'We grill. You enjoy.', storyLead:'Our team grills your pork over charcoal, right at your table.',
   menuTitle:'The full menu.', reviewsTitle:'From our guests.', visitTitle:'See you in Hapjeong.'
@@ -119,6 +119,14 @@ const reviews = {
   ]
 };
 
+reviews.ko.push(
+  {text:'작년부터 왔는데 삼겹 목살 진짜 한결같이 잡내없이 맛있어요🥹\n항상 잘 구워주셔서 열심히 먹기만 하면 된답니다-!\n… 된장술밥은 고기랑 같이 먹으면 그냥 뒤집어집니다🫶🏻',author:'애엉잉',date:'2026.09.23',url:'https://pcmap.place.naver.com/restaurant/1006983247/review/visitor'},
+  {text:'… 고기 구성은 소갈빗살+삼겹+목살+껍데기+소고기 된장찌게였는데 다 맛있었어요~\n반찬구성도 적당하게 좋았고 무엇보다 친절하게 잘 챙겨주셔서 기분좋게 먹었습니다. …',author:'미유찡',date:'2026.09.12',url:'https://pcmap.place.naver.com/restaurant/1006983247/review/visitor'}
+);
+reviews.en.push(
+  {text:'The pork here is SOOO GOOOD.\nSuper tender and juicy!\nThe staff cooks the meat for you as well 😊 …',author:'Chloe Teo',date:'Google',url:GOOGLE_URL},
+  {text:'REALLY DELICIOUS FOOD 😍 the pork was soft and the staff were really friendly!!\n… Short walk from Hapjeong station, great service!',author:'erika c.',date:'Google',url:GOOGLE_URL}
+);
 let currentLang = 'ko';
 let currentCategory = 'all';
 const menuList = document.getElementById('menu-list');
@@ -235,6 +243,7 @@ function showHeroSlide(index) {
 heroDots.forEach((dot, index) => dot.addEventListener('click', () => showHeroSlide(index)));
 heroTrack.addEventListener('scroll', () => {
   const index = Math.round(heroTrack.scrollLeft / heroTrack.clientWidth);
+  document.getElementById('hero-count').textContent = (index + 1) + ' / ' + heroDots.length;
   heroDots.forEach((dot, position) => {
     dot.classList.toggle('is-active', position === index);
     dot.setAttribute('aria-pressed', String(position === index));
@@ -244,8 +253,38 @@ heroTrack.addEventListener('keydown', event => {
   if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
   event.preventDefault();
   const current = Math.round(heroTrack.scrollLeft / heroTrack.clientWidth);
-  showHeroSlide(Math.max(0, Math.min(2, current + (event.key === 'ArrowRight' ? 1 : -1))));
+  showHeroSlide(Math.max(0, Math.min(heroDots.length - 1, current + (event.key === 'ArrowRight' ? 1 : -1))));
 });
 if (currentLang === 'en') {
-  ['Charcoal pork photo', 'Kimchi fried rice photo', 'Soybean stew photo'].forEach((label, index) => heroDots[index].setAttribute('aria-label', label));
+  ['Charcoal pork photo', 'Pork neck photo', 'Soybean stew photo', 'Kimchi fried rice photo', 'Draft beer photo'].forEach((label, index) => heroDots[index].setAttribute('aria-label', label));
 }
+// Signature cards show a visible next card and explicit browsing controls.
+const signatureTrack = document.getElementById('signature-track');
+const signatureCards = [...signatureTrack.querySelectorAll('.signature-card')];
+const signaturePrevious = document.getElementById('signature-prev');
+const signatureNext = document.getElementById('signature-next');
+let signatureIndex = 0;
+function updateSignaturePosition() {
+  const stride = signatureCards[1].offsetLeft - signatureCards[0].offsetLeft;
+  signatureIndex = Math.min(signatureCards.length - 1, Math.round(signatureTrack.scrollLeft / stride));
+  document.getElementById('signature-count').textContent = (signatureIndex + 1) + ' / ' + signatureCards.length;
+  signaturePrevious.disabled = signatureIndex === 0;
+  signatureNext.disabled = signatureIndex === signatureCards.length - 1;
+}
+function showSignature(index) {
+  const card = signatureCards[Math.max(0, Math.min(signatureCards.length - 1, index))];
+  signatureTrack.scrollTo({left:card.offsetLeft - signatureCards[0].offsetLeft,behavior:reducedMotion.matches ? 'auto' : 'smooth'});
+}
+signaturePrevious.addEventListener('click', () => showSignature(signatureIndex - 1));
+signatureNext.addEventListener('click', () => showSignature(signatureIndex + 1));
+signatureTrack.addEventListener('scroll', updateSignaturePosition, {passive:true});
+signatureTrack.addEventListener('keydown', event => {
+  if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+  event.preventDefault();
+  showSignature(signatureIndex + (event.key === 'ArrowRight' ? 1 : -1));
+});
+if (currentLang === 'en') {
+  signaturePrevious.setAttribute('aria-label','Previous signature dish');
+  signatureNext.setAttribute('aria-label','Next signature dish');
+}
+updateSignaturePosition();

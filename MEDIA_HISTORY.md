@@ -20,3 +20,13 @@ Korean cards contain verbatim excerpts of confirmed five-star Naver reviews by y
 - It shows scored grilled pork held with tongs and smoke. It is described as charcoal pork, not mislabelled as pork neck.
 - The other banners use the existing actual-store fried-rice and doenjang photos.
 - Outback's assets and copy are not included; its mobile layout is the design reference.
+## Additional review excerpts and sharing artwork (2026-09-30)
+
+- Two additional Korean reviews: 애엉잉 (visit 2026-09-23), 미유찡 (visit 2026-09-12).
+- Source: https://pcmap.place.naver.com/restaurant/1006983247/review/visitor
+- Both individual ratings were visibly confirmed as five stars in Naver Place.
+- Two additional English reviews: Chloe Teo and erika c. Their five-star Google Maps ratings and original English text were checked directly, with automatic translation disabled.
+- Source: https://maps.app.goo.gl/Ffdk7cAi9mKsqfgm6
+- All five cards per language are selected verbatim excerpts, with ellipses for omitted portions. They do not claim every review of the restaurant is five stars.
+- All five banner images are existing actual-store photographs: charcoal grill, pork neck, soybean stew, cheese fried rice and draft beer.
+- The share thumbnail is an original orange-and-white PIGBAR wordmark with a steam motif. The editable SVG and 1200 x 630 PNG are stored in dist/assets/.

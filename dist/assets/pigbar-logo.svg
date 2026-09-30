@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="PIGBAR Korean Pork BBQ">
+<rect width="1200" height="630" fill="#f34a23"/>
+<g fill="none" stroke="#fff8ee" stroke-width="9" stroke-linecap="round">
+<path d="M540 208c-31-26 30-39 0-66"/><path d="M600 208c-31-26 30-39 0-66"/><path d="M660 208c-31-26 30-39 0-66"/>
+</g>
+<text x="600" y="390" text-anchor="middle" fill="#fff8ee" font-family="Arial, sans-serif" font-weight="900" font-size="180" letter-spacing="-8">PIGBAR</text>
+<text x="600" y="450" text-anchor="middle" fill="#fff8ee" font-family="Arial, sans-serif" font-weight="700" font-size="29" letter-spacing="8">KOREAN PORK BBQ</text>
+<text x="600" y="540" text-anchor="middle" fill="#fff8ee" font-family="Arial, sans-serif" font-size="22" letter-spacing="5">HAPJEONG · SEOUL</text>
+</svg>
