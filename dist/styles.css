@@ -198,3 +198,121 @@ h1,h2,h3,p{margin-top:0}
 .review-author span{font-size:10px;color:#b19f95;white-space:nowrap}
 @media(max-width:1100px){.drink-card{gap:11px}.drink-card img{width:65px;height:84px}.drink-card h3{font-size:13px}}
 @media(max-width:600px){.drink-strip{grid-template-columns:1fr;gap:9px}.drink-card{padding:10px;gap:17px}.drink-card img{width:74px;height:78px}.drink-card h3{font-size:16px}.drink-card strong{font-size:16px}.drink-card div{flex:1}.review-card{min-height:260px}.review-card blockquote{font-size:16px}.video-frame{height:530px}.video-caption{left:17px;font-size:9px;letter-spacing:.09em}}
+
+/* Compact mobile layout. Keep desktop typography and the original header logo. */
+.brand-badge{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border-radius:12px;background:var(--hot);color:var(--ink);font-size:22px}
+.review-swipe{display:none}
+@media(max-width:850px){
+  .hero-grid{padding-block:32px 28px;gap:22px}
+  .hero-facts{margin-top:20px}
+  .section-pad{padding-block:48px}
+  .story-grid{gap:18px}
+  .story h2{font-size:38px;margin:12px 0}
+  .story-lead{margin-bottom:12px}
+  .video-frame{height:360px}
+  .story-points:not(:has(>div)){display:none}
+  .reviews{background:#eee2d4;color:var(--ink)}
+  .review-source strong{color:#51443b}
+  .review-source a{color:#a83517}
+  .review-source .stars{color:#b33a19}
+  .review-grid{display:flex;align-items:stretch;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:8px;padding:12px 8px 22px;gap:0;scrollbar-width:thin;scrollbar-color:#ca9c7c transparent}
+  .review-card{flex:0 0 76%;min-width:0;min-height:240px;background:#fffaf4;border:1px solid #d9c1ac;border-radius:16px;padding:24px;scroll-snap-align:start;box-shadow:0 6px 16px #65412b12}
+  .review-card+.review-card{margin-left:-10px}
+  .review-card:nth-child(2){background:#fff4e6}
+  .review-card:nth-child(3){background:#fffaf4}
+  .review-card .stars,.review-rating strong{color:#c43f16}
+  .review-card blockquote{font-size:16px;line-height:1.75;margin:16px 0 auto}
+  .review-author{color:#534236;margin-top:18px}
+  .review-author span{color:#78614f}
+  .review-swipe{display:block;margin:0;font-size:12px;color:#735b49}
+}
+@media(max-width:600px){
+  .shell{width:calc(100% - 36px)}
+  section[id]{scroll-margin-top:76px}
+  .site-header{height:60px}
+  .main-nav{top:60px}
+  .hero-grid{padding-block:24px;gap:18px}
+  .hero .eyebrow{margin-bottom:12px;font-size:9px;letter-spacing:.1em}
+  .hero h1{font-size:clamp(29px,8.2vw,44px);line-height:1.22;letter-spacing:-.065em;margin-bottom:14px}
+  .hero h1 br:first-of-type{display:none}
+  .hero h1 em{margin-left:.18em}
+  .hero-lead{font-size:14px;line-height:1.65;margin-bottom:16px}
+  .hero-buttons{gap:8px}
+  .hero-buttons .button{flex:1;min-width:0;min-height:44px;font-size:12px;padding-inline:10px}
+  .hero-facts{margin-top:16px;gap:10px;justify-content:space-between}
+  .hero-facts span{padding-right:10px;margin:0;line-height:1.35}
+  .hero-facts strong{font-size:17px}
+  .hero-facts small{font-size:10px}
+  .hero-visual{height:260px;gap:8px;grid-template-columns:1.25fr .85fr}
+  .hero-side-photo{height:86%}
+  .hero-main-photo figcaption span{display:none}
+  .hero-main-photo figcaption strong{font-size:21px}
+  .hero-bottom{display:none}
+  .section-pad{padding-block:38px}
+  .section-kicker{font-size:10px;letter-spacing:.13em;margin-bottom:8px}
+  .section-heading{margin-bottom:20px}
+  .section-heading h2,.story h2{font-size:clamp(29px,8vw,36px);line-height:1.25;letter-spacing:-.06em;margin-top:8px}
+  .section-heading>p{font-size:14px;line-height:1.65;margin-top:12px}
+  .signature-card,.signature-featured{min-height:290px}
+  .signature-featured{min-height:320px}
+  .signature-info h3,.signature-featured h3{font-size:24px}
+  .signature-card .signature-info{left:18px;right:18px;bottom:18px;gap:8px}
+  .signature-info p{font-size:13px}
+  .drink-card{gap:14px;padding:10px}
+  .drink-card img{width:64px;height:68px}
+  .drink-card span{display:none}
+  .drink-card h3{font-size:15px}
+  .story{background:#faf4ec;color:var(--ink)}
+  .story{padding-block:30px}
+  .story-grid{gap:16px}
+  .story h2{margin:8px 0 10px}
+  .story h2 br:first-of-type{display:none}
+  .story-lead{font-size:14px;line-height:1.65;color:#65564c;margin:0}
+  .story-points{border-color:#d5c4b4}
+  .story-points>div{border-color:#d5c4b4}
+  .story-points p{color:#65564c}
+  .video-frame{height:300px;max-height:42svh}
+  .video-caption{color:#fff;bottom:18px}
+  .menu-tabs{gap:6px;padding-bottom:12px}
+  .menu-tab{min-height:44px;padding:8px 14px;font-size:12px}
+  .menu-item{padding:14px 0;min-height:78px;gap:6px 12px}
+  .menu-item p{font-size:12px}
+  .menu-note{font-size:12px}
+  .board-menu{padding:0 16px;margin-top:20px}
+  .board-menu summary{font-size:14px;padding-block:16px}
+  .review-source{flex-wrap:wrap;gap:6px 10px;margin-bottom:10px}
+  .review-source .stars{font-size:18px}
+  .review-source strong{font-size:12px}
+  .review-source a{font-size:12px;min-height:32px;display:inline-flex;align-items:center}
+  .review-card{flex-basis:88%;padding:20px;min-height:250px}
+  .review-card .stars{font-size:20px}
+  .review-rating{gap:10px}
+  .review-card blockquote{font-size:15px}
+  .review-author{font-size:12px;flex-wrap:wrap;gap:5px}
+  .dessert{padding:18px 0}
+  .dessert-inner{gap:12px}
+  .dessert-icon{font-size:32px}
+  .dessert div>span:not(.dessert-icon){display:none}
+  .dessert h2{font-size:clamp(18px,5.2vw,23px);line-height:1.35;margin:0 0 4px}
+  .dessert p{font-size:12px;line-height:1.5;font-weight:500}
+  .visit{background:#f8f1e8;color:var(--ink)}
+  .visit .section-heading>p{color:#65564c}
+  #visit-title{font-size:clamp(26px,7.4vw,34px)}
+  #visit-title br{display:none}
+  .visit-card{padding:18px;background:#fffaf4;border-color:#dfd0c0;border-radius:12px}
+  .visit-card h3{margin:12px 0 8px;font-size:18px;line-height:1.5}
+  .visit-label{font-size:11px;letter-spacing:.07em;color:#b43b1b}
+  .visit-card p{font-size:13px;line-height:1.65;color:#65564c;margin-bottom:10px}
+  .visit-links{margin-top:14px;gap:8px}
+  .visit-links .button{min-height:44px;font-size:12px}
+  .visit .button-outline{color:var(--ink);border-color:#bca28c}
+  .hours-row{margin-top:14px;font-size:13px}
+  .hours-row strong{font-size:15px}
+  .hours-row small{color:#746153;font-size:12px}
+  .visit-card .text-link{margin-top:8px;min-height:44px;display:inline-flex;align-items:center;color:#a83617;border-color:#a83617}
+  .site-footer{padding:26px 0}
+  .footer-inner>div:last-child{margin-top:18px}
+  .lang-en .hero-buttons .button{font-size:11px}
+  .lang-en .hero h1{font-size:clamp(30px,8.6vw,42px)}
+  .lang-en #visit-title{font-size:clamp(23px,6.6vw,30px)}
+}
