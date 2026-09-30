@@ -36,3 +36,12 @@ Korean cards contain verbatim excerpts of confirmed five-star Naver reviews by y
 - Removed the three steam marks from the editable SVG and re-centered the text.
 - Current share image: dist/assets/pigbar-share-v2.png, 1200 x 630 pixels.
 - Both language pages reference the new image URL so image caching can distinguish this revision.
+
+## Approved neon sharing thumbnail (2026-09-30)
+- Current share image: dist/assets/pigbar-share-neon-v3.png.
+- The user approved this generated logo artwork after comparing it with the real interior neon lighting in Naver Place photos.
+- Color reference: https://pcmap.place.naver.com/restaurant/1006983247/photo?filterType=AI%20View&subFilter=INTERIOR
+- The thumbnail is original logo artwork, not a photograph of the restaurant sign.
+- Text contains only PIGBAR and KOREAN PORK BBQ; the location line and steam symbols are omitted.
+- Korean and English Open Graph and Twitter image tags point to the same versioned public image URL, with the image's actual dimensions declared.
+- The earlier flat orange share thumbnail and SVG are retained for comparison.

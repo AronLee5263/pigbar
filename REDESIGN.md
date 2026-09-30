@@ -64,9 +64,9 @@ This creates a new commit; it does not rewrite Git history.
 - Three drinks are grouped beneath a clear heading and compact rows.
 - Tested at 320px and 390px mobile widths and 1440px desktop width; no horizontal page overflow.
 - Korean and English pages include static Open Graph and Twitter metadata.
-- Share artwork: dist/assets/pigbar-share-v2.png, 1200 x 630 pixels.
-- Editable wordmark artwork: dist/assets/pigbar-logo.svg. Browser icon: dist/assets/favicon.svg.
-- The orange PIGBAR wordmark is original; Outback branding is not copied.
+- Current share artwork: dist/assets/pigbar-share-neon-v3.png, 1731 x 909 pixels.
+- The earlier flat wordmark remains available in dist/assets/pigbar-logo.svg. Browser icon: dist/assets/favicon.svg.
+- The approved sharing artwork uses coral-pink neon with a red-orange glow on a dark background. It contains only PIGBAR and KOREAN PORK BBQ; Outback branding is not copied.
 - Public share preview can be checked after deploying this commit. Local preview cannot expose the public image URL to external crawlers.
 
 If Kakao still shows the old photo after deployment, clear the cached metadata in the Kakao Developers URL metadata tool, then share the link again.
