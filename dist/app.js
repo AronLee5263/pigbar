@@ -368,7 +368,7 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 document.querySelector('.hero-scroll').addEventListener('click', event => {
   event.preventDefault();
   window.scrollBy({
-    top:Math.min(300, Math.round(window.innerHeight * .38)),
+    top:Math.min(450, Math.round(window.innerHeight * .38)),
     behavior:'smooth'
   });
 });
