@@ -479,17 +479,3 @@ body.lang-ja{font-family:"Noto Sans JP","Noto Sans KR",sans-serif}
  .experience-grid{margin-top:16px}
  .experience-icon{width:28px;height:28px;margin-bottom:8px}
 }
-
-/* 모바일 첫 사진 영역 높이: 아래 숫자 하나만 변경하세요. 예: 540px, 555px, 580px */
-:root{--mobile-hero-height:504px}
-html,body{width:100%;min-width:0;overflow-x:clip}
-@media(max-width:850px){
- .hero{height:var(--mobile-hero-height)}
- .hero-slide img{object-fit:cover}
-}
-
-/* 모바일 대표사진: 원본 전체를 비율 유지하여 표시합니다. */
-@media(max-width:850px){
- .hero-slide:before,.hero-slide:after{display:none}
- .hero-slide img{position:absolute;left:0;top:84px;bottom:auto;width:100%;max-width:100%;height:calc(100% - 84px);object-fit:contain;object-position:center top;transform:none;mask-image:none}
-}
