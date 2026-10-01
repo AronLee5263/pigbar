@@ -480,11 +480,11 @@ body.lang-ja{font-family:"Noto Sans JP","Noto Sans KR",sans-serif}
  .experience-icon{width:28px;height:28px;margin-bottom:8px}
 }
 
-/* Restore 30% of the mobile hero height removed in the previous update. */
+/* Restore 45% of the mobile hero height removed in the previous update. */
 html,body{width:100%;min-width:0;overflow-x:clip}
 @media(max-width:850px){
- .hero{height:calc(clamp(320px,calc(100svh - 300px),520px) * .7 + 550px * .3)}
+ .hero{height:calc(clamp(320px,calc(100svh - 300px),520px) * .55 + 550px * .45)}
 }
 @media(max-width:600px){
- .hero{height:calc(clamp(320px,calc(100svh - 300px),520px) * .7 + clamp(410px,calc(100svh - 180px),560px) * .3)}
+ .hero{height:calc(clamp(320px,calc(100svh - 300px),520px) * .55 + clamp(410px,calc(100svh - 180px),560px) * .45)}
 }
