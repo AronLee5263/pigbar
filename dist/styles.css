@@ -488,7 +488,8 @@ html,body{width:100%;min-width:0;overflow-x:clip}
  .hero-slide img{object-fit:cover}
 }
 
-/* 모바일 대표사진 9장: 영역 높이는 유지하고 사진만 10% 축소합니다. */
+/* 사진을 화면 너비에 맞춘 채 세로 잘림을 완화합니다. 전체 영역 높이는 유지됩니다. */
 @media(max-width:850px){
- .hero-slide img{transform:scale(.9);transform-origin:center}
+ .hero-slide img{position:absolute;left:0;bottom:0;width:100%;height:76.5%;object-fit:cover;transform:none}
+ .hero-slide:after{top:23.5%}
 }
