@@ -487,3 +487,8 @@ html,body{width:100%;min-width:0;overflow-x:clip}
  .hero{height:var(--mobile-hero-height)}
  .hero-slide img{object-fit:cover}
 }
+
+/* 모바일 대표사진 9장: 영역 높이는 유지하고 사진만 10% 축소합니다. */
+@media(max-width:850px){
+ .hero-slide img{transform:scale(.9);transform-origin:center}
+}
