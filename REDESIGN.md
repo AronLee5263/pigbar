@@ -129,3 +129,10 @@ Keep using https://aronlee5263.github.io/pigbar/ when resetting the Korean page.
 - 중국어 김치말이국수 이름은 泡菜冷面으로 통일한다. 메뉴와 세트 설명의 정적 HTML 및 공통 번역 데이터를 함께 수정했다.
 - 영상은 초기 autoplay 대신 IntersectionObserver로 화면에 들어올 때 무음 재생하고, 화면 밖에서는 일시정지한다. 기존 loop 속성으로 반복 재생한다. 동작 줄이기 설정에서는 수동 재생한다. 자동재생이 기기 설정으로 거부되면 기존 재생 버튼을 사용할 수 있다.
 - 기본 영어 페이지의 영상 포스터 상대 경로를 바로잡았다.
+
+## Mobile sizing and autoplay follow-up — 2026-10-01
+
+- Restore 30% of the previous mobile hero height reduction at each viewport size.
+- Set minimum viewport scale to 1, retain zoom-in, and clip horizontal page overflow.
+- Restore native muted inline autoplay and loop; start on visibility, retry on media readiness, page return and normal touch.
+- Remove the reduced-motion autoplay gate per the requested continuous video behavior; retain manual pause.
