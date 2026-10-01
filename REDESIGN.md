@@ -121,3 +121,12 @@ Keep using https://aronlee5263.github.io/pigbar/ when resetting the Korean page.
 - Booking entry points first open the reservation guide, including seven-table capacity, cut-off times, Naver booking and the confirmed CATCHTABLE international waitlist page. Instagram is included with its icon.
 - No direct booking API, live availability or automatic menu/review synchronization is claimed.
 - The drinks image layout and Kakao-only zoom behavior are preserved as requested; recommendations are documented in SALES_HANDOFF.md.
+
+## 사용자 승인 기준 — 2026-10-01
+
+- 사용자가 현재 구성을 매우 만족한다고 확인했음. 이후 디자인 수정은 이 구성을 기준으로 비교한다.
+- 기준 커밋: `7455ce2` (`아 수정중 여기 괜찮은 것 같아.`). 승인 시점에 main과 origin/main이 일치하고 작업 트리가 깨끗함.
+- 모바일 대표 영역 높이: `dist/styles.css`의 `@media(max-width:600px)` 안에서 `height:495px`.
+- 모바일 대표사진: 영역 하단에 배치, `height:85%`, `object-fit:cover`. 흐린 배경이나 scale 축소 효과를 추가하지 않는다.
+- 제목과 사진 간격 및 현재 사진 구도 유지. 변경 요청이 있을 때 해당 범위만 수정한다.
+- 아래로 더 보기 버튼은 앵커로 순간 이동하지 않고 약 200~220px를 부드럽게 스크롤하는 현재 동작을 유지한다.
