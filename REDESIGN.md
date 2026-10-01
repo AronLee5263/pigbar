@@ -121,3 +121,11 @@ Keep using https://aronlee5263.github.io/pigbar/ when resetting the Korean page.
 - Booking entry points first open the reservation guide, including seven-table capacity, cut-off times, Naver booking and the confirmed CATCHTABLE international waitlist page. Instagram is included with its icon.
 - No direct booking API, live availability or automatic menu/review synchronization is claimed.
 - The drinks image layout and Kakao-only zoom behavior are preserved as requested; recommendations are documented in SALES_HANDOFF.md.
+
+## 2026-10-01 첫 화면과 영상 개선
+
+- 아래로 더 보기 버튼은 섹션 앵커로 이동하는 대신 화면 높이의 28%, 최대 220px만 부드럽게 스크롤한다. 동작 줄이기 설정에서는 애니메이션을 생략한다.
+- 첫 화면 사진 높이를 화면 크기에 맞게 줄이고 다음 소개 영역을 밝은 배경으로 구분한다. 사진·바로가기 아래에 본문 제목과 콘텐츠 일부가 보이도록 한다.
+- 중국어 김치말이국수 이름은 泡菜冷面으로 통일한다. 메뉴와 세트 설명의 정적 HTML 및 공통 번역 데이터를 함께 수정했다.
+- 영상은 초기 autoplay 대신 IntersectionObserver로 화면에 들어올 때 무음 재생하고, 화면 밖에서는 일시정지한다. 기존 loop 속성으로 반복 재생한다. 동작 줄이기 설정에서는 수동 재생한다. 자동재생이 기기 설정으로 거부되면 기존 재생 버튼을 사용할 수 있다.
+- 기본 영어 페이지의 영상 포스터 상대 경로를 바로잡았다.
