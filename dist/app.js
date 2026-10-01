@@ -289,14 +289,10 @@ video.addEventListener('play', syncVideoControls);
 video.addEventListener('pause', syncVideoControls);
 
 video.querySelector('source').addEventListener('error', () => { videoToggle.hidden = true; });
-// Start the silent loop when the visitor reaches it; pause outside the viewport.
-video.muted = true;
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
-  const videoObserver = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) video.play().catch(syncVideoControls);
-    else video.pause();
-  }, {threshold:0.1});
-  videoObserver.observe(video);
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  video.removeAttribute('autoplay');
+  video.pause();
+  videoToggle.textContent = '▶';
 }
 
 
@@ -340,11 +336,6 @@ const heroSlides = [...heroTrack.querySelectorAll('.hero-slide')];
 const heroPrevious = document.getElementById('hero-prev');
 const heroNext = document.getElementById('hero-next');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-// A small nudge demonstrates that more content continues below the first screen.
-document.querySelector('.hero-scroll').addEventListener('click', event => {
-  event.preventDefault();
-  window.scrollBy({top:Math.min(220, Math.round(window.innerHeight * 0.28)), behavior:reducedMotion.matches ? 'auto' : 'smooth'});
-});
 let heroIndex = 0;
 function updateHeroPosition() {
   const index = Math.max(0, Math.min(heroSlides.length - 1, Math.round(heroTrack.scrollLeft / heroTrack.clientWidth)));
