@@ -481,7 +481,7 @@ body.lang-ja{font-family:"Noto Sans JP","Noto Sans KR",sans-serif}
 }
 
 /* 모바일 첫 사진 영역 높이: 아래 숫자 하나만 변경하세요. 예: 540px, 555px, 580px */
-:root{--mobile-hero-height:514px}
+:root{--mobile-hero-height:504px}
 html,body{width:100%;min-width:0;overflow-x:clip}
 @media(max-width:850px){
  .hero{height:var(--mobile-hero-height)}
