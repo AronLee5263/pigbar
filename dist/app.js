@@ -275,6 +275,8 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
 
 const video = document.getElementById('grill-video');
 const videoToggle = document.getElementById('video-toggle');
+let videoInView = false;
+let videoManuallyPaused = false;
 function syncVideoControls() {
   const ui = PIGBAR_LOCALES[currentLang].ui;
   videoToggle.textContent = video.paused ? '▶' : 'Ⅱ';
@@ -282,18 +284,44 @@ function syncVideoControls() {
 }
 videoToggle.addEventListener('click', async () => {
   if (video.paused) {
+    videoManuallyPaused = false;
     try { await video.play(); } catch { syncVideoControls(); }
-  } else video.pause();
+  } else {
+    videoManuallyPaused = true;
+    video.pause();
+  }
 });
 video.addEventListener('play', syncVideoControls);
 video.addEventListener('pause', syncVideoControls);
 
 video.querySelector('source').addEventListener('error', () => { videoToggle.hidden = true; });
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  video.removeAttribute('autoplay');
-  video.pause();
-  videoToggle.textContent = '▶';
+// Keep iOS inline autoplay muted, and retry when media becomes ready or the page returns.
+video.defaultMuted = video.muted = true;
+function playVisibleVideo() {
+  if (videoInView && !videoManuallyPaused && !document.hidden && video.paused) {
+    video.play().catch(syncVideoControls);
+  }
 }
+if ('IntersectionObserver' in window) {
+  const videoObserver = new IntersectionObserver(([entry]) => {
+    videoInView = entry.isIntersecting;
+    if (videoInView) playVisibleVideo();
+    else video.pause();
+  }, {threshold:0});
+  videoObserver.observe(video);
+} else {
+  videoInView = true;
+  playVisibleVideo();
+}
+video.addEventListener('canplay', playVisibleVideo);
+window.addEventListener('pageshow', playVisibleVideo);
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) video.pause();
+  else playVisibleVideo();
+});
+// A normal touch can retry playback in browsers that require user interaction.
+document.addEventListener('touchend', playVisibleVideo, {passive:true});
+document.addEventListener('pointerup', playVisibleVideo, {passive:true});
 
 
 function localizeAccessibility() {
