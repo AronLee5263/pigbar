@@ -336,6 +336,14 @@ const heroSlides = [...heroTrack.querySelectorAll('.hero-slide')];
 const heroPrevious = document.getElementById('hero-prev');
 const heroNext = document.getElementById('hero-next');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+// Reveal a little of the next section without jumping to its anchor.
+document.querySelector('.hero-scroll').addEventListener('click', event => {
+  event.preventDefault();
+  window.scrollBy({
+    top:Math.min(220, Math.round(window.innerHeight * .28)),
+    behavior:'smooth'
+  });
+});
 let heroIndex = 0;
 function updateHeroPosition() {
   const index = Math.max(0, Math.min(heroSlides.length - 1, Math.round(heroTrack.scrollLeft / heroTrack.clientWidth)));
